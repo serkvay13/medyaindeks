@@ -16,6 +16,7 @@
     python -m medya aktor dogrula [--dizin aktorler] | tepki --csv olaylar.csv --a TUR --b RUS --y 4 --x 3 [--gun 7]
     python -m medya ornek kur                                  # sentetik örnek vaka (deneme için)
     python -m medya vaka-ice-aktar <klasör> <vaka_id>          # K/KR/R/RD kart dosyalarını vakaya aktar
+    python -m medya gdelt indir <vaka> [--paralel 8] | tara <vaka> [--en-fazla N] | istatistik <vaka>
 
 Sağlayıcı: MEDYA_LLM_SAGLAYICI (offline varsayılan) · Depo: MEDYA_KANIT_DB · Çalışma alanı: MEDYA_CALISMA
 """
@@ -241,6 +242,34 @@ def cmd_vaka_ice_aktar(a):
         print(f"[RED] {h}")
 
 
+def cmd_gdelt(a):
+    from medya import gdelt
+    from medya.gdelt import grafik
+    from medya.gdelt.indirici import indir
+    from medya.gdelt.sorgu import VakaSorgusu
+    from medya.vaka_paketi import VakaPaketi
+    paket = VakaPaketi(a.vaka)
+    ayar = paket.alt_ayar("gdelt")
+    ham = Path(a.ham) if a.ham else gdelt.ham_dizin(ayar, a.vaka)
+    if a.alt == "indir":
+        r = indir(a.baslangic or ayar["baslangic"], a.bitis or ayar["bitis"], ham, akis=ayar.get("akis", "translation"),
+                  dil=ayar.get("dil", "tur"), alan_soneki=ayar.get("alan_soneki", ".tr"), paralel=a.paralel)
+        print(f"[OK] {ham}: {r.say()}")
+    elif a.alt == "tara":
+        r = VakaSorgusu.ayardan(ayar, ham).tara(en_fazla=a.en_fazla)
+        print(f"[OK] {r['islenen']} dosya işlendi, {r['kalan']} kaldı (toplam {r['toplam']})")
+    elif a.alt == "istatistik":
+        ist, s = gdelt.vaka_istatistigi(ayar, a.vaka, ham)
+        hedef = paket.yol("gdelt")
+        gdelt.kaydet(ist, hedef / "istatistik.json")
+        grafik.gunluk_grafik(ist, hedef / "gunluk.png", ayar.get("grafik"))
+        grafik.saatlik_grafik(ist, hedef / "saatlik.png", ayar.get("grafik"))
+        print(f"[OK] çekirdek {ist['tekil_url']} haber, {ist['tekil_site']} site; {hedef / 'istatistik.json'}")
+        if ist["gurultu"]["uyari"]:
+            print(f"[UYARI] {ist['gurultu']['uyari']}")
+    print(medya.GDELT_ATTRIBUTION_DUZ)
+
+
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="python -m medya", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -347,6 +376,18 @@ def parser() -> argparse.ArgumentParser:
     o = s.add_parser("ornek").add_subparsers(dest="alt", required=True)
     o.add_parser("kur")
 
+    gd = s.add_parser("gdelt", help="GDELT ham veri: indir, tara, istatistik").add_subparsers(dest="alt", required=True)
+    for ad in ("indir", "tara", "istatistik"):
+        x = gd.add_parser(ad)
+        x.add_argument("vaka")
+        x.add_argument("--ham", help="ham veri dizini (varsayılan: MEDYA_GDELT_HAM ya da vaka ayarı)")
+        if ad == "indir":
+            x.add_argument("--baslangic")
+            x.add_argument("--bitis")
+            x.add_argument("--paralel", type=int, default=8)
+        if ad == "tara":
+            x.add_argument("--en-fazla", type=int, default=None)
+
     x = s.add_parser("vaka-ice-aktar", help="kart klasörünü (K/KR/R/RD şemaları) vakaya aktar")
     x.add_argument("klasor")
     x.add_argument("vaka_id")
@@ -355,7 +396,7 @@ def parser() -> argparse.ArgumentParser:
 
 KOMUTLAR = {"vaka": cmd_vaka, "kanit": cmd_kanit, "hipotez": cmd_hipotez, "ach": cmd_ach, "baglam": cmd_baglam,
             "rapor": cmd_rapor, "soru": cmd_soru, "onayla": cmd_onayla, "aktor": cmd_aktor, "ornek": cmd_ornek,
-            "vaka-ice-aktar": cmd_vaka_ice_aktar}
+            "vaka-ice-aktar": cmd_vaka_ice_aktar, "gdelt": cmd_gdelt}
 
 
 def main(argv=None):

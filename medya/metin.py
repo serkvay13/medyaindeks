@@ -253,3 +253,9 @@ def sayilari_bul(text: str, haric: list[tuple[int, int]] | None = None, sozcukle
                 continue
             out.append(deger)
     return out
+
+
+def sayi_tr(deger, ondalik: int | None = None) -> str:
+    """Türkçe sayı yazımı: binlik ayırıcı nokta, ondalık ayırıcı virgül (1.429 · 3,42)."""
+    s = f"{deger:,}" if ondalik is None else f"{deger:,.{ondalik}f}"
+    return s.replace(",", "\0").replace(".", ",").replace("\0", ".")

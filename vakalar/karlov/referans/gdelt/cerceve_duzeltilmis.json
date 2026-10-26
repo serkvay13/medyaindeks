@@ -1,0 +1,155 @@
+{
+ "n": {
+  "Diğer (yerel/portal)": 2931,
+  "Ana akım": 257,
+  "Hükümete yakın": 322,
+  "Ulusalcı": 111,
+  "Rejim kontrolünde olmayan kaynaklar": 11,
+  "Muhalif / bağımsız": 276,
+  "Haber ajansları": 101,
+  "Yabancı yayınların Türkçe servisleri": 176,
+  "TÜMÜ": 4185
+ },
+ "grup": {
+  "Hükümete yakın": {
+   "Provokasyon": 3,
+   "FETÖ/Gülen": 44,
+   "Halep/Suriye": 4,
+   "ABD/Batı/CIA/NATO": 10,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 3,
+   "Güvenlik açığı/koruma": 4,
+   "Samanyolu dizisi": 4
+  },
+  "TÜMÜ": {
+   "Provokasyon": 17,
+   "ABD/Batı/CIA/NATO": 103,
+   "FETÖ/Gülen": 217,
+   "Halep/Suriye": 51,
+   "Güvenlik açığı/koruma": 37,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 46,
+   "Nurettin Yıldız/Sosyal Doku": 5,
+   "Samanyolu dizisi": 51
+  },
+  "Yabancı yayınların Türkçe servisleri": {
+   "ABD/Batı/CIA/NATO": 11,
+   "Halep/Suriye": 6,
+   "Provokasyon": 2,
+   "FETÖ/Gülen": 6,
+   "Güvenlik açığı/koruma": 2,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 2,
+   "Samanyolu dizisi": 1
+  },
+  "Diğer (yerel/portal)": {
+   "ABD/Batı/CIA/NATO": 70,
+   "Provokasyon": 10,
+   "FETÖ/Gülen": 140,
+   "Güvenlik açığı/koruma": 24,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 26,
+   "Halep/Suriye": 26,
+   "Nurettin Yıldız/Sosyal Doku": 3,
+   "Samanyolu dizisi": 40
+  },
+  "Muhalif / bağımsız": {
+   "ABD/Batı/CIA/NATO": 8,
+   "Güvenlik açığı/koruma": 4,
+   "FETÖ/Gülen": 14,
+   "Halep/Suriye": 8,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 14,
+   "Provokasyon": 1,
+   "Nurettin Yıldız/Sosyal Doku": 2
+  },
+  "Ana akım": {
+   "Halep/Suriye": 5,
+   "FETÖ/Gülen": 5,
+   "Güvenlik açığı/koruma": 1,
+   "ABD/Batı/CIA/NATO": 3,
+   "Samanyolu dizisi": 5
+  },
+  "Haber ajansları": {
+   "Provokasyon": 1,
+   "FETÖ/Gülen": 4,
+   "Halep/Suriye": 1,
+   "ABD/Batı/CIA/NATO": 1,
+   "Samanyolu dizisi": 1
+  },
+  "Ulusalcı": {
+   "FETÖ/Gülen": 4,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 1,
+   "Güvenlik açığı/koruma": 2,
+   "Halep/Suriye": 1
+  }
+ },
+ "gunluk": {
+  "20161219": {
+   "Provokasyon": 4,
+   "ABD/Batı/CIA/NATO": 10,
+   "FETÖ/Gülen": 28,
+   "Halep/Suriye": 3,
+   "Güvenlik açığı/koruma": 3,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 1
+  },
+  "20161220": {
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 4,
+   "Provokasyon": 13,
+   "ABD/Batı/CIA/NATO": 21,
+   "FETÖ/Gülen": 52,
+   "Halep/Suriye": 27,
+   "Güvenlik açığı/koruma": 7
+  },
+  "20161221": {
+   "Halep/Suriye": 8,
+   "FETÖ/Gülen": 45,
+   "ABD/Batı/CIA/NATO": 7,
+   "Güvenlik açığı/koruma": 4,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 33
+  },
+  "20161222": {
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 6,
+   "FETÖ/Gülen": 31,
+   "Güvenlik açığı/koruma": 22,
+   "ABD/Batı/CIA/NATO": 6,
+   "Halep/Suriye": 10
+  },
+  "20161223": {
+   "FETÖ/Gülen": 10,
+   "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": 2,
+   "ABD/Batı/CIA/NATO": 42,
+   "Halep/Suriye": 2
+  },
+  "20161224": {
+   "Halep/Suriye": 1,
+   "ABD/Batı/CIA/NATO": 5,
+   "Nurettin Yıldız/Sosyal Doku": 5,
+   "FETÖ/Gülen": 12
+  },
+  "20161225": {
+   "ABD/Batı/CIA/NATO": 10,
+   "FETÖ/Gülen": 3
+  },
+  "20161226": {
+   "FETÖ/Gülen": 10,
+   "ABD/Batı/CIA/NATO": 1
+  },
+  "20161227": {
+   "FETÖ/Gülen": 11,
+   "Samanyolu dizisi": 39
+  },
+  "20161228": {
+   "Samanyolu dizisi": 12,
+   "FETÖ/Gülen": 9,
+   "ABD/Batı/CIA/NATO": 1
+  },
+  "20170101": {
+   "FETÖ/Gülen": 1
+  },
+  "20170103": {
+   "FETÖ/Gülen": 3
+  },
+  "20170107": {
+   "FETÖ/Gülen": 2
+  },
+  "20170110": {
+   "Güvenlik açığı/koruma": 1
+  }
+ }
+}

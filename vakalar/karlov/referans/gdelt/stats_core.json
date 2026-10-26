@@ -1,0 +1,1378 @@
+{
+ "toplam_kayit": 4185,
+ "tekil_url": 4185,
+ "tekil_site": 211,
+ "turkce_toplam_kayit_pencere": 606455,
+ "gunluk": {
+  "20161217": {
+   "karlov": 0,
+   "tum": 21255,
+   "pay_%": 0.0
+  },
+  "20161218": {
+   "karlov": 0,
+   "tum": 17600,
+   "pay_%": 0.0
+  },
+  "20161219": {
+   "karlov": 933,
+   "tum": 27262,
+   "pay_%": 3.42
+  },
+  "20161220": {
+   "karlov": 1429,
+   "tum": 27564,
+   "pay_%": 5.18
+  },
+  "20161221": {
+   "karlov": 465,
+   "tum": 27670,
+   "pay_%": 1.68
+  },
+  "20161222": {
+   "karlov": 449,
+   "tum": 27123,
+   "pay_%": 1.66
+  },
+  "20161223": {
+   "karlov": 167,
+   "tum": 25107,
+   "pay_%": 0.67
+  },
+  "20161224": {
+   "karlov": 157,
+   "tum": 18892,
+   "pay_%": 0.83
+  },
+  "20161225": {
+   "karlov": 61,
+   "tum": 16724,
+   "pay_%": 0.36
+  },
+  "20161226": {
+   "karlov": 88,
+   "tum": 25551,
+   "pay_%": 0.34
+  },
+  "20161227": {
+   "karlov": 77,
+   "tum": 26704,
+   "pay_%": 0.29
+  },
+  "20161228": {
+   "karlov": 49,
+   "tum": 26965,
+   "pay_%": 0.18
+  },
+  "20161229": {
+   "karlov": 14,
+   "tum": 28339,
+   "pay_%": 0.05
+  },
+  "20161230": {
+   "karlov": 9,
+   "tum": 26436,
+   "pay_%": 0.03
+  },
+  "20161231": {
+   "karlov": 7,
+   "tum": 19782,
+   "pay_%": 0.04
+  },
+  "20170101": {
+   "karlov": 15,
+   "tum": 17232,
+   "pay_%": 0.09
+  },
+  "20170102": {
+   "karlov": 2,
+   "tum": 24867,
+   "pay_%": 0.01
+  },
+  "20170103": {
+   "karlov": 75,
+   "tum": 26393,
+   "pay_%": 0.28
+  },
+  "20170104": {
+   "karlov": 21,
+   "tum": 26847,
+   "pay_%": 0.08
+  },
+  "20170105": {
+   "karlov": 7,
+   "tum": 27157,
+   "pay_%": 0.03
+  },
+  "20170106": {
+   "karlov": 2,
+   "tum": 27789,
+   "pay_%": 0.01
+  },
+  "20170107": {
+   "karlov": 53,
+   "tum": 20391,
+   "pay_%": 0.26
+  },
+  "20170108": {
+   "karlov": 2,
+   "tum": 17555,
+   "pay_%": 0.01
+  },
+  "20170109": {
+   "karlov": 52,
+   "tum": 27733,
+   "pay_%": 0.19
+  },
+  "20170110": {
+   "karlov": 51,
+   "tum": 27517,
+   "pay_%": 0.19
+  }
+ },
+ "saatlik_utc_19_20": {
+  "2016121916": 19,
+  "2016121917": 113,
+  "2016121918": 128,
+  "2016121919": 186,
+  "2016121920": 142,
+  "2016121921": 168,
+  "2016121922": 113,
+  "2016121923": 64,
+  "2016122000": 40,
+  "2016122001": 14,
+  "2016122002": 14,
+  "2016122003": 5,
+  "2016122004": 8,
+  "2016122005": 32,
+  "2016122006": 49,
+  "2016122007": 86,
+  "2016122008": 78,
+  "2016122009": 152,
+  "2016122010": 149,
+  "2016122011": 111,
+  "2016122012": 93,
+  "2016122013": 102,
+  "2016122014": 89,
+  "2016122015": 107,
+  "2016122016": 59,
+  "2016122017": 43,
+  "2016122018": 38,
+  "2016122019": 43,
+  "2016122020": 45,
+  "2016122021": 37,
+  "2016122022": 21,
+  "2016122023": 14
+ },
+ "ilk_30": [
+  [
+   "20161219163000",
+   "ensonhaber.com",
+   "http://www.ensonhaber.com/rus-buyukelcisine-silahli-saldiri-2016-12-19.html"
+  ],
+  [
+   "20161219163000",
+   "haberler.com",
+   "http://www.haberler.com/son-dakika-rusya-buyukelcisi-ankara-da-silahli-9079433-haberi/"
+  ],
+  [
+   "20161219163000",
+   "hurriyet.com.tr",
+   "http://www.hurriyet.com.tr/son-dakika-rusya-buyukelcisi-ankarada-silahli-suikasta-ugradi-40311678"
+  ],
+  [
+   "20161219164500",
+   "haber7.com",
+   "http://www.haber7.com/guncel/haber/2235925-ankarada-rus-buyukelciye-silahli-saldiri"
+  ],
+  [
+   "20161219164500",
+   "haber3.com",
+   "http://www.haber3.com/rusya-buyukelcisine-ankarada-silahli-saldiri-3998353h.htm"
+  ],
+  [
+   "20161219164500",
+   "sozcu.com.tr",
+   "http://www.sozcu.com.tr/2016/dunya/rus-buyukelciyi-vuran-saldirgan-halen-iceride-1575188/"
+  ],
+  [
+   "20161219164500",
+   "haberler.com",
+   "http://www.haberler.com/rusya-nin-ankara-buyukelcisi-andrey-karlov-ankara-9079447-haberi/"
+  ],
+  [
+   "20161219164500",
+   "star.com.tr",
+   "http://www.star.com.tr/guncel/rusya-buyukelcisine-ankarada-silahli-saldiri-haber-1168883/"
+  ],
+  [
+   "20161219164500",
+   "dunya.com",
+   "http://www.dunya.com/gundem/rusyanin-ankara-buyukelcisine-silahli-saldiri-haberi-342391"
+  ],
+  [
+   "20161219164500",
+   "aktifhaber.com",
+   "http://aktifhaber.com/gundem/rus-buyukelcisine-silahli-saldiri-h86954.html"
+  ],
+  [
+   "20161219164500",
+   "haberturk.com",
+   "http://www.haberturk.com/yerel-haberler/haber/10409570-rusyanin-ankara-buyukelcisi-andrey-karlov-ankarada-katildigi-bir-sergide-silahli-sald"
+  ],
+  [
+   "20161219164500",
+   "takvim.com.tr",
+   "http://www.takvim.com.tr/guncel/2016/12/19/rus-buyukelcisine-silahli-saldiri"
+  ],
+  [
+   "20161219164500",
+   "yeniakit.com.tr",
+   "http://www.yeniakit.com.tr/haber/catisma-devam-ediyor-rus-buyukelci-ile-ilgili-ilk-goruntu-247587.html"
+  ],
+  [
+   "20161219164500",
+   "beyazgazete.com",
+   "http://beyazgazete.com/haber/2016/12/19/rusya-buyukelcisi-ankara-da-silahli-suikasta-ugradi-3624860.html"
+  ],
+  [
+   "20161219164500",
+   "yenialanya.com",
+   "http://www.yenialanya.com/turkiye/rusya-buyukelcisi-ankarada-silahli-suikasta-ugradi-h213646.html"
+  ],
+  [
+   "20161219164500",
+   "yeniakit.com.tr",
+   "http://www.yeniakit.com.tr/haber/ankarada-rus-buyukelciye-silahli-saldiri-247581.html"
+  ],
+  [
+   "20161219164500",
+   "medyafaresi.com",
+   "http://www.medyafaresi.com/haber/son-dakika-rusya-buyukelcisi-ankarada-silahli-suikasta-ugradi/800280"
+  ],
+  [
+   "20161219164500",
+   "yenicaggazetesi.com.tr",
+   "http://www.yenicaggazetesi.com.tr/ankarada-rus-buyukelci-suikasta-ugradi-153185h.htm"
+  ],
+  [
+   "20161219164500",
+   "haber10.com",
+   "http://www.haber10.com/guncel/rusya_buyukelcisi_ne_ankara_da_silahli_saldiri-676541"
+  ],
+  [
+   "20161219170000",
+   "haberler.com",
+   "http://www.haberler.com/rusya-nin-ankara-buyukelcisi-karlov-silahli-9079467-haberi/"
+  ],
+  [
+   "20161219170000",
+   "nationalturk.com",
+   "http://www.nationalturk.com/son-dakika-rus-buyukelci-ankarada-silahli-saldiriya-ugradi/"
+  ],
+  [
+   "20161219170000",
+   "star.com.tr",
+   "http://www.star.com.tr/guncel/son-dakika-rusya-buyukelcisi-suikasti-andrey-karlov-kimdir-haber-1168888/"
+  ],
+  [
+   "20161219170000",
+   "posta.com.tr",
+   "http://www.posta.com.tr/rusya-nin-ankara-buyukelcisi-andrey-gennadiyevic-karlov-ankara-da-silahli-saldiriya-ugradi-haberi-1250589"
+  ],
+  [
+   "20161219170000",
+   "bursadabugun.com",
+   "http://www.bursadabugun.com/haber/rusya-buyukelcisi-ankara-da-silahli-suikasta-ugradi-772211.html"
+  ],
+  [
+   "20161219170000",
+   "risalehaber.com",
+   "http://www.risalehaber.com/rusya-buyukelcisine-suikast-rusya-buyukelcisi-oldu-mu-291438h.htm"
+  ],
+  [
+   "20161219170000",
+   "shaber3.com",
+   "http://www.shaber3.com/rusya-buyukelcisi-ankara-da-silahli-suikasta-ugradi-haberi/1278068/"
+  ],
+  [
+   "20161219170000",
+   "yenisafak.com",
+   "http://www.yenisafak.com/gundem/rusyanin-ankara-buyukelcisine-silahli-saldiri-2583312"
+  ],
+  [
+   "20161219170000",
+   "yeniasir.com.tr",
+   "http://www.yeniasir.com.tr/gundem/2016/12/19/rusyanin-ankara-buyukelcisi-silahli-saldiriya-ugradi"
+  ],
+  [
+   "20161219170000",
+   "odatv.com",
+   "http://odatv.com/saldiriya-ugrayan-buyukelci-son-roportajinda-ne-demisti-1912161200.html"
+  ],
+  [
+   "20161219170000",
+   "odatv.com",
+   "http://odatv.com/rusya-buyukelcisine-saldiri-1912161200.html"
+  ]
+ ],
+ "site_top40": [
+  [
+   "haberler.com",
+   338
+  ],
+  [
+   "sputniknews.com",
+   172
+  ],
+  [
+   "konhaber.com",
+   108
+  ],
+  [
+   "cumhuriyet.com.tr",
+   103
+  ],
+  [
+   "memleket.com.tr",
+   97
+  ],
+  [
+   "star.com.tr",
+   89
+  ],
+  [
+   "aydinses.com",
+   85
+  ],
+  [
+   "t24.com.tr",
+   84
+  ],
+  [
+   "ulusalkanal.com.tr",
+   75
+  ],
+  [
+   "timeturk.com",
+   74
+  ],
+  [
+   "yeniakit.com.tr",
+   71
+  ],
+  [
+   "haberx.com",
+   69
+  ],
+  [
+   "beyazgazete.com",
+   66
+  ],
+  [
+   "f5haber.com",
+   62
+  ],
+  [
+   "sozcu.com.tr",
+   57
+  ],
+  [
+   "bursadabugun.com",
+   56
+  ],
+  [
+   "mavikocaeli.com.tr",
+   56
+  ],
+  [
+   "sondakika.com",
+   55
+  ],
+  [
+   "yenisafak.com",
+   54
+  ],
+  [
+   "mynet.com",
+   52
+  ],
+  [
+   "gunes.com",
+   49
+  ],
+  [
+   "haber7.com",
+   48
+  ],
+  [
+   "haberturk.com",
+   48
+  ],
+  [
+   "aa.com.tr",
+   48
+  ],
+  [
+   "dunyabulteni.net",
+   47
+  ],
+  [
+   "posta.com.tr",
+   44
+  ],
+  [
+   "birgun.net",
+   44
+  ],
+  [
+   "gazetevatan.com",
+   44
+  ],
+  [
+   "medyafaresi.com",
+   42
+  ],
+  [
+   "cnnturk.com",
+   42
+  ],
+  [
+   "haber10.com",
+   40
+  ],
+  [
+   "aksam.com.tr",
+   39
+  ],
+  [
+   "ogunhaber.com",
+   39
+  ],
+  [
+   "sabah.com.tr",
+   39
+  ],
+  [
+   "cagdasses.com",
+   38
+  ],
+  [
+   "haberdar.com",
+   36
+  ],
+  [
+   "evrensel.net",
+   36
+  ],
+  [
+   "haber3.com",
+   35
+  ],
+  [
+   "ensonhaber.com",
+   34
+  ],
+  [
+   "hurriyet.com.tr",
+   34
+  ]
+ ],
+ "grup": {
+  "Diğer": 2931,
+  "Ana akım": 257,
+  "Hükümete yakın": 322,
+  "Ulusalcı": 111,
+  "Rejim kontrolünde olmayan kaynaklar": 11,
+  "Muhalif / bağımsız": 276,
+  "Haber ajansları": 101,
+  "Yabancı yayınların Türkçe servisleri": 176
+ },
+ "izlenen_yayin_ilk_haber_utc": {
+  "hurriyet.com.tr": "20161219163000",
+  "sozcu.com.tr": "20161219164500",
+  "star.com.tr": "20161219164500",
+  "haberturk.com": "20161219164500",
+  "yeniakit.com.tr": "20161219164500",
+  "yenicaggazetesi.com.tr": "20161219164500",
+  "shaber3.com": "20161219170000",
+  "yenisafak.com": "20161219170000",
+  "odatv.com": "20161219170000",
+  "t24.com.tr": "20161219170000",
+  "birgun.net": "20161219170000",
+  "aksam.com.tr": "20161219171500",
+  "aa.com.tr": "20161219171500",
+  "cumhuriyet.com.tr": "20161219171500",
+  "cnnturk.com": "20161219173000",
+  "dha.com.tr": "20161219173000",
+  "ntv.com.tr": "20161219174500",
+  "ulusalkanal.com.tr": "20161219174500",
+  "iha.com.tr": "20161219174500",
+  "sabah.com.tr": "20161219174500",
+  "ahaber.com.tr": "20161219180000",
+  "trthaber.com": "20161219180000",
+  "dw.com": "20161219181500",
+  "sputniknews.com": "20161219183000",
+  "evrensel.net": "20161219190000",
+  "milliyet.com.tr": "20161219193000",
+  "bianet.org": "20161219203000",
+  "karar.com": "20161220024500",
+  "diken.com.tr": "20161221173000"
+ },
+ "izlenen_yayin_sayi": {
+  "aa.com.tr": 48,
+  "dha.com.tr": 29,
+  "iha.com.tr": 24,
+  "hurriyet.com.tr": 34,
+  "milliyet.com.tr": 31,
+  "haberturk.com": 48,
+  "ntv.com.tr": 20,
+  "cnnturk.com": 42,
+  "trthaber.com": 25,
+  "sozcu.com.tr": 57,
+  "sabah.com.tr": 39,
+  "yenisafak.com": 54,
+  "star.com.tr": 89,
+  "aksam.com.tr": 39,
+  "ahaber.com.tr": 30,
+  "yeniakit.com.tr": 71,
+  "cumhuriyet.com.tr": 103,
+  "birgun.net": 44,
+  "evrensel.net": 36,
+  "t24.com.tr": 84,
+  "diken.com.tr": 1,
+  "bianet.org": 7,
+  "karar.com": 1,
+  "ulusalkanal.com.tr": 75,
+  "odatv.com": 22,
+  "yenicaggazetesi.com.tr": 14,
+  "shaber3.com": 11,
+  "dw.com": 4,
+  "sputniknews.com": 172
+ },
+ "ton_grup": {
+  "Diğer": [
+   -3.3,
+   -3.21,
+   2931
+  ],
+  "Ana akım": [
+   -2.47,
+   -2.27,
+   257
+  ],
+  "Hükümete yakın": [
+   -3.31,
+   -2.7,
+   322
+  ],
+  "Ulusalcı": [
+   -2.64,
+   -2.51,
+   111
+  ],
+  "Rejim kontrolünde olmayan kaynaklar": [
+   -2.74,
+   -0.49,
+   11
+  ],
+  "Muhalif / bağımsız": [
+   -2.71,
+   -2.17,
+   276
+  ],
+  "Haber ajansları": [
+   -1.35,
+   -1.37,
+   101
+  ],
+  "Yabancı yayınların Türkçe servisleri": [
+   -3.78,
+   -3.49,
+   176
+  ]
+ },
+ "ton_tum": -3.16,
+ "cerceve_url_tum": {
+  "El Nusra/cihatçı/IŞİD": 101,
+  "Yayın yasağı": 32,
+  "Rusya-ilişki/Putin": 328,
+  "Provokasyon": 17,
+  "ABD/Batı/CIA": 163,
+  "Polis/çevik kuvvet": 164,
+  "FETÖ/Gülen": 217,
+  "Şehit/terör (genel)": 51,
+  "Halep/Suriye": 51,
+  "Güvenlik açığı/koruma": 37,
+  "Nurettin Yıldız/Sosyal Doku": 2
+ },
+ "cerceve_url_grup": {
+  "Diğer": {
+   "Rusya-ilişki/Putin": 204,
+   "El Nusra/cihatçı/IŞİD": 58,
+   "Yayın yasağı": 20,
+   "ABD/Batı/CIA": 111,
+   "Polis/çevik kuvvet": 108,
+   "Şehit/terör (genel)": 34,
+   "Provokasyon": 10,
+   "FETÖ/Gülen": 140,
+   "Güvenlik açığı/koruma": 24,
+   "Halep/Suriye": 26,
+   "_n": 2931
+  },
+  "Ana akım": {
+   "Yayın yasağı": 4,
+   "Rusya-ilişki/Putin": 23,
+   "ABD/Batı/CIA": 9,
+   "Polis/çevik kuvvet": 6,
+   "Halep/Suriye": 5,
+   "FETÖ/Gülen": 5,
+   "El Nusra/cihatçı/IŞİD": 3,
+   "Şehit/terör (genel)": 3,
+   "Güvenlik açığı/koruma": 1,
+   "_n": 257
+  },
+  "Hükümete yakın": {
+   "El Nusra/cihatçı/IŞİD": 9,
+   "Provokasyon": 3,
+   "FETÖ/Gülen": 44,
+   "ABD/Batı/CIA": 15,
+   "Polis/çevik kuvvet": 14,
+   "Rusya-ilişki/Putin": 24,
+   "Halep/Suriye": 4,
+   "Şehit/terör (genel)": 6,
+   "Güvenlik açığı/koruma": 4,
+   "Yayın yasağı": 2,
+   "_n": 322
+  },
+  "Ulusalcı": {
+   "Yayın yasağı": 3,
+   "Rusya-ilişki/Putin": 14,
+   "El Nusra/cihatçı/IŞİD": 4,
+   "FETÖ/Gülen": 4,
+   "ABD/Batı/CIA": 1,
+   "Güvenlik açığı/koruma": 2,
+   "Polis/çevik kuvvet": 1,
+   "Halep/Suriye": 1,
+   "Şehit/terör (genel)": 1,
+   "_n": 111
+  },
+  "Rejim kontrolünde olmayan kaynaklar": {
+   "Polis/çevik kuvvet": 3,
+   "Rusya-ilişki/Putin": 1,
+   "Yayın yasağı": 1,
+   "_n": 11
+  },
+  "Muhalif / bağımsız": {
+   "Polis/çevik kuvvet": 28,
+   "ABD/Batı/CIA": 13,
+   "El Nusra/cihatçı/IŞİD": 18,
+   "Rusya-ilişki/Putin": 40,
+   "Güvenlik açığı/koruma": 4,
+   "FETÖ/Gülen": 14,
+   "Halep/Suriye": 8,
+   "Provokasyon": 1,
+   "Şehit/terör (genel)": 1,
+   "Nurettin Yıldız/Sosyal Doku": 2,
+   "Yayın yasağı": 1,
+   "_n": 276
+  },
+  "Haber ajansları": {
+   "Rusya-ilişki/Putin": 10,
+   "Provokasyon": 1,
+   "FETÖ/Gülen": 4,
+   "Polis/çevik kuvvet": 2,
+   "El Nusra/cihatçı/IŞİD": 3,
+   "ABD/Batı/CIA": 2,
+   "Şehit/terör (genel)": 1,
+   "Halep/Suriye": 1,
+   "Yayın yasağı": 1,
+   "_n": 101
+  },
+  "Yabancı yayınların Türkçe servisleri": {
+   "ABD/Batı/CIA": 12,
+   "El Nusra/cihatçı/IŞİD": 6,
+   "Halep/Suriye": 6,
+   "Rusya-ilişki/Putin": 12,
+   "Provokasyon": 2,
+   "FETÖ/Gülen": 6,
+   "Şehit/terör (genel)": 5,
+   "Güvenlik açığı/koruma": 2,
+   "Polis/çevik kuvvet": 2,
+   "_n": 176
+  }
+ },
+ "cerceve_gunluk": {
+  "20161219": {
+   "n": 933,
+   "FETÖ": 28,
+   "cihat": 22,
+   "Halep": 3
+  },
+  "20161220": {
+   "n": 1429,
+   "FETÖ": 52,
+   "cihat": 25,
+   "Halep": 27
+  },
+  "20161221": {
+   "n": 465,
+   "FETÖ": 45,
+   "cihat": 36,
+   "Halep": 8
+  },
+  "20161222": {
+   "n": 449,
+   "FETÖ": 31,
+   "cihat": 14,
+   "Halep": 10
+  },
+  "20161223": {
+   "n": 167,
+   "FETÖ": 10,
+   "cihat": 2,
+   "Halep": 2
+  },
+  "20161224": {
+   "n": 157,
+   "FETÖ": 12,
+   "cihat": 2,
+   "Halep": 1
+  },
+  "20161225": {
+   "n": 61,
+   "FETÖ": 3,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161226": {
+   "n": 88,
+   "FETÖ": 10,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161227": {
+   "n": 77,
+   "FETÖ": 11,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161228": {
+   "n": 49,
+   "FETÖ": 9,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161229": {
+   "n": 14,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161230": {
+   "n": 9,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20161231": {
+   "n": 7,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170101": {
+   "n": 15,
+   "FETÖ": 1,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170102": {
+   "n": 2,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170103": {
+   "n": 75,
+   "FETÖ": 3,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170104": {
+   "n": 21,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170105": {
+   "n": 7,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170106": {
+   "n": 2,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170107": {
+   "n": 53,
+   "FETÖ": 2,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170108": {
+   "n": 2,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170109": {
+   "n": 52,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  },
+  "20170110": {
+   "n": 51,
+   "FETÖ": 0,
+   "cihat": 0,
+   "Halep": 0
+  }
+ },
+ "ilk_cerceve": {
+  "FETÖ/Gülen": [
+   "20161219190000",
+   "star.com.tr",
+   "http://www.star.com.tr/guncel/rus-ajansi-fetonun-suikasti-olabilir-haber-1168919/"
+  ],
+  "El Nusra/cihatçı/IŞİD": [
+   "20161219171500",
+   "yenisafak.com",
+   "http://www.yenisafak.com/gundem/rus-disislerinden-buyukelciye-saldiriyla-ilgili-ilk-aciklama-2583326"
+  ],
+  "Nurettin Yıldız/Sosyal Doku": [
+   "20161224100000",
+   "cumhuriyet.com.tr",
+   "http://www.cumhuriyet.com.tr/haber/turkiye/650076/Karlov_un_katili___6_yasindaki_cocukla_evlenilebilir__diyen_AKP_egitimcisi_Nurettin_Yildiz_in_sohbetlerine_kat"
+  ],
+  "Provokasyon": [
+   "20161219174500",
+   "sabah.com.tr",
+   "http://www.sabah.com.tr/gundem/2016/12/19/son-dakika-baskentte-cirkin-provokasyon-rusya-buyukelcisine-saldiri"
+  ]
+ },
+ "adlar_top40": [
+  [
+   "Russia'S Ambassador Andrey",
+   1239
+  ],
+  [
+   "Religious Ceremonies Manly",
+   743
+  ],
+  [
+   "Russia'S Ambassador Andrey Karlov",
+   587
+  ],
+  [
+   "Ambassador Andrey Karlov",
+   567
+  ],
+  [
+   "Ambassador Andrey",
+   544
+  ],
+  [
+   "Ambassador Karlov",
+   529
+  ],
+  [
+   "Andrey Karlov",
+   516
+  ],
+  [
+   "Religious Ceremonies Manly Altintas",
+   497
+  ],
+  [
+   "Internal Affairs Minister Solomon Noble",
+   351
+  ],
+  [
+   "Contemporary Arts In The Center",
+   348
+  ],
+  [
+   "Cankaya Municipality",
+   326
+  ],
+  [
+   "Foreign Minister Religious Ceremonies",
+   260
+  ],
+  [
+   "Russia'S Ambassador",
+   259
+  ],
+  [
+   "Russia'S Andrey",
+   254
+  ],
+  [
+   "From Belarus",
+   251
+  ],
+  [
+   "Belarus Chief Of State",
+   251
+  ],
+  [
+   "Turkey Belarus",
+   225
+  ],
+  [
+   "United States",
+   210
+  ],
+  [
+   "President Erdogan",
+   209
+  ],
+  [
+   "Foreign Ministries",
+   193
+  ],
+  [
+   "Mobile The Eye Belarus",
+   192
+  ],
+  [
+   "Prime Minister Lightning",
+   180
+  ],
+  [
+   "Belarus Foreign Minister Lavrov",
+   177
+  ],
+  [
+   "Contemporary Arts Center",
+   173
+  ],
+  [
+   "Legal Warning",
+   171
+  ],
+  [
+   "President Recep Tayyip Erdogan",
+   169
+  ],
+  [
+   "Esenboga At The Airport",
+   169
+  ],
+  [
+   "Belarus Ambassador Andrey",
+   167
+  ],
+  [
+   "Belarus Ambassador Andrey Karlov",
+   161
+  ],
+  [
+   "Prime Minister Assistant",
+   156
+  ],
+  [
+   "Russia'S Embassy",
+   154
+  ],
+  [
+   "Middle East",
+   153
+  ],
+  [
+   "Russia'S Andrey Karlov",
+   152
+  ],
+  [
+   "Russia'S Ambassador Karlov",
+   150
+  ],
+  [
+   "Belarus Chief Of State Putin",
+   144
+  ],
+  [
+   "Intellectuals Soke",
+   141
+  ],
+  [
+   "Trust Hospital",
+   131
+  ],
+  [
+   "Prime Minister",
+   131
+  ],
+  [
+   "Belarus Foreign The Ministry",
+   130
+  ],
+  [
+   "Foreign The Ministry",
+   129
+  ]
+ ],
+ "tema_top30": [
+  [
+   "TAX_FNCACT",
+   3923
+  ],
+  [
+   "TAX_FNCACT_AMBASSADOR",
+   3419
+  ],
+  [
+   "TAX_WORLDLANGUAGES",
+   3035
+  ],
+  [
+   "CRISISLEX_CRISISLEXREC",
+   2947
+  ],
+  [
+   "TAX_WORLDLANGUAGES_RUSSIAS",
+   2642
+  ],
+  [
+   "KILL",
+   2139
+  ],
+  [
+   "CRISISLEX_C07_SAFETY",
+   2080
+  ],
+  [
+   "WB_2432_FRAGILITY_CONFLICT_AND_VIOLENCE",
+   2005
+  ],
+  [
+   "TERROR",
+   1967
+  ],
+  [
+   "UNGP_CRIME_VIOLENCE",
+   1885
+  ],
+  [
+   "WB_2433_CONFLICT_AND_VIOLENCE",
+   1869
+  ],
+  [
+   "EPU_CATS_NATIONAL_SECURITY",
+   1699
+  ],
+  [
+   "TAX_FNCACT_POLICE",
+   1674
+  ],
+  [
+   "SECURITY_SERVICES",
+   1673
+  ],
+  [
+   "WB_2462_POLITICAL_VIOLENCE_AND_WAR",
+   1590
+  ],
+  [
+   "WB_2467_TERRORISM",
+   1548
+  ],
+  [
+   "RELIGION",
+   1484
+  ],
+  [
+   "LEADER",
+   1455
+  ],
+  [
+   "EPU_POLICY",
+   1407
+  ],
+  [
+   "CRISISLEX_T03_DEAD",
+   1404
+  ],
+  [
+   "WB_696_PUBLIC_SECTOR_MANAGEMENT",
+   1383
+  ],
+  [
+   "MEDIA_MSM",
+   1312
+  ],
+  [
+   "SOC_GENERALCRIME",
+   1308
+  ],
+  [
+   "TAX_WORLDLANGUAGES_RUSSIA",
+   1277
+  ],
+  [
+   "ARMEDCONFLICT",
+   1272
+  ],
+  [
+   "WB_840_JUSTICE",
+   1270
+  ],
+  [
+   "TAX_FNCACT_MINISTER",
+   1189
+  ],
+  [
+   "GENERAL_GOVERNMENT",
+   1150
+  ],
+  [
+   "USPEC_POLITICS_GENERAL1",
+   1110
+  ],
+  [
+   "UNGP_FORESTS_RIVERS_OCEANS",
+   1108
+  ]
+ ],
+ "ort_kelime": 310.0,
+ "ayni_slug_cok_site": [
+  [
+   8,
+   "rus-buyukelci-karlovun-naasi-moskovaya-getirildi",
+   [
+    "aa.com.tr",
+    "gazeteuzay.com",
+    "hurriyet.com.tr",
+    "kanalahaber.com",
+    "mynet.com",
+    "ogunhaber.com",
+    "pusulahaber.com.tr",
+    "sabah.com.tr"
+   ]
+  ],
+  [
+   8,
+   "buyukelciligin-bulundugu-sokaga",
+   [
+    "beyazgazete.com",
+    "haber46.com",
+    "haber50.com",
+    "haberler.com",
+    "mansethaber.com.tr",
+    "pusulahaber.com.tr",
+    "star.com.tr",
+    "ulusalkanal.com.tr"
+   ]
+  ],
+  [
+   6,
+   "rus-buyukelci-karlov-torenle-ugurlandi",
+   [
+    "aydinses.com",
+    "dha.com.tr",
+    "haberler.com",
+    "sozcu.com.tr",
+    "yeniasya.com.tr",
+    "yenisafak.com"
+   ]
+  ],
+  [
+   5,
+   "suikastci-mevlut-mert-altintas",
+   [
+    "bursadabugun.com",
+    "cnnturk.com",
+    "habervitrini.com",
+    "sabah.com.tr",
+    "yenialanya.com"
+   ]
+  ],
+  [
+   5,
+   "rusyanin-ankara-buyukelcisine-silahli-saldiri",
+   [
+    "cagdasses.com",
+    "ilkehaber.com",
+    "pusulahaber.com.tr",
+    "yenimeram.com.tr",
+    "yenisafak.com"
+   ]
+  ],
+  [
+   5,
+   "rus-elci-karlov-suikastinda",
+   [
+    "aydinses.com",
+    "dha.com.tr",
+    "haberler.com",
+    "hurriyet.com.tr",
+    "sozcu.com.tr"
+   ]
+  ],
+  [
+   5,
+   "rus-buyukelci-karlovun-silahli-saldiri-sonucu-oldurulmesi",
+   [
+    "dunyabulteni.net",
+    "mansethaber.com.tr",
+    "memleket.com.tr",
+    "sabah.com.tr",
+    "trthaber.com"
+   ]
+  ],
+  [
+   5,
+   "rus-buyukelci-karlova-suikast-samanyolu-tvde-islenmis",
+   [
+    "avrupabulteni.com",
+    "haberflash.com",
+    "malatyaguncel.com",
+    "mynet.com",
+    "sabah.com.tr"
+   ]
+  ],
+  [
+   5,
+   "rus-buyukelci-karlov-devlet-toreniyle-ugurlanacak",
+   [
+    "dunyabulteni.net",
+    "gazetevatan.com",
+    "ogunhaber.com",
+    "pusulahaber.com.tr",
+    "trthaber.com"
+   ]
+  ],
+  [
+   5,
+   "karlov-turk-rus-dostlugunun-ebedi-sembolu-olmustur",
+   [
+    "beyazgazete.com",
+    "bursadabugun.com",
+    "marasgundem.com",
+    "medyatrabzon.com",
+    "ogunhaber.com"
+   ]
+  ],
+  [
+   5,
+   "is-dunyasindan-suikaste-tepkiler",
+   [
+    "aydinses.com",
+    "dha.com.tr",
+    "haber1.com",
+    "haberler.com",
+    "objektifhaber.com"
+   ]
+  ],
+  [
+   5,
+   "dis-basinda-karlov-suikasti",
+   [
+    "bursadabugun.com",
+    "gazeteuzay.com",
+    "haberler.com",
+    "memleket.com.tr",
+    "pusulahaber.com.tr"
+   ]
+  ],
+  [
+   5,
+   "buyukelci-suikastiyla-ilgili",
+   [
+    "egehaber.com",
+    "ensonhaber.com",
+    "haber46.com",
+    "haberler.com",
+    "malatyaguncel.com"
+   ]
+  ],
+  [
+   5,
+   "buyukelci-karlov-ugurlaniyor",
+   [
+    "avrupabulteni.com",
+    "beyazgazete.com",
+    "haberler.com",
+    "marasgundem.com",
+    "medyatrabzon.com"
+   ]
+  ],
+  [
+   5,
+   "basbakan-yildirimdan-rus-buyukelciye-suikast-aciklamasi",
+   [
+    "avrupabulteni.com",
+    "haberflash.com",
+    "malatyaguncel.com",
+    "medyatrabzon.com",
+    "yuksekovahaber.com.tr"
+   ]
+  ],
+  [
+   5,
+   "abdullah-gul-hedef-karlov-degil-turkiye-rusya-iliskileridir",
+   [
+    "avrupabulteni.com",
+    "haberflash.com",
+    "habervitrini.com",
+    "malatyaguncel.com",
+    "yuksekovahaber.com.tr"
+   ]
+  ],
+  [
+   5,
+   "abd-buyukelcisi-bass-suclamalari-reddediyoruz",
+   [
+    "bursadabugun.com",
+    "gunes.com",
+    "haber3.com",
+    "hurriyet.com.tr",
+    "yeniasya.com.tr"
+   ]
+  ],
+  [
+   4,
+   "suikast-gecesi-putin-icin-ilginc-tesaduf",
+   [
+    "ahaber.com.tr",
+    "gazetevatan.com",
+    "habervitrini.com",
+    "yenisafak.com"
+   ]
+  ],
+  [
+   4,
+   "rusyanin-ankara-buyukelcisi-karlova-silahli-saldiri",
+   [
+    "avrupabulteni.com",
+    "haberflash.com",
+    "malatyaguncel.com",
+    "trthaber.com"
+   ]
+  ],
+  [
+   4,
+   "rusya-maci-oncesi-karlov-icin-saygi-durusu",
+   [
+    "avrupabulteni.com",
+    "haberflash.com",
+    "haberler.com",
+    "malatyaguncel.com"
+   ]
+  ]
+ ]
+}

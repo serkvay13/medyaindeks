@@ -1,0 +1,55 @@
+# Karlov vakası GDELT sorgusu (medya.gdelt). Ham veri depoda yoktur: MEDYA_GDELT_HAM ortam değişkeni ya da
+# varsayılan data/gdelt/karlov/tr (git dışı). Yeniden indirme: python -m medya gdelt indir karlov
+baslangic: "2016-12-17"
+bitis: "2017-01-10"
+akis: translation
+dil: tur
+# Referans veri yalnızca srclc:tur süzgeciyle indirildi; aynı sayıları üretmek için alan adı süzgeci kapalı.
+alan_soneki: null
+ham_veri: data/gdelt/karlov/tr
+saat_farki: 3                 # TSİ = UTC + 3 (Aralık 2016)
+yerel_saat_adi: TSİ
+
+ad_kalibi: "karlov|karlof|карлов"                                   # geniş küme: ad alanları
+url_kalibi: "karlov|b[uü]y[uü]kel[cç]i|suikast|alt[iı]nta[sş]|mevl[uü]t"   # çekirdek küme: URL
+
+# Kanonik çerçeve sözlüğü: Türkçe katlanmış, URL '-' ile tokenlenmiş, kalıp başında '-' (sözcük başı sınırı).
+cerceveler:
+  "FETÖ/Gülen": "-(feto|fetonun|fetoye|fetocu|gulen|gulenden|gulenin|fethullah|fetullah|paralel)"
+  "Cihatçı (Nusra/El Kaide/IŞİD/cihat)": "-(nusra|el-kaide|kaide|cihat|cihatci|cihad|isid|isidin|deas|daes|isis|fetih|selefi|radikal|ceysul)"
+  "Halep/Suriye": "-(halep|halepi|haleb|suriye|suriyeyi)"
+  "Provokasyon": "-provokasyon"
+  "Güvenlik açığı/koruma": "-(korumasi|korumasiz|koruma|zafiyet|zaafiyet|ihmal)"
+  "ABD/Batı/CIA/NATO": "-(abd|abdnin|cia|nato|bati|amerika|amerikan)-"
+  "Samanyolu dizisi": "-samanyolu"
+  "Nurettin Yıldız/Sosyal Doku": "-(nurettin|nureddin|sosyal-doku)"
+cerceve_diger_etiketi: "Diğer (yerel/portal)"
+
+# Çerçeve tablosu: sütun başlıkları (sıra sözlük sırası) ve satır sırası; oran sütunu iki çerçeve arasında
+cerceve_tablosu:
+  basliklar: ["FETÖ/ Gülen", "Cihatçı", "Halep/ Suriye", "ABD/ Batı", "Provo- kasyon", "Güvenlik açığı", "Samanyolu dizisi", "N. Yıldız/ Sosyal Doku"]
+  sutunlar: ["FETÖ/Gülen", "Cihatçı (Nusra/El Kaide/IŞİD/cihat)", "Halep/Suriye", "ABD/Batı/CIA/NATO", "Provokasyon", "Güvenlik açığı/koruma", "Samanyolu dizisi", "Nurettin Yıldız/Sosyal Doku"]
+  satirlar: ["Hükümete yakın", "Muhalif / bağımsız", "Ana akım", "Yabancı yayınların Türkçe servisleri", "Ulusalcı", "Haber ajansları", "Rejim kontrolünde olmayan kaynaklar", "Diğer (yerel/portal)", "TÜMÜ"]
+  oran: ["FETÖ/Gülen", "Cihatçı (Nusra/El Kaide/IŞİD/cihat)"]
+  oran_basligi: "FETÖ : cihatçı"
+  oran_sifir_notu: "cihatçı 0"
+
+# Manipülasyon göstergeleri (medya.gdelt.gostergeler)
+gostergeler:
+  sessizlik: {asgari_toplam: 5, asgari_grup: 50, esik_oran: 0.25}
+  eszamanli: {asgari_site: 3}
+  atif_kaliplari: ["-rus-ajansi", "-rus-ajansindan", "-rus-basini", "-rus-medyasi", "-rus-televizyonu",
+                   "-rusya-devlet-televizyonu", "-rus-devlet-televizyonu", "-rus-gazetesi", "-abd-basini",
+                   "-amerikan-basini", "-yabanci-basin", "-ingiliz-basini", "-alman-basini", "-reuters", "-bbc"]
+
+# Grafikler (medya.gdelt.grafik)
+grafik:
+  gunluk_baslik: "Günlük hacim, 17.12.2016–10.01.2017 (GDELT GKG 2.1, Türkçe kaynaklı kayıtlar)"
+  gunluk_notlar:
+    - {gun: "26.12", metin: "Mahkeme yayın yasağı (KR-094)", dy: 700}
+    - {gun: "27.12", metin: "Samanyolu dalgası (51 URL)", dy: 450}
+  saatlik_baslik: "Saatlik hacim, Türkiye saati (UTC+3), 19.12 19:00 – 21.12 00:00"
+  saatlik_saat_sayisi: 30
+  saatlik_notlar:
+    - {saat: "20161219 20", metin: "~20:30 RTÜK yasağı haberi (CNN Türk URL)", y: 40}
+    - {saat: "20161219 22", metin: "22:00 ilk FETÖ çerçeveli URL", y: 185}
