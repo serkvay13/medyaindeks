@@ -107,7 +107,7 @@ def _tarih_eslesir(t: tuple, kume: set) -> bool:
 
 def _sayi_kumesi(metin: str) -> set:
     tarihler = tarihleri_bul(metin)
-    kume = set(sayilari_bul(metin, haric=[s for _, s in tarihler]))
+    kume = set(sayilari_bul(metin, haric=[s for _, s in tarihler], genis=True))
     kume |= {str(t[0]) for t, _ in tarihler if t[0]}   # tarihlerin yılları da sayı olarak anılabilir
     return kume
 
@@ -138,11 +138,55 @@ def _adlar(metin: str) -> list[str]:
     return out
 
 
+_KUCUK_SOZCUK = re.compile(r"(?<![\w'’])([a-zçğıöşüâîû][a-zçğıöşüâîû\-]{2,})(?:['’][a-zçğıöşüâîû]+)?")
+
+
+def ad_sozlugu(metinler) -> frozenset:
+    """Özel ad sözlüğü (katlanmış): kanıt metinlerinde cümle ortasında büyük harfle yazılmış sözcükler.
+    Türkçede cümle ortasındaki büyük harf özel ad işaretidir; cümle başındaki büyük harf sayılmaz.
+    Küçük harfle yazılmış ad denetimi (`_kucuk_harfli_adlar`) bu sözlüğe bakar."""
+    out, kucuk = set(), set()
+    for metin in metinler:
+        kucuk |= {fold_tr(m.group(1)) for m in _KUCUK_SOZCUK.finditer(metin or "")}
+        for m in _AD.finditer(metin or ""):
+            ad = m.group(1)
+            if len(ad) < 3:
+                continue
+            onceki = (metin or "")[:m.start()].rstrip()
+            if not onceki or onceki[-1] in ".!?:;—–-(\n\"“«'‘":
+                continue
+            a = fold_tr(ad)
+            if a in CUMLE_BASI_SOZCUKLER or not re.fullmatch(r"[a-z][a-z\-]*", a):
+                continue
+            out.add(a)
+    # Kanıtta küçük harfle de geçen sözcük ("Sabah" gazetesi / "sabah") genel sözcüktür, ad sayılmaz
+    return frozenset(out - kucuk)
+
+
+def _kucuk_harfli_adlar(metin: str, sozluk: frozenset, korpus_f: str) -> list[str]:
+    """Küçük harfle yazılmış ama vakanın özel ad sözlüğünde bulunan sözcükler; atıf yapılan kartlarda
+    geçmiyorsa döner ("karlov", "ankara'da" …). Sözlükte olmayan, tümüyle uydurma küçük harfli ad
+    yakalanamaz (bilinen sınır)."""
+    out = []
+    for m in _KUCUK_SOZCUK.finditer(metin):
+        w = fold_tr(m.group(1))
+        if w in CUMLE_BASI_SOZCUKLER:
+            continue
+        adaylar = [w[:n] for n in range(len(w), max(4, len(w) - 4) - 1, -1)]
+        if not any(a in sozluk for a in adaylar):
+            continue
+        if re.search(r"(?<![a-z0-9])" + re.escape(w), korpus_f) or _ad_bulunur(m.group(1), korpus_f):
+            continue
+        out.append(m.group(1))
+    return out
+
+
 def _tirnaklar(metin: str) -> list[tuple[str, tuple[int, int]]]:
     return [(next(g for g in m.groups() if g), m.span()) for m in _TIRNAK.finditer(metin)]
 
 
-def _icerik_denetimi(c: Cumle, korpus: str, ad_korpusu: str, nedenler: list) -> list[tuple[int, int]]:
+def _icerik_denetimi(c: Cumle, korpus: str, ad_korpusu: str, nedenler: list,
+                     sozluk: frozenset = frozenset()) -> list[tuple[int, int]]:
     """Sayı/tarih/alıntı/ad denetimi. Doğrulanmış alıntıların konumlarını döner."""
     korpus_n = normalize(korpus)
     korpus_f = fold_tr(korpus)
@@ -185,19 +229,26 @@ def _icerik_denetimi(c: Cumle, korpus: str, ad_korpusu: str, nedenler: list) -> 
             continue
         if not (_ad_bulunur(ad, korpus_f) or (ad_f and _ad_bulunur(ad, ad_f))):
             nedenler.append(f"ad kanıtta yok: {ad}")
+    # 5) Küçük harfle yazılmış özel adlar (vakanın ad sözlüğüne göre)
+    if sozluk:
+        for ad in _kucuk_harfli_adlar(acik, sozluk, korpus_f + "\n" + ad_f):
+            nedenler.append(f"ad kanıtta yok (küçük harfle yazılmış): {ad}")
     return gecerli_tirnak
 
 
 def cumle_dogrula(c: Cumle, kartlar: dict[str, KanitKarti], olgular: dict[str, Cumle] | None = None,
-                  ek_adlar: str = "") -> list[str]:
+                  ek_adlar: str = "", sozluk: frozenset | None = None) -> list[str]:
     """Tek cümlenin red nedenleri (boş liste = geçti).
 
     kartlar: vakanın tüm kanıt kartları (kimlik -> kart)
     olgular: aynı rapordaki kabul edilmiş olgu cümleleri (değerlendirmenin dayanağı için)
     ek_adlar: değerlendirme ve açık sorularda adların aranabileceği ek metin (ör. önceden kayıtlı
               hipotez metinleri). Sayı ve tarihler için KULLANILMAZ.
+    sozluk:   küçük harfli ad denetimi için özel ad sözlüğü; verilmezse `kartlar`dan kurulur.
     """
     olgular = olgular or {}
+    if sozluk is None:
+        sozluk = ad_sozlugu(k.dogrulama_metni() for k in kartlar.values())
     nedenler: list[str] = []
     if c.tur not in CUMLE_TURLERI:
         return [f"geçersiz cümle türü: {c.tur!r}"]
@@ -214,7 +265,7 @@ def cumle_dogrula(c: Cumle, kartlar: dict[str, KanitKarti], olgular: dict[str, C
             nedenler.append("olgu cümlesi en az bir geçerli kanıt kimliği taşımalı")
             return nedenler
         korpus = "\n".join(k.dogrulama_metni() for k in atif)
-        tirnaklar = _icerik_denetimi(c, korpus, "", nedenler)
+        tirnaklar = _icerik_denetimi(c, korpus, "", nedenler, sozluk)
         # Niyet fiili: doğrulanmış alıntının içinde değilse yasak
         maske = list(fold_tr(c.metin))
         for s, e in tirnaklar:
@@ -243,24 +294,26 @@ def cumle_dogrula(c: Cumle, kartlar: dict[str, KanitKarti], olgular: dict[str, C
             nedenler.append(f"güven alanı Kent ölçeğinde değil: {c.guven!r}")
         kartlar_hepsi = atif + [kartlar[k] for o in dayanak_olgu for k in o.kanit_ids if k in kartlar]
         korpus = "\n".join([k.dogrulama_metni() for k in kartlar_hepsi] + [o.metin for o in dayanak_olgu])
-        _icerik_denetimi(c, korpus, ek_adlar, nedenler)
+        _icerik_denetimi(c, korpus, ek_adlar, nedenler, sozluk)
 
     else:  # acik_soru
         if not c.metin.rstrip().endswith("?"):
             nedenler.append("açık soru soru işaretiyle bitmeli")
         havuz = atif or list(kartlar.values())
         korpus = "\n".join(k.dogrulama_metni() for k in havuz)
-        _icerik_denetimi(c, korpus, ek_adlar, nedenler)
+        _icerik_denetimi(c, korpus, ek_adlar, nedenler, sozluk)
     return nedenler
 
 
 def dogrula(cumleler: list[Cumle], kartlar: dict[str, KanitKarti], ek_adlar: str = "",
-            onceki_olgular: dict[str, Cumle] | None = None) -> DogrulamaSonucu:
+            onceki_olgular: dict[str, Cumle] | None = None, sozluk: frozenset | None = None) -> DogrulamaSonucu:
     """Cümleleri sırayla doğrular. Önce olgular (değerlendirmeler onlara dayanabilsin)."""
     sonuc = DogrulamaSonucu()
     olgular = dict(onceki_olgular or {})
+    if sozluk is None:
+        sozluk = ad_sozlugu(k.dogrulama_metni() for k in kartlar.values())
     for c in [x for x in cumleler if x.tur == "olgu"]:
-        n = cumle_dogrula(c, kartlar, olgular, ek_adlar)
+        n = cumle_dogrula(c, kartlar, olgular, ek_adlar, sozluk)
         if n:
             sonuc.red.append(Red(c, n))
         else:
@@ -268,7 +321,7 @@ def dogrula(cumleler: list[Cumle], kartlar: dict[str, KanitKarti], ek_adlar: str
     for c in cumleler:
         if c.tur == "olgu":
             continue
-        n = cumle_dogrula(c, kartlar, olgular, ek_adlar)
+        n = cumle_dogrula(c, kartlar, olgular, ek_adlar, sozluk)
         if n:
             sonuc.red.append(Red(c, n))
     reddedilen = {r.cumle.id for r in sonuc.red}
