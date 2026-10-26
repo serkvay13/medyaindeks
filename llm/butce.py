@@ -44,6 +44,18 @@ FIYAT = {
     "claude-opus-5-5":   {"girdi": 4.00, "cikti": 20.0, "onbellek_okuma": 0.20,  "onbellek_yazma": 5.00},
     "claude-opus-5":     {"girdi": 5.00, "cikti": 25.0, "onbellek_okuma": 0.50,  "onbellek_yazma": 6.25},
 }
+# Diğer sağlayıcıların (OpenAI, Gemini …) fiyatları KODA YAZILMAZ: yapılandırma dosyasından okunur.
+# Varsayılan dosya `llm/fiyatlar.toml` boştur; boşken bu modeller için maliyet önceden hesaplanamaz ve
+# uyarı verilir (medya.uzman çağrıyı yalnızca MEDYA_FIYATSIZ_IZIN=1 ile yapar). Dosya yolu LLM_FIYAT_DOSYASI
+# ile değiştirilebilir. Biçim ($ / 1M token):
+#     [modeller."gpt-5-mini"]
+#     girdi = 0.0
+#     cikti = 0.0
+#     kaynak = "fiyat sayfasının adresi"
+#     tarih = "YYYY-AA-GG"
+FIYAT_DOSYASI = Path(os.environ.get("LLM_FIYAT_DOSYASI", ROOT / "llm" / "fiyatlar.toml"))
+_FIYAT_ALANLARI = ("girdi", "cikti", "onbellek_okuma", "onbellek_yazma")
+
 # Haiku 5.5'te 100.000 token'ı aşan istemler 5 kat pahalıdır (fiyat listesinde ayrı satır).
 # Kademe **tek bir isteğin istem boyutuna** bakar, toplam token'a değil: 4.000 ayrı küçük çağrının
 # toplamı 160.000 token olsa da her biri kısa istemdir ve ucuz kademededir.
@@ -56,11 +68,45 @@ class ButceAsimi(RuntimeError):
     """Tavan aşılacağı için çağrı yapılmadı."""
 
 
+def fiyat_dosyasi_oku(yol: str | Path | None = None) -> dict:
+    """Yapılandırma dosyasındaki fiyatlar: {model: {"girdi", "cikti", "onbellek_okuma", "onbellek_yazma"}}.
+    Dosya yoksa ya da boşsa {} döner. Eksik alanlar 0 sayılmaz: "girdi" ve "cikti" zorunludur."""
+    yol = Path(yol or os.environ.get("LLM_FIYAT_DOSYASI", FIYAT_DOSYASI))
+    if not yol.exists():
+        return {}
+    import tomllib
+    veri = tomllib.loads(yol.read_text(encoding="utf-8")).get("modeller", {}) or {}
+    out = {}
+    for model, f in veri.items():
+        if not isinstance(f, dict) or "girdi" not in f or "cikti" not in f:
+            raise ValueError(f"{yol}: '{model}' için girdi ve cikti fiyatı zorunlu")
+        out[model] = {k: float(f.get(k, 0.0)) for k in _FIYAT_ALANLARI}
+    return out
+
+
+def fiyat_tablosu() -> dict:
+    """Koddaki Claude tablosu + yapılandırma dosyası (dosyadaki değer önceliklidir)."""
+    return {**FIYAT, **fiyat_dosyasi_oku()}
+
+
+def fiyat_var_mi(model: str) -> bool:
+    return model in fiyat_tablosu()
+
+
+def fiyat_uyarisi(model: str) -> str:
+    """Fiyatı tanımlı olmayan model için uyarı metni (tanımlıysa boş)."""
+    if fiyat_var_mi(model):
+        return ""
+    return (f"'{model}' için fiyat tanımlı değil ({os.environ.get('LLM_FIYAT_DOSYASI', FIYAT_DOSYASI)} boş ya da "
+            "modeli içermiyor): maliyet önceden hesaplanamaz, bütçe tavanı yalnızca token sayısıyla izlenir.")
+
+
 def _fiyat(model: str) -> dict:
-    if model not in FIYAT:
-        raise ValueError(f"Fiyatı bilinmeyen model: {model}. llm/butce.py içindeki FIYAT'a ekleyin "
-                         f"(bilinenler: {', '.join(sorted(FIYAT))})")
-    return FIYAT[model]
+    tablo = fiyat_tablosu()
+    if model not in tablo:
+        raise ValueError(f"Fiyatı bilinmeyen model: {model}. Claude için llm/butce.py FIYAT, diğerleri için "
+                         f"{FIYAT_DOSYASI.name} (bilinenler: {', '.join(sorted(tablo))})")
+    return tablo[model]
 
 
 def maliyet(model: str, girdi: int = 0, cikti: int = 0, onbellek_okuma: int = 0, onbellek_yazma: int = 0,
@@ -74,6 +120,54 @@ def maliyet(model: str, girdi: int = 0, cikti: int = 0, onbellek_okuma: int = 0,
     tutar = (girdi * f["girdi"] + cikti * f["cikti"]
              + onbellek_okuma * f["onbellek_okuma"] + onbellek_yazma * f["onbellek_yazma"]) / 1e6 * kat
     return tutar * (BATCH_INDIRIM if batch else 1.0)
+
+
+# --------------------------------------------------------------------------------
+# TOKEN SAYACI
+# --------------------------------------------------------------------------------
+class TokenSayaci:
+    """Bir çalışmanın (ör. bir rapor yazımı) model başına token ve tutar sayacı.
+
+    `tavan_usd` verilirse fiyatı bilinen çağrılar tavanı aşacaksa `ButceAsimi`; `tavan_token` verilirse
+    fiyatı bilinmeyen modeller dahil toplam token tavanı uygulanır."""
+
+    def __init__(self, tavan_usd: float | None = None, tavan_token: int | None = None):
+        self.tavan_usd, self.tavan_token = tavan_usd, tavan_token
+        self.kayitlar: dict[str, dict] = {}
+
+    @property
+    def toplam_token(self) -> int:
+        return sum(k["girdi"] + k["cikti"] for k in self.kayitlar.values())
+
+    @property
+    def toplam_usd(self) -> float:
+        return sum(k["tutar"] for k in self.kayitlar.values())
+
+    def on_denetim(self, model: str, girdi_tahmini: int, max_tokens: int) -> None:
+        """Çağrıdan önce: en kötü durumda tavanlar aşılacak mı?"""
+        if self.tavan_token is not None and self.toplam_token + girdi_tahmini + max_tokens > self.tavan_token:
+            raise ButceAsimi(f"Token tavanı aşılacaktı ({self.tavan_token:,}); çağrı yapılmadı. "
+                             f"Şimdiye kadar {self.toplam_token:,} token.")
+        if self.tavan_usd is not None and fiyat_var_mi(model):
+            tahmin = maliyet(model, girdi=girdi_tahmini, cikti=max_tokens)
+            if self.toplam_usd + tahmin > self.tavan_usd:
+                raise ButceAsimi(f"Çalışma bütçesi aşılacaktı ({self.tavan_usd:.2f} $); çağrı yapılmadı. "
+                                 f"Şimdiye kadar {self.toplam_usd:.4f} $, tahmin {tahmin:.4f} $.")
+
+    def ekle(self, model: str, girdi: int, cikti: int) -> float:
+        tutar = maliyet(model, girdi=girdi, cikti=cikti) if fiyat_var_mi(model) else 0.0
+        k = self.kayitlar.setdefault(model, {"cagri": 0, "girdi": 0, "cikti": 0, "tutar": 0.0,
+                                             "fiyatli": fiyat_var_mi(model)})
+        k["cagri"] += 1
+        k["girdi"] += int(girdi or 0)
+        k["cikti"] += int(cikti or 0)
+        k["tutar"] += tutar
+        return tutar
+
+    def ozet(self) -> dict:
+        return {"modeller": {m: {**k, "tutar": round(k["tutar"], 6)} for m, k in self.kayitlar.items()},
+                "toplam_token": self.toplam_token, "toplam_usd": round(self.toplam_usd, 6),
+                "fiyatsiz_modeller": sorted(m for m, k in self.kayitlar.items() if not k["fiyatli"])}
 
 
 # --------------------------------------------------------------------------------

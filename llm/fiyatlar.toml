@@ -1,0 +1,14 @@
+# Claude dışı modellerin fiyatları ($ / 1M token). Fiyatlar koda yazılmaz; burada, kaynağı ve çekilme tarihiyle
+# tutulur. Dosya bilerek BOŞ gelir: fiyat girilmemiş model için maliyet önceden hesaplanamaz, llm/butce.py uyarı
+# verir ve medya.uzman çağrıyı yalnızca MEDYA_FIYATSIZ_IZIN=1 ile yapar (token sayacı yine çalışır).
+# Başka bir dosya kullanmak için: LLM_FIYAT_DOSYASI=/yol/fiyatlar.toml
+#
+# Örnek (değerleri sağlayıcının güncel fiyat sayfasından doldurun):
+# [modeller."gpt-5-mini"]
+# girdi = 0.0
+# cikti = 0.0
+# onbellek_okuma = 0.0
+# kaynak = "https://…/pricing"
+# tarih = "YYYY-AA-GG"
+
+[modeller]
