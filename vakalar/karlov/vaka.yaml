@@ -23,3 +23,107 @@ sema_ayarlari:
 # Hipotez türleri (ACH simetri kuralı için); metinler kartlar/hipotezler.json'dan
 hipotez_turleri: {H1: resmi_tez, H2: alternatif, H3: yapisal, H4: dis_konjonktur, H5: diger,
                   H3a: yapisal, H3b: yapisal, H5a: diger}
+
+# Araştırma protokolü değişkenleri (medya.arastirma). Diller: protokolün TR/EN/RU'suna ek olarak Arapça.
+arastirma:
+  ek_diller: [ar]
+  degiskenler:
+    olay: {tr: "Andrey Karlov suikastı", en: "Andrei Karlov assassination", ru: "убийство Андрея Карлова", ar: "اغتيال السفير الروسي أندريه كارلوف"}
+    fail: {tr: "Mevlüt Mert Altıntaş", en: "Mevlut Mert Altintas", ru: "Мевлют Мерт Алтынташ"}
+    yer: {tr: "Ankara", en: "Ankara", ru: "Анкара", ar: "أنقرة"}
+    tarih: {tr: "19 Aralık 2016", en: "19 December 2016", ru: "19 декабря 2016"}
+  aktorler:
+    - {tr: "Rusya", en: "Russia", ru: "Россия", ar: "روسيا"}
+    - {tr: "ABD", en: "United States", ru: "США"}
+    - {tr: "AB", en: "EU", ru: "ЕС"}
+    - {tr: "BM", en: "UN", ru: "ООН"}
+    - {tr: "NATO", en: "NATO", ru: "НАТО"}
+    - {tr: "İran", en: "Iran", ru: "Иран"}
+    - {tr: "Suriye", en: "Syria", ru: "Сирия", ar: "سوريا"}
+  kavramlar: [radikalleşme]
+  kavram_ceviri: {radikalleşme: {en: radicalization, ru: радикализация}}
+  kavram_dosyalari: [kaynaklar/radikallesme.md]
+
+# Rapor künyesi ve deterministik tabloların etiketleri (medya.rapor.vaka_raporu)
+rapor:
+  dosya_adi: Karlov-analiz
+  ust_bilgi: "Karlov suikastı · OSINT analizi · TASLAK — insan onayı bekliyor"
+  kapak:
+    kicker: "Açık kaynak istihbarat (OSINT) analizi"
+    baslik: "Andrey Karlov Suikastı<br/>Ankara, 19 Aralık 2016"
+    alt_baslik: "Dakika dakika kronoloji, medya çerçevelemesinin nicel analizi, Rusya ve uluslararası tepkiler, failin radikalleşme süreci ve rakip hipotezlerin kanıtla sınanması"
+    hazirlanma: "26 Ekim 2026 (Europe/Brussels)"
+    durum: "Taslak; yargısal bulgu değildir; insan editör onayı olmadan dağıtılmamalıdır"
+  basliklar:
+    aktorler: "Rusya ve diğer aktörler"
+    kavram: "Kavram: radikalleşme"
+    vaka_sureci: "Failin radikalleşme süreci"
+  # Atıf denetiminde kart kimliği dışında izin verilen etiketler
+  izinli_etiketler: ["GDELT-istatistik", "GDELT-ek", "RAD-B", "ACH", "hipotezler.json"]
+  izinli_etiket_kaliplari: ["RAD-A§\\d+"]
+  kaynak_tabani:
+    erisim_etiketleri: {devralındı: "temel kartlardan"}
+    semalar:
+      - sema: K
+        siniflar:
+          - ["^mahkeme/iddianame$", "Mahkeme/iddianame aktarımı"]
+          - ["^Batı basını$", "Batı basını"]
+          - ["^hükümete yakın yayın$", "TR hükümete yakın"]
+          - ["^TR ana akım basın$", "TR ana akım"]
+          - ["^Arap/Körfez basını$", "Arap/Körfez basını"]
+          - ["^düşünce kuruluşu$", "düşünce kuruluşu"]
+          - ["^resmi-TR$", "resmî-TR"]
+          - ["^resmi-RU$", "resmî-RU"]
+          - ["^TR devlet basını$", "TR devlet basını"]
+          - ["^rejim kontrolünde olmayan kaynaklar$", "rejim kontrolünde olmayan kaynaklar"]
+          - ["^Rus devlet basını$", "Rus devlet basını"]
+          - ["^Rus basını$", "Rus basını"]
+          - ["^Avrupa basını$", "Avrupa basını"]
+          - ["^uluslararası kuruluş$", "uluslararası kuruluş"]
+          - ["^TR muhalefet$", "TR muhalefet"]
+      - sema: KR
+        siniflar:
+          - ["^devlet medyası \\(TR\\)", "TR devlet medyası"]
+          - ["^yabancı bağımsız medya", "yabancı bağımsız medya"]
+          - ["^Rus devlet medyası", "Rus devlet medyası"]
+          - ["^hükümete yakın yayın", "TR hükümete yakın"]
+          - ["^yurt içi ana akım \\(Doğan dönemi\\)", "TR ana akım (Doğan dönemi)"]
+          - ["^yurt içi muhalif/bağımsız", "TR muhalif/bağımsız"]
+          - ["^devlet kurumu/resmi", "resmî kurum"]
+          - ["^rejim kontrolünde olmayan kaynaklar", "rejim kontrolünde olmayan kaynaklar"]
+          - ["geçiş yılı\\)$", "2018 geçiş yılı"]
+          - ["^$", "sınıfsız"]
+      - sema: R
+        siniflar:
+          - ["^Rus devlet medyası", "Rus devlet medyası"]
+          - ["^Rus devlet kurumu", "Rus resmî kurum"]
+          - ["^Rus bağımsız medya", "Rus bağımsız medya"]
+          - ["^yabancı bağımsız medya", "yabancı bağımsız medya"]
+          - ["^Rusya'da hükümete yakın yayın", "Rusya'da hükümete yakın yayın"]
+          - ["^akademik", "akademik"]
+          - ["^uluslararası kuruluş", "uluslararası kuruluş"]
+          - ["^devlet medyası \\(TR\\)", "TR devlet medyası"]
+          - ["^Türk devlet kurumu", "TR resmî"]
+          # R50 (Hürriyet, 2017): girdi dosyasında "yurt içi muhalif/bağımsız"; sahiplik düzeltmesiyle Doğan dönemi
+          - ["^(yurt içi muhalif/bağımsız|yurt içi ana akım \\(Doğan dönemi\\))", "TR yayın"]
+          - ["^yabancı devlet kurumu", "ABD resmî"]
+          - ["^yabancı devlet medyası – İran", "İran devlet medyası"]
+      - sema: RD
+        siniflar:
+          - ["^devlet medyası", "TR devlet medyası"]
+          - ["^rejim kontrolünde olmayan kaynaklar", "rejim kontrolünde olmayan kaynaklar"]
+          - ["^yurt içi muhalif/bağımsız", "TR muhalif/bağımsız"]
+          - ["^hükümete yakın yayın", "TR hükümete yakın"]
+          - ["^ana akım \\(Hürriyet, Doğan dönemi\\)", "TR ana akım (Doğan dönemi)"]
+          - ["^yabancı bağımsız medya", "yabancı bağımsız"]
+          - [".*", "diğer"]
+  kart_dizini:
+    # Referans raporla aynı etiket; "temel kartlardan" olarak değiştirilebilir
+    erisim_etiketleri: {devralındı: " (v1 kartından)"}
+    semalar:
+      - {sema: K, baslik: "A.1 Kanıt kartları ({aralik}, `{dosya}`)"}
+      - sema: KR
+        baslik: "A.2 Kronoloji satırları ({aralik}, `{dosya}`)"
+        not: "KR satırlarının içeriği Bölüm 2 tablolarında tam olarak verilmiştir; burada yalnızca künye yer alır. KR satırları kronoloji kaydıdır; ayrı Admiralty derecesi taşımaz. \"Derece\" sütununda erişim durumu (açıldı / arama özeti / bulunamadı) ve kaynaklar arası çelişki notu (⚠) verilir. † = yayın grubu sahiplik dönemine göre düzeltilmiş sınıf."
+      - {sema: R, baslik: "A.3 Rusya ve dünya kartları ({aralik}, `{dosya}`)", tarih_basligi: "Tarih"}
+      - {sema: RD, baslik: "A.4 Radikalleşme kartları ({aralik}, `{dosya}`)"}

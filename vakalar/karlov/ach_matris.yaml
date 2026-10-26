@@ -1,0 +1,136 @@
+# Tanısal kanıt satırları (ACH). Her satır bir ya da birden çok karta dayanır; derece birincil kartınkidir.
+# isaretler: hipotezler sırasıyla T (tutarlı) / Ç (çelişir) / N (nötr). Ağırlık = kaynak × bilgi katsayısı.
+# Ön kayıt: kartlar/hipotezler.json (SHA-256 kilidi medya.hipotez ile).
+hipotezler:
+- H1
+- H2
+- H3a
+- H3b
+- H4
+- H5a
+agirlik:
+  kaynak:
+    A: 1
+    B: 0.8
+    C: 0.6
+    D: 0.4
+    E: 0.2
+    F: 0.2
+  bilgi:
+    '1': 1
+    '2': 0.85
+    '3': 0.65
+    '4': 0.4
+    '5': 0.2
+    '6': 0.2
+satirlar:
+- id: E01
+  kartlar: RD55, K01, KR-024
+  derece: A1
+  aciklama: Olay anında Arapça biat dizesi ve "Halep'i unutmayın"
+  isaretler: Ç T T T N T
+- id: E02
+  kartlar: RD27
+  derece: B2
+  aciklama: 'Bir gün önce bırakılan valiz: Kutub, Benna, Yıldız, Şen kitapları; "özel harekat netleşmedi"'
+  isaretler: Ç T T N N T
+- id: E03
+  kartlar: RD38
+  derece: B2
+  aciklama: El Kaide videosu Şubat 2016'da indirildi, 18.12.2016'da silindi
+  isaretler: Ç T T T N T
+- id: E04
+  kartlar: RD39
+  derece: C2
+  aciklama: 'Arama geçmişi: Bayancuk, Awlaki, Kouachi, Bhutto (Ağu–Ara 2016)'
+  isaretler: Ç T T N N T
+- id: E05
+  kartlar: RD33, RD34
+  derece: B2
+  aciklama: Suriye'ye gitme ve işi bırakma isteği (iki tanık)
+  isaretler: Ç T T N N T
+- id: E06
+  kartlar: RD11, RD13, K27
+  derece: B2
+  aciklama: Sosyal Doku / Nurettin Yıldız sohbetlerine 2014–2016 katılım
+  isaretler: N Ç T N N T
+- id: E07
+  kartlar: RD35
+  derece: C2
+  aciklama: İHH hesaplarına 11 havale (Oca 2015–Tem 2016)
+  isaretler: N N T N N T
+- id: E08
+  kartlar: RD41
+  derece: C3
+  aciklama: '"Şahadet istiyorum" (Kasım sonu) ve "El-Kaide tehlikeli" (1 hafta önce)'
+  isaretler: N T T Ç N T
+- id: E09
+  kartlar: K20, KR-099, KR-100
+  derece: C3
+  aciklama: Gmail/Facebook yazışmaları fail öldükten sonra (≈2,5 saat) VPN üzerinden silindi
+  isaretler: T Ç N T T T
+- id: E10
+  kartlar: K22, RD44
+  derece: C3
+  aciklama: 'Söğüt teması: hatsız telefon, Wi-Fi iletişimi, 9 Aralık 256 m baz yakınlığı'
+  isaretler: T Ç Ç N N T
+- id: E11
+  kartlar: RD23, K23
+  derece: C3
+  aciklama: 'Etkin pişmanlık beyanı: Altıntaş "kendi zümresi içinde"'
+  isaretler: T Ç Ç N N T
+- id: E12
+  kartlar: RD18–RD22, K30
+  derece: C3
+  aciklama: Polis okulunda (2012–2013) Gülen sohbetlerine katılım tanıklığı; bir ifade geri alındı
+  isaretler: T N N N N T
+- id: E13
+  kartlar: RD46
+  derece: B2
+  aciklama: Failin ByLock kullanmadığı belirlendi
+  isaretler: Ç T T N N N
+- id: E14
+  kartlar: RD50
+  derece: C3
+  aciklama: Sık görüştüğü 8 kişi ByLock kullanıcısı
+  isaretler: T N N N N N
+- id: E15
+  kartlar: RD40, K21
+  derece: C3
+  aciklama: Rus heyeti silinmiş dosyalarda 690 "Hizmet", 2 "Fetullah Gülen"; silinenlerde El Kaide/Nusra/DEAŞ adlı dosya yok
+  isaretler: T N N N N T
+- id: E16
+  kartlar: RD47, RD48
+  derece: D4
+  aciklama: '"Garson" listesi: 2014 "EA", 2015 "bağı zayıfladı"; EA''nın anlamı çelişkili'
+  isaretler: T N N N N T
+- id: E17
+  kartlar: K34, R49, KR-080, KR-081
+  derece: C2
+  aciklama: Üstlenme bildirisi sahte; Ceyş el-Fetih/JFŞ inkâr etti
+  isaretler: N T N Ç T N
+- id: E18
+  kartlar: K35
+  derece: C3
+  aciklama: JFŞ eylemi sahiplenmeden "doğal tepki" diye meşrulaştırdı
+  isaretler: N T T Ç N N
+- id: E19
+  kartlar: R18, K10, R46
+  derece: B1
+  aciklama: Kremlin 21.12.2016'da FETÖ atfını onaylamadı ("acele etmeyin")
+  isaretler: Ç N N N N N
+- id: E20
+  kartlar: K24
+  derece: C4
+  aciklama: 'İddianame: plan Ocak 2016, Haziran 2016 iftarında ilk girişim'
+  isaretler: T Ç Ç Ç T N
+- id: E21
+  kartlar: K18 × K24
+  derece: C4
+  aciklama: 'Plan tarihi (Oca 2016) normalleşmeden (Haz 2016) önce: "ilişkileri bozma" amacıyla zaman uyumsuzluğu'
+  isaretler: Ç N N N N N
+- id: E22
+  kartlar: K41, K15
+  derece: C2
+  aciklama: Saldırıdan önceki hafta Rus temsilcilikleri önünde ve sınırda "Katil Rusya" protestoları
+  isaretler: N T T N N T

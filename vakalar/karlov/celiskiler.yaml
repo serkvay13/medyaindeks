@@ -1,0 +1,177 @@
+# Kaynaklar arası çelişki kayıtları (analist girdisi). Her kayıt bir konu için kaynakların verdiği farklı
+# değerleri (olgu) ve analistin değerlendirmesini taşır. Kartlar var olmalı; kronolojide çelişki notu olup
+# hiçbir kayda bağlanmayan satırlar rapor üretiminde uyarı olarak listelenir.
+giris: '**Kaynaklar arası saat, sayı ve ayrıntı çelişkileri.** Her satır bir **[O]** olgudur (kaynakların ne dediği); son sütun **[D]** değerlendirmedir.'
+basliklar:
+- Konu
+- Versiyonlar
+- Kart
+- Değerlendirme
+kayitlar:
+- konu: Saldırı saati
+  versiyonlar: 19:05 (Soylu, BBC "16:05 GMT", DW) · 20:15 (Türkçe ve İngilizce Vikipedi bilgi kutusu)
+  kartlar:
+  - KR-017
+  - KR-018
+  - KR-019
+  degerlendirme: 19:05 neredeyse kesin; 20:15 birincil kaynaklarla çelişen hatalı değer
+- konu: Otel odası ve giriş günü
+  versiyonlar: 214 no'lu oda, 18 Aralık (2016 basını) · 204 no'lu oda, 19 Aralık 12:15 (iddianame, AA 2022) · aynı Hürriyet sayfasında "dün (19 Aralık) gelen"
+  kartlar:
+  - KR-008
+  - KR-009
+  - KR-073
+  - RD45
+  degerlendirme: Çözülemedi; iddianame versiyonu daha ayrıntılı, 2016 basını daha erken
+- konu: Rezervasyon süresi
+  versiyonlar: 2 günlük (2016 basını) · 1 gecelik (iddianame)
+  kartlar:
+  - KR-004
+  degerlendirme: Rezervasyon değişikliği iki versiyonu da açıklayabilir (olası)
+- konu: Otelden çıkış
+  versiyonlar: 17:00 (AA 2022) · 17:30 (Hürriyet) · 18:30'a bağlanan anlatım (Cumhuriyet)
+  kartlar:
+  - KR-011
+  - KR-012
+  degerlendirme: 17:00–17:30 aralığı muhtemel
+- konu: Atış sayısı
+  versiyonlar: En az 5 (ilk haber) · 8 (tanıklar, AP "en az 8") · 11 atış, 9 isabet (Adli Tıp/kamera, BBC) · 15–20 (Rusça Vikipedi, birincil teyit yok)
+  kartlar:
+  - KR-031
+  - KR-020
+  - KR-022
+  - KR-025
+  - KR-018
+  degerlendirme: 11 atış, 9 isabet muhtemel
+- konu: Şarjör / mermi
+  versiyonlar: Üç şarjör ve 75 mermi (AFP, arama özeti) · silahtaki ile birlikte iki şarjör (Hürriyet)
+  kartlar:
+  - KR-015
+  degerlendirme: Çözülemedi
+- konu: Konuşma süresi
+  versiyonlar: '"Bir dakikadan kısa" (Lenta.ru) · "birkaç dakikadır" (AP)'
+  kartlar:
+  - KR-020
+  - KR-021
+  degerlendirme: Çözülemedi
+- konu: Müdahale süresi
+  versiyonlar: ≈15 dk çatışma (BBC) · Karlov 25 dk yerde (Lenta.ru) · ≈20 dk, 19:27'de öldürüldü (Rusça Vikipedi, teyitsiz)
+  kartlar:
+  - KR-027
+  - KR-028
+  degerlendirme: 15–25 dk aralığı; failin öldürülme saatine dair resmî kaynak yok [KR-035]
+- konu: İlk müdahale eden birim
+  versiyonlar: Çankaya Polis Merkezi (Soylu) · JFK Caddesi trafik polisleri (Hürriyet)
+  kartlar:
+  - KR-026
+  degerlendirme: İki versiyon birbirini dışlamayabilir
+- konu: Ölüm yeri
+  versiyonlar: Hastanede 19:53 (Soylu) · saldırgan öldürülene kadar tahliye edilmedi (Rus MİD, Lenta) · ambulansta kalp masajı (RIA/NTV)
+  kartlar:
+  - KR-034
+  - KR-021
+  degerlendirme: Ölüm anı belirsiz
+- konu: Rus ceza davasının maddesi
+  versiyonlar: m.360 (korunan kişiye saldırı; AiF, Interfax arama özeti) · m.361/3 (uluslararası terör; SK sitesi) · iki madde birlikte (BBC)
+  kartlar:
+  - KR-044
+  - KR-065
+  - R14
+  - R15
+  - R17
+  degerlendirme: Önce 360, sonra 361/3 eklenmiş olması muhtemel
+- konu: Gözaltı sayısı
+  versiyonlar: 5 (TASS/NTV) · 6 (Reuters, Vikipedi aktarımı) · 13 şüpheli (Haber 7'ye atfen TASS)
+  kartlar:
+  - KR-066
+  - KR-080
+  degerlendirme: Sayılar farklı anlara ait olabilir
+- konu: Ailenin serbest bırakılması
+  versiyonlar: 2 gün sorgulama (Sabah) · 22 Aralık (TR Vikipedi, kaynaksız) · "bir gün" (EN Vikipedi)
+  kartlar:
+  - KR-093
+  degerlendirme: Çözülemedi
+- konu: Gmail silme anı
+  versiyonlar: Suikasttan ≈2,5 saat sonra (Milliyet) · "suikast saatlerinde" (HDN)
+  kartlar:
+  - KR-099
+  - KR-100
+  degerlendirme: İkisi de savcılık kaynaklı; kesin saat açık soru
+- konu: Telefon şifresi
+  versiyonlar: 4 haneli şifre Türkiye'de kırılamadı (Habertürk 2016) · Rus ekibi de kıramadı (HDN 2018) · Çinli uzman 16 haneli ikinci şifreyi çözemedi (Habertürk 2018) · "Rusya açtı" (IBTimes, sonra düzeltildi,
+    arama özeti)
+  kartlar:
+  - KR-089
+  - KR-103
+  - KR-105
+  degerlendirme: Şifrenin çözüldüğüne dair açılabilen kaynak yok
+- konu: Telefon açma ücreti
+  versiyonlar: '20 bin dolar: İsrailli firma (HDN) · İngiliz firma/Çinli uzman (Habertürk)'
+  kartlar:
+  - KR-102
+  - KR-105
+  degerlendirme: Çözülemedi
+- konu: Telefon verileri
+  versiyonlar: 8 kişinin ByLock kullandığı "telefon incelemesinden" (AA) · telefon şifresi kırılamadı
+  kartlar:
+  - KR-086
+  - RD50
+  degerlendirme: Verinin HTS/iCloud kaynaklı olması olası [KR-101]
+- konu: İddianame
+  versiyonlar: 609 sayfa (AA Arapça, BirGün) · 607 sayfa (arama özeti) · sunuluş 22 Kasım (Nordic Monitor) / 23 Kasım (AA)
+  kartlar:
+  - KR-106
+  - KR-107
+  - KR-108
+  degerlendirme: 609 muhtemel
+- konu: 2021 karar sayıları
+  versiyonlar: Üç sanığa ikişer müebbet (AA/Hürriyet) · "ikisine" (BBC Rusça) · 6 beraat (AA) / 5 beraat (Rusça Vikipedi) · firari 9
+  kartlar:
+  - KR-114
+  - KR-115
+  - K28
+  degerlendirme: AA versiyonu muhtemel
+- konu: Yargıtay
+  versiyonlar: 13 sanıktan 12'si onandı (AA) · "12 sanık mahkûm" (Daily Sabah)
+  kartlar:
+  - KR-119
+  - KR-120
+  degerlendirme: AA versiyonu muhtemel
+- konu: Talimat zinciri
+  versiyonlar: Söğüt (AA 2022) · Salih Yılmaz ve Ahmet Kılınçarslan da "ileten" olarak anılıyor
+  kartlar:
+  - KR-118
+  - K27
+  degerlendirme: Zincirin halkaları kaynaklara göre değişiyor
+- konu: Açığa alınma
+  versiyonlar: 4 Ekim'de açığa alındı, 16 Kasım'da iade (HDN) · darbe sonrası ihraç edilmişti (ilk Rus haberleri) · Emniyet yalanladı, ihraç listelerinde yok · BBC "doğrulanmamış"
+  kartlar:
+  - KR-003
+  - RD49
+  - K03
+  - K32
+  degerlendirme: Çözülemedi; resmî yazı metni yok
+- konu: Dershane
+  versiyonlar: Söke'deki Körfez dershanesinde hazırlandı (AA, arama özeti) · anne ve abla yalanlıyor
+  kartlar:
+  - RD06
+  - RD02
+  - RD05
+  degerlendirme: AA iddiası zayıf (C4)
+- konu: Sergi adı
+  versiyonlar: '"Gezgin Gözüyle Kaliningrad''dan Kamçatka''ya Rusya" (AA/Soylu) ve Rusça/İngilizce farklı çeviriler'
+  kartlar:
+  - KR-032
+  degerlendirme: Çeviri farkı
+- konu: Yasak saati
+  versiyonlar: 21:29 (Timeturk sayfa damgası) · en geç 20:30 (CNN Türk URL'si, GDELT)
+  kartlar:
+  - KR-042
+  - GDELT-ek
+  degerlendirme: 20:30 veya öncesi muhtemel
+- konu: Karaata'nın adı
+  versiyonlar: '"İsim değiştirerek kayıtlardan kaçtı" (MİT/HDN) · Kanada sicilinde eski adı açıkça yazıyor (RIA)'
+  kartlar:
+  - KR-122
+  - KR-123
+  degerlendirme: İki kurum anlatısı çelişiyor

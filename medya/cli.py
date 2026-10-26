@@ -17,6 +17,10 @@
     python -m medya ornek kur                                  # sentetik örnek vaka (deneme için)
     python -m medya vaka-ice-aktar <klasör> <vaka_id>          # K/KR/R/RD kart dosyalarını vakaya aktar
     python -m medya gdelt indir <vaka> [--paralel 8] | tara <vaka> [--en-fazla N] | istatistik <vaka>
+    python -m medya vaka-rapor <vaka> --cevrimdisi [--cikti DİZİN] [--pdf-yok] [--kati]
+    python -m medya vaka-rapor <vaka> --saglayici openai|gemini|anthropic [--tavan-usd 2] [--tavan-token N]
+    python -m medya vaka-anlati-cikar <referans.md> <vaka>        # elle derlenmiş rapordan çevrimdışı anlatı
+    python -m medya arastirma baslat <vaka> --hipotezler h.json --dizin <d> [--web] | al <vaka> <d> | kapsam <vaka>
 
 Sağlayıcı: MEDYA_LLM_SAGLAYICI (offline varsayılan) · Depo: MEDYA_KANIT_DB · Çalışma alanı: MEDYA_CALISMA
 """
@@ -270,6 +274,72 @@ def cmd_gdelt(a):
     print(medya.GDELT_ATTRIBUTION_DUZ)
 
 
+def cmd_arastirma(a):
+    from medya import arastirma as ar
+    from medya.vaka_paketi import VakaPaketi, vakaya_aktar
+    paket = VakaPaketi(a.vaka)
+    if a.alt == "baslat":
+        d = Path(a.dizin)
+        on_kayit_yolu = d / "on_kayit.json"
+        if a.hipotezler:
+            k = ar.on_kayit_kilitle(json.loads(Path(a.hipotezler).read_text(encoding="utf-8")), on_kayit_yolu,
+                                    paket.ayar.get("hipotez_turleri"))
+            print(f"[OK] hipotezler kilitlendi · {k['zaman']} · SHA-256 {k['ozet']}")
+        if not on_kayit_yolu.exists():
+            raise SystemExit("Hipotez ön kaydı yok: --hipotezler ile kilitleyin (kanıttan önce).")
+        gorevler = ar.gorev_listesi(paket.ayar, on_kayit=on_kayit_yolu)
+        sag = ar.ManuelSaglayici(d)
+        yol = sag.gorevleri_yaz(gorevler, a.vaka)
+        print(f"[OK] {len(gorevler)} görev yazıldı: {yol}")
+        if a.web:
+            sonuc = ar.WebAramaSaglayici().gorevleri_calistir(gorevler)
+            (d / "aday_sonuclar.json").write_text(json.dumps(sonuc, ensure_ascii=False, indent=1), encoding="utf-8")
+            print(f"[OK] web araması: {sum(len(v) for v in sonuc.values())} aday (kart değildir; açılıp kartlaştırılmalı)")
+    elif a.alt == "al":
+        with KanitDeposu() as dp:
+            r = vakaya_aktar(Path(a.dizin) / "kartlar", a.vaka, dp, ayar=paket.ayar)
+        print(f"[OK] {r['kart']} kart alındı ({r['yeni_kart']} yeni)")
+        for h in r["hatalar"]:
+            print(f"[RED] {h}")
+    elif a.alt == "kapsam":
+        from medya.rapor.vaka_raporu import kapsam_raporu
+        r = kapsam_raporu(paket)
+        print(r.markdown())
+        print("\nKapsam tamam." if r.tamam else "\nEksikler:\n" + "\n".join(f"- {e}" for e in r.eksikler))
+
+
+def cmd_vaka_rapor(a):
+    from medya.rapor.vaka_raporu import vaka_raporu_uret
+    sag = sayac = None
+    if not a.cevrimdisi:
+        from llm.butce import TokenSayaci
+        from medya.uzman import saglayici_al
+        sayac = TokenSayaci(tavan_usd=a.tavan_usd, tavan_token=a.tavan_token)
+        sag = saglayici_al(a.saglayici, sayac=sayac)
+    s = vaka_raporu_uret(a.vaka, cevrimdisi=a.cevrimdisi, saglayici=sag, cikti=a.cikti, pdf=not a.pdf_yok,
+                         kati=a.kati, sayac=sayac)
+    print(s.kapsam.markdown())
+    for e in s.kapsam.eksikler:
+        print(f"[KAPSAM] {e}")
+    for u in s.uyarilar:
+        print(f"[UYARI] {u}")
+    if s.reddedilenler:
+        print(f"[RED] doğrulayıcı {len(s.reddedilenler)} cümleyi düşürdü (rapor_ozeti.json)")
+    print(f"[OK] {s.md}" + (f" · {s.pdf} ({s.sayfa} sayfa)" if s.pdf else "") + f" · {s.kullanilan_kart} kart atıflı")
+    print("Taslak — insan onayı bekliyor. " + medya.GDELT_ATTRIBUTION_DUZ)
+
+
+def cmd_vaka_anlati_cikar(a):
+    from medya.rapor.sablon import anlati_cikar, anlati_yaz
+    from medya.vaka_paketi import VakaPaketi
+    paket = VakaPaketi(a.vaka)
+    g = anlati_cikar(Path(a.referans).read_text(encoding="utf-8"),
+                     {"gunluk": "gdelt_gunluk.png", "saatlik": "gdelt_saatlik.png"})
+    g.pop("_basliklar")
+    for p in anlati_yaz(g, paket.yol("anlati")):
+        print(f"[OK] {p}")
+
+
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="python -m medya", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -388,6 +458,32 @@ def parser() -> argparse.ArgumentParser:
         if ad == "tara":
             x.add_argument("--en-fazla", type=int, default=None)
 
+    x = s.add_parser("vaka-rapor", help="vaka paketinden rapor (MD + HTML + PDF)")
+    x.add_argument("vaka")
+    x.add_argument("--cevrimdisi", action="store_true", help="anlatıyı LLM yerine vakalar/<vaka>/anlati/'dan al")
+    x.add_argument("--saglayici", default=None, help="openai | gemini | anthropic (varsayılan MEDYA_LLM_SAGLAYICI)")
+    x.add_argument("--cikti", default=None)
+    x.add_argument("--pdf-yok", action="store_true")
+    x.add_argument("--kati", action="store_true", help="kapsam eksikse rapor üretme")
+    x.add_argument("--tavan-usd", type=float, default=None)
+    x.add_argument("--tavan-token", type=int, default=None)
+    x = s.add_parser("vaka-anlati-cikar", help="elle derlenmiş rapordan çevrimdışı anlatı dosyaları")
+    x.add_argument("referans")
+    x.add_argument("vaka")
+
+    ar = s.add_parser("arastirma", help="araştırma protokolü: ön kayıt, görevler, kapsam").add_subparsers(
+        dest="alt", required=True)
+    x = ar.add_parser("baslat")
+    x.add_argument("vaka")
+    x.add_argument("--dizin", required=True)
+    x.add_argument("--hipotezler", help="hipotezler.json (kart toplamadan önce kilitlenir)")
+    x.add_argument("--web", action="store_true", help="MEDYA_ARAMA_URL ile web araması da yap")
+    x = ar.add_parser("al")
+    x.add_argument("vaka")
+    x.add_argument("dizin")
+    x = ar.add_parser("kapsam")
+    x.add_argument("vaka")
+
     x = s.add_parser("vaka-ice-aktar", help="kart klasörünü (K/KR/R/RD şemaları) vakaya aktar")
     x.add_argument("klasor")
     x.add_argument("vaka_id")
@@ -396,7 +492,8 @@ def parser() -> argparse.ArgumentParser:
 
 KOMUTLAR = {"vaka": cmd_vaka, "kanit": cmd_kanit, "hipotez": cmd_hipotez, "ach": cmd_ach, "baglam": cmd_baglam,
             "rapor": cmd_rapor, "soru": cmd_soru, "onayla": cmd_onayla, "aktor": cmd_aktor, "ornek": cmd_ornek,
-            "vaka-ice-aktar": cmd_vaka_ice_aktar, "gdelt": cmd_gdelt}
+            "vaka-ice-aktar": cmd_vaka_ice_aktar, "gdelt": cmd_gdelt, "arastirma": cmd_arastirma,
+            "vaka-rapor": cmd_vaka_rapor, "vaka-anlati-cikar": cmd_vaka_anlati_cikar}
 
 
 def main(argv=None):

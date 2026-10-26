@@ -1,0 +1,52 @@
+@page { size: A4; margin: 20mm 17mm 20mm 17mm;
+  @bottom-center { content: counter(page) " / " counter(pages); font: 8pt "DejaVu Sans"; color:#555; }
+  @top-right { content: "{{UST_BILGI}}"; font: 7pt "DejaVu Sans"; color:#888; } }
+@page :first { @bottom-center { content: none } @top-right { content: none } }
+html { font-family: "DejaVu Serif", serif; font-size: 9.6pt; line-height: 1.42; color:#1b1b1b; }
+body { margin:0; }
+h1, h2, h3, h4 { font-family: "DejaVu Sans", sans-serif; color:#1d3557; line-height:1.25; }
+h1 { font-size: 16pt; page-break-before: always; border-bottom: 2px solid #1d3557; padding-bottom: 4px; margin-top:0; }
+h2 { font-size: 12pt; margin-top: 14pt; }
+h3 { font-size: 10.5pt; }
+h1 .header-section-number, h2 .header-section-number { color:#c0392b; margin-right:6px; }
+p { margin: 4pt 0 5pt 0; text-align: justify; hyphens: auto; }
+li { margin-bottom: 3pt; text-align: justify; }
+strong { color:#111; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 9pt 0; font-family: "DejaVu Sans", sans-serif; font-size: 7.6pt; line-height:1.28; page-break-inside: auto; }
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; }
+th { background:#1d3557; color:#fff; text-align:left; padding:3px 4px; font-weight:bold; }
+td { border-bottom: 0.5pt solid #ccd; padding: 2.5px 4px; vertical-align: top; overflow-wrap: anywhere; word-break: break-word; }
+tr:nth-child(even) td { background:#f4f6fa; }
+.tbl-kr_a table, .tbl-kr_b table, .tbl-kr_c table, .tbl-kr_d table { font-size: 6.9pt; }
+.tbl-eka table { font-size: 6.4pt; }
+.tbl-ach table { font-size: 6.9pt; }
+.tbl-g_frames table { font-size: 6.9pt; }
+.box { border: 1.2pt solid #c0392b; background:#fdf3f2; padding: 6pt 8pt; margin: 8pt 0; }
+.box table { font-size: 6.8pt; }
+.box tr:nth-child(even) td { background:#fbe7e5; }
+figure { margin: 8pt 0; text-align:center; page-break-inside: avoid; }
+figure img { width: 100%; }
+figcaption { font: 7.5pt "DejaVu Sans"; color:#555; }
+code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background:#f1f1f1; padding:0 2px; }
+.cover { page-break-after: always; padding-top: 30mm; }
+.cover .draft { font: bold 13pt "DejaVu Sans"; color:#fff; background:#c0392b; padding: 7pt 10pt; display:inline-block; letter-spacing: 1px; }
+.cover .kicker { font: 10pt "DejaVu Sans"; color:#555; margin-top: 18mm; text-transform: uppercase; letter-spacing: 1px; }
+.cover h1.title { font-size: 28pt; border: none; page-break-before: avoid; margin: 4mm 0; }
+.cover .subtitle { font: 11pt "DejaVu Serif"; color:#333; text-align:left; }
+.cover table.covermeta { margin-top: 14mm; font-size: 9pt; }
+.cover table.covermeta td:first-child { width: 28%; font-weight: bold; color:#1d3557; }
+.cover .gdelt { margin-top: 12mm; font: 8.5pt "DejaVu Sans"; color:#333; border-top: 1px solid #aaa; padding-top: 6pt; text-align:left; }
+nav#TOC { page-break-after: always; font-family: "DejaVu Sans"; font-size: 9pt; }
+nav#TOC::before { content: "İçindekiler"; display:block; font-size: 16pt; color:#1d3557; font-weight:bold; border-bottom: 2px solid #1d3557; margin-bottom: 8pt; }
+nav#TOC ul { list-style: none; padding-left: 12pt; margin: 0; }
+nav#TOC > ul { padding-left: 0; }
+nav#TOC li { margin: 2pt 0; }
+nav#TOC a { color:#1d3557; text-decoration:none; }
+nav#TOC a::after { content: leader('.') target-counter(attr(href), page); color:#555; }
+a { color:#1d3557; text-decoration: none; }
+.tbl-kr_a td:nth-child(1), .tbl-kr_a td:nth-child(2), .tbl-kr_b td:nth-child(1), .tbl-kr_b td:nth-child(2),
+.tbl-kr_c td:nth-child(1), .tbl-kr_c td:nth-child(2), .tbl-kr_d td:nth-child(1), .tbl-kr_d td:nth-child(2),
+.tbl-eka td:nth-child(1), .tbl-eka td:nth-child(3), .tbl-ach td:nth-child(1), .tbl-g_first td:nth-child(1) { white-space: nowrap; word-break: normal; overflow-wrap: normal; }
+.tbl-kr_a td:nth-child(3), .tbl-kr_b td:nth-child(3), .tbl-kr_c td:nth-child(3), .tbl-kr_d td:nth-child(3) { min-width: 14mm; }
+.tbl-g_frames td:nth-child(2), .tbl-g_first td:nth-child(3), .tbl-g_first td:nth-child(4), .tbl-g_daily td:nth-child(1) { white-space: nowrap; word-break: normal; overflow-wrap: normal; }
