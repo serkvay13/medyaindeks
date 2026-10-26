@@ -71,10 +71,11 @@ def paketler(kok: str | Path | None = None) -> list[str]:
 
 
 # --------------------------------------------------------------------------------
-def vakaya_aktar(klasor: str | Path, vaka_id: str, depo, kok_calisma=None) -> dict:
+def vakaya_aktar(klasor: str | Path, vaka_id: str, depo, kok_calisma=None, ayar: dict | None = None) -> dict:
     """Kart klasörünü çalışma alanındaki bir vakaya aktarır (`python -m medya vaka-ice-aktar`).
 
-    - Ayar: klasörün üstünde ya da içinde `vaka.yaml` varsa (paket yapısı) okunur; yoksa varsayılanlar.
+    - Ayar: `ayar` verilmişse o; yoksa klasörün üstünde ya da içinde `vaka.yaml` varsa (paket yapısı) okunur;
+      yoksa varsayılanlar.
     - Vaka çalışma alanında yoksa oluşturulur (olay tarihi ayardan ya da kartlardan gelmezse hata).
     - hipotezler.json varsa ve vaka henüz ön kayıtlı değilse ön kayıt yapılır — kartlar depoya
       bağlanmadan ÖNCE (hipotez önce, kanıt sonra).
@@ -86,8 +87,9 @@ def vakaya_aktar(klasor: str | Path, vaka_id: str, depo, kok_calisma=None) -> di
     from medya.vaka import Vaka
 
     klasor = Path(klasor)
-    ayar_yolu = ilk_bulunan(klasor, "vaka") or ilk_bulunan(klasor.parent, "vaka")
-    ayar = yukle(ayar_yolu) if ayar_yolu else {}
+    if ayar is None:
+        ayar_yolu = ilk_bulunan(klasor, "vaka") or ilk_bulunan(klasor.parent, "vaka")
+        ayar = yukle(ayar_yolu) if ayar_yolu else {}
     if ayar.get("kart_klasoru") and (klasor / ayar["kart_klasoru"]).is_dir():
         klasor = klasor / ayar["kart_klasoru"]
     sonuc = klasor_ice_aktar(klasor, ayar.get("sema_ayarlari"))

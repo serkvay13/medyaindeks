@@ -1,0 +1,74 @@
+# Araştırma protokolü: her vakada zorunlu beş hat. Vaka ayarı (vaka.yaml > arastirma) değişkenleri, ek dilleri ve
+# eşikleri geçersiz kılabilir. Sorgu şablonlarındaki {olay}, {fail}, {yer}, {tarih}, {aktor}, {kavram}
+# değişkenleri dile göre vaka ayarından doldurulur; bir değişkeni o dilde tanımsız şablon üretilmez.
+diller: [tr, en, ru]
+
+hatlar:
+  kronoloji:
+    kod: a
+    ad: "Dakika dakika kronoloji"
+    aciklama: >-
+      Olay öncesi, olay günü (saat saat), sonraki günler ve yargı süreci. Her satır tek olgu, saat türü
+      (olay saati / yayın saati / belirtilmemiş), kaynak sınıfı ve kaynaklar arası çelişki notuyla.
+    kart_semasi: KR
+    sorgular:
+      tr: ["{olay} dakika dakika", "{olay} saat kaçta", "{fail} {tarih} otel", "{olay} ilk açıklama {tarih}",
+           "{olay} iddianame kronoloji", "{olay} çelişki saat"]
+      en: ["{olay} timeline", "{olay} minute by minute", "{olay} first reports {tarih}", "{fail} hotel {tarih}"]
+      ru: ["{olay} хронология", "{olay} онлайн трансляция", "{olay} {tarih} что известно"]
+      ar: ["{olay} تسلسل زمني"]
+    esikler: {asgari_kart: 30, olay_gunu_satir: 20}
+
+  aktorler:
+    kod: b
+    ad: "Diğer aktörlerin tepkileri, kendi soruşturmaları ve mağdur yakınları"
+    aciklama: >-
+      Devletler ve kurumlar (resmî açıklama = kurum iddiası), kendi soruşturmaları, medya çerçeveleri ve mağdur
+      yakınlarının açıklamaları; her biri tarih ve özgün dilde alıntıyla.
+    kart_semasi: R
+    sorgular:
+      tr: ["{olay} {aktor} tepki", "{olay} {aktor} açıklama", "{olay} ailesi açıklama", "{olay} eşi açıklama"]
+      en: ["{olay} {aktor} reaction", "{olay} {aktor} investigation", "{olay} widow statement", "{olay} family"]
+      ru: ["{olay} {aktor} заявление", "{olay} Следственный комитет", "{olay} вдова", "{olay} семья"]
+      ar: ["{olay} {aktor} موقف"]
+    # katlanmış metinde aranır (tema + aktör + özet); mağdur yakınları hattı boş geçilemez
+    zorunlu_temalar:
+      "mağdur yakınları": "\\b(aile\\w*|dul|esi|widow\\w*|family|вдова)\\b"
+    esikler: {asgari_kart: 20}
+
+  kavram:
+    kod: c
+    ad: "Kavram açıklaması ve vakaya özgü süreç"
+    aciklama: >-
+      Raporda kullanılan her yeni kavram için akademik tanım ve modeller (literatür künyesiyle) ve kavramın bu
+      vakadaki süreci (yaşam öyküsü, çevre, dijital iz, tanıklıklar).
+    kart_semasi: RD
+    sorgular:
+      tr: ["{kavram} tanımı akademik", "{kavram} modelleri", "{fail} {kavram}", "{fail} sohbet", "{fail} tanık ifadesi"]
+      en: ["{kavram} definition academic review", "{kavram} models pathways", "{fail} {kavram}"]
+      ru: ["{kavram} теория", "{fail} {kavram}"]
+    kavram_dosyasi_gerekli: true
+    esikler: {asgari_kart: 20}
+
+  gdelt:
+    kod: d
+    ad: "GDELT medya istatistikleri"
+    aciklama: >-
+      GKG 2.1 ham dosyaları (Türkçe), çekirdek/geniş küme, günlük ve saatlik hacim, ilk haber zamanları, yayın
+      grupları, ton, kopya haber ve çerçeve sayımları; üç manipülasyon göstergesi.
+    komutlar: ["python -m medya gdelt indir {vaka}", "python -m medya gdelt tara {vaka}",
+               "python -m medya gdelt istatistik {vaka}"]
+    esikler: {asgari_cekirdek: 100}
+
+  kanit_ach:
+    kod: e
+    ad: "Kanıt kartları ve ACH"
+    aciklama: >-
+      Admiralty dereceli kanıt kartları; hipotezler kart toplamadan önce ön kayıtlı ve SHA-256 ile kilitli;
+      tanısal kanıt satırlarıyla kanıt–hipotez matrisi.
+    kart_semasi: K
+    sorgular:
+      tr: ["{olay} iddianame", "{olay} gerekçeli karar", "{olay} delil", "{olay} Yargıtay"]
+      en: ["{olay} indictment", "{olay} verdict evidence", "{olay} court ruling"]
+      ru: ["{olay} приговор", "{olay} обвинительное заключение"]
+    esikler: {asgari_kart: 20, asgari_ach_satiri: 10}

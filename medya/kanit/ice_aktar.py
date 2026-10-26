@@ -29,6 +29,25 @@ from medya.kanit.kart import ALINTI_AZAMI, OZET_AZAMI, KanitHatasi, KanitKarti
 from medya.kanit.siniflar import kurum_temizle, sinif_adlandir, sinif_duzelt
 
 SEMALAR = ("K", "KR", "R", "RD")
+# Dışarıda (harici ajan / analist) doldurulacak kart şemaları: alan -> açıklama. Görev dosyalarına yazılır.
+SEMA_ALANLARI = {
+    "K": {"kanit_id": "K01, K02 …", "tur": "kaynak türü (resmi açıklama, haber, mahkeme/iddianame aktarımı …)",
+          "kaynak_url": "açılan sayfa", "kurum_yayin": "yayın/kurum adı", "yayin_tarihi": "YYYY-AA-GG",
+          "olay_tarihi": "YYYY-AA-GG", "ozet": "kendi cümlenle, ≤600 karakter", "alinti": "birebir, ≤300 karakter",
+          "kaynak_derecesi": "A–F", "bilgi_derecesi": "1–6", "serit": "kaynak şeridi", "devlet_baglantili": "true/false"},
+    "KR": {"id": "K001, K002 … (raporda KR-001)", "tarih": "YYYY-AA-GG", "saat": "SS:DD (dilimiyle) ya da 'saat belirtilmemiş'",
+           "saat_turu": "olay saati | yayın/bildirim saati | saat belirtilmemiş", "donem": "0-öncesi | 1-olay günü | 2-… | 3-…",
+           "olay": "tek olgu", "kaynak_url": "", "yayin": "", "yayin_tarihi": "YYYY-AA-GG", "alinti": "birebir",
+           "kaynak_sinifi": "yayın sınıfı", "dogrulama": "sayfa açıldı | yalnızca arama özeti | bulunamadı",
+           "celiski": "kaynaklar arası çelişki notu ya da null"},
+    "R": {"kanit_id": "R01 …", "tarih": "YYYY-AA-GG", "aktor": "aktör (rolüyle)", "tema": "", "ifade_olay": "",
+          "alinti_orijinal": "özgün dilde birebir", "alinti_tr": "Türkçe çeviri", "kaynak_url": "", "yayin": "",
+          "yayin_tarihi": "YYYY-AA-GG", "kaynak_sinifi": "", "admiralty_kaynak": "A–F", "admiralty_bilgi": "1–6",
+          "dogrulama": "açıldı | yalnızca arama özeti"},
+    "RD": {"kanit_id": "RD01 …", "tema": "", "olay_tarihi": "YYYY-AA-GG", "olgu": "", "alinti": "birebir",
+           "url": "", "yayin": "", "yayin_tarihi": "YYYY-AA-GG", "sinif": "", "erisim": "fetch edildi | yalnızca arama özeti",
+           "admiralty": "ör. C3", "teyit": ""},
+}
 # Sınıf alanı yayın sahipliğini anlatan şemalar (sahiplik dönemi düzeltmesi bunlara uygulanır)
 VARSAYILAN_SAHIPLIK = {"K": False, "KR": True, "R": True, "RD": True}
 _ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
