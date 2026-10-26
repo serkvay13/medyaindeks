@@ -1,0 +1,13 @@
+# TASLAK ÖRNEK — kaynakla doldurulana kadar raporlara girmez. İçerik yer tutucudur.
+aktor = "BM Güvenlik Konseyi"
+tur = "uluslararasi_kurum"
+durum = "taslak"
+gozden_gecirme = "2027-04-30"
+
+[[tipik_hamleler]]
+metin = "TODO: Olay sonrası yayımlanan basın açıklaması türleri (kaynakla doldurulacak)"
+kaynaklar = []
+
+[[anlati_kaliplari]]
+metin = "TODO: Benzer olaylarda kullanılan ortak ifade kalıpları (kaynakla doldurulacak)"
+kaynaklar = []

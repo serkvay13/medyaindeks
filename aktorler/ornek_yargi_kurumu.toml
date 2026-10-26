@@ -1,0 +1,13 @@
+# TASLAK ÖRNEK — kaynakla doldurulana kadar raporlara girmez. İçerik yer tutucudur.
+aktor = "Cumhuriyet Başsavcılığı (genel kurum profili)"
+tur = "devlet_kurumu"
+durum = "taslak"
+gozden_gecirme = "2027-04-30"
+
+[[tipik_hamleler]]
+metin = "TODO: Yüksek profilli olaylarda soruşturma duyurusu ve yayın yasağı uygulamaları (kaynakla)"
+kaynaklar = []
+
+[[anlati_kaliplari]]
+metin = "TODO: Soruşturma duyurularında kullanılan nitelendirme kalıpları (kaynakla)"
+kaynaklar = []

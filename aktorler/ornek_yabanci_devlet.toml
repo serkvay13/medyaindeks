@@ -1,0 +1,17 @@
+# TASLAK ÖRNEK — kaynakla doldurulana kadar raporlara girmez. İçerik yer tutucudur.
+aktor = "Rusya Federasyonu Dışişleri Bakanlığı"
+tur = "yabanci_devlet"
+durum = "taslak"
+gozden_gecirme = "2027-04-30"
+
+[[cikarlar]]
+metin = "TODO: Bölgesel politikada açıklanmış öncelikler (resmi belgelerden, kaynakla)"
+kaynaklar = []
+
+[[kirmizi_cizgiler]]
+metin = "TODO: Resmi belgelerde açıkça ifade edilmiş kırmızı çizgiler (kaynakla)"
+kaynaklar = []
+
+[[tipik_hamleler]]
+metin = "TODO: Diplomatik krizlerde gözlenen tipik adımlar (araştırma kurumu kaynağıyla)"
+kaynaklar = []
