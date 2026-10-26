@@ -1,0 +1,197 @@
+{
+ "aciklama": "Kamusal rolü olmayan kişiler rolüyle anılır. Sıralı [kalıp (Python regex), yerine] çiftleri; uzun/özgül kalıp önce. Rapor metnine ve modele giden kart görünümüne uygulanır; kanıt kartının kendisi değişmez.",
+ "kurallar": [
+  [
+   "Leyla Gündoğan, Anıl Değer \\(taburcu\\) ve Arnavutluk doğumlu TC vatandaşı Anastas Zımbırıkalı",
+   "üç yaralı (biri taburcu; biri Arnavutluk doğumlu TC vatandaşı)"
+  ],
+  [
+   "Değer taburcu",
+   "bir yaralı taburcu"
+  ],
+  [
+   "Zımbırıkalı \\(AA\\), Zimbinkali \\(RBC\\), Zimrikaki \\(iddianame/Gazetevatan\\)",
+   "bir yaralının adı üç farklı yazımla geçiyor"
+  ],
+  [
+   "müteahhit Tahsin Şenlik",
+   "bir müteahhit/dernek yöneticisi"
+  ],
+  [
+   "\\(T\\. Şenlik\\)",
+   "(bir dernek yöneticisi)"
+  ],
+  [
+   "Şenlik",
+   "dernek yöneticisi"
+  ],
+  [
+   "iddianamedeki tanık İbrahim Yılmazoğlu'nun",
+   "iddianamedeki bir tanığın"
+  ],
+  [
+   "Tanık Yılmazoğlu",
+   "Bir tanık"
+  ],
+  [
+   "Hürriyet muhabiri Haşim Kılıç",
+   "bir Hürriyet muhabiri"
+  ],
+  [
+   "Söğüt'ün eşi A\\.S\\.",
+   "Söğüt'ün eşi"
+  ],
+  [
+   "İHH çalışanı tanık Mikail Bora",
+   "İHH çalışanı bir tanık"
+  ],
+  [
+   "Şüpheli Kaan Bülbül \\(iddianame\\)",
+   "Polis okulundan bir şüpheli (iddianame)"
+  ],
+  [
+   "'Hamza' kod adlı Burak Yusmak'ın",
+   "'Hamza' kod adlı bir kişinin"
+  ],
+  [
+   "Sercan Başar \\(savcıya\\)",
+   "Polis okulundan arkadaşı olan sanık (savcıya)"
+  ],
+  [
+   "Kaan Bülbül",
+   "bir okul arkadaşı"
+  ],
+  [
+   "Sercan Başar duruşmada",
+   "Okul arkadaşı olan sanık duruşmada"
+  ],
+  [
+   "Sercan Başar",
+   "okul arkadaşı (sanık)"
+  ],
+  [
+   "Sercan B\\.",
+   "okul arkadaşı"
+  ],
+  [
+   "Sınıf komiseri Cem Yıldız",
+   "Sınıf komiseri"
+  ],
+  [
+   "Altıntaş ve Başar",
+   "Altıntaş ve arkadaşı"
+  ],
+  [
+   "Tanık E\\.G\\.",
+   "Bir tanık"
+  ],
+  [
+   "Bülbül/Başar/Buyruk",
+   "okul arkadaşları"
+  ],
+  [
+   "Tanık Hüseyin Korkmaz",
+   "Bir tanık"
+  ],
+  [
+   "Murat Oduncu \\(İsmailağa Ankara uzantısı\\) tweet",
+   "İsmailağa çevresinin Ankara uzantısından bir kişinin tweet"
+  ],
+  [
+   "Tanık İ\\.B\\. Oduncu",
+   "Bir tanık"
+  ],
+  [
+   "İ\\.B\\. Oduncu'ya",
+   "bir tanığa"
+  ],
+  [
+   "Durmuş Kutlu",
+   "Bir tanık"
+  ],
+  [
+   "hükümlü El Kaide üyesi Fatih Köçer",
+   "hükümlü bir El Kaide üyesi"
+  ],
+  [
+   "\\(E\\.A\\. Silin ayarladı\\)",
+   "(bir aracı ayarladı)"
+  ],
+  [
+   "Hüsnü Aktaş",
+   "bir vaiz"
+  ],
+  [
+   "Diyanet imamı Recep Uğuz",
+   "bir Diyanet imamı"
+  ],
+  [
+   "Ramazan Yücel",
+   "bir kişi"
+  ],
+  [
+   "FETÖ'den tutuklu 3\\. Sınıf Emniyet Müdürü",
+   "FETÖ'den tutuklu bir şube müdürü"
+  ],
+  [
+   "firari işadamı Şahin İlgi'nin",
+   "firari bir işadamının"
+  ],
+  [
+   "Oduncu kardeşlerle",
+   "İsmailağa çevresinden kişilerle"
+  ],
+  [
+   "Merhamet Derneği'nden M\\.E\\. Akin ile",
+   "bir dernek mensubuyla"
+  ],
+  [
+   "anne Maria, eşi Marina, oğlu Gennadiy ve kız kardeşi Yelena",
+   "annesi, eşi Marina Karlova, oğlu ve kız kardeşi"
+  ],
+  [
+   "Oğul Gennadiy Karlov",
+   "Oğlu"
+  ],
+  [
+   "Gennadiy'nin",
+   "oğlunun"
+  ],
+  [
+   "\\(oğul Gennadiy hakkında\\)",
+   "(oğlu hakkında)"
+  ],
+  [
+   "Baba adı: Esrafil \\(Sabah\\) / İsrafil \\(TR Vikipedi\\)\\.",
+   "Babanın adı kaynaklarda iki farklı yazımla geçiyor."
+  ],
+  [
+   "avukat S\\.Ö\\. ve polis S\\.B\\.",
+   "bir avukat ve bir polis"
+  ],
+  [
+   "S\\.Ö\\., S\\.B\\. ve Altıntaş",
+   "İki ev arkadaşı ve Altıntaş"
+  ],
+  [
+   "avukat S\\.Ö\\.",
+   "bir avukat"
+  ],
+  [
+   "S\\.B\\.",
+   "bir ev arkadaşı"
+  ],
+  [
+   "S\\.Ö\\.",
+   "bir ev arkadaşı"
+  ],
+  [
+   "S\\.'nin",
+   "bir arkadaşın"
+  ],
+  [
+   "Kaan",
+   "X"
+  ]
+ ]
+}

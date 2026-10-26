@@ -1,0 +1,665 @@
+{
+  "vaka": "Andrey Karlov suikastı (19.12.2016)",
+  "olusturma": "2026-10-26 ~10:00 CET",
+  "yontem": {
+    "aciklama": "Heuer ACH: Her kanıt her hipotez için T/Ç/N olarak işaretlendi. Ağırlık = kaynak derecesi (A=1, B=0.8, C=0.6, D=0.4) × bilgi derecesi (1=1, 2=0.85, 3=0.65, 4=0.4, 5=0.2). Sıralama ağırlıklı tutarsızlığa göre yapıldı (düşük = daha az çürütülmüş). Ağırlıklı tutarlılık bilgi amaçlı ayrıca verildi.",
+    "uyari": "Tutarsızlık puanı, belirsiz veya kanıtsız hipotezleri ödüllendirir. H5 bir kombinasyon olduğu için neredeyse hiçbir kanıtla çelişmez. H4 ise hakkında neredeyse hiç kanıt olmadığı için düşük puan alır. Bu nedenle nihai sıralama analist yargısıyla düzeltildi (bkz. nihai_siralama)."
+  },
+  "matris": [
+    {
+      "kanit_id": "K01",
+      "agirlik": 0.68,
+      "tanilayici": true,
+      "H1": "Ç",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K02",
+      "agirlik": 0.68,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K03",
+      "agirlik": 0.32,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K04",
+      "agirlik": 0.68,
+      "tanilayici": true,
+      "H1": "Ç",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K05",
+      "agirlik": 0.68,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "N",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K06",
+      "agirlik": 0.24,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K07",
+      "agirlik": 0.52,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K08",
+      "agirlik": 0.24,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K09",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "Ç",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K10",
+      "agirlik": 0.68,
+      "tanilayici": true,
+      "H1": "Ç",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K11",
+      "agirlik": 0.65,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "N",
+      "H4": "T",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K12",
+      "agirlik": 1.0,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K13",
+      "agirlik": 1.0,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K14",
+      "agirlik": 1.0,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K15",
+      "agirlik": 0.68,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K16",
+      "agirlik": 0.51,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "N",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K17",
+      "agirlik": 0.52,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "N",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K18",
+      "agirlik": 0.85,
+      "tanilayici": true,
+      "H1": "Ç",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K19",
+      "agirlik": 0.52,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K20",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "T",
+      "H4": "T",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K21",
+      "agirlik": 0.24,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "N",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K22",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "N",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K23",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K24",
+      "agirlik": 0.24,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "Ç",
+      "H4": "T",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K25",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "N",
+      "H4": "T",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K26",
+      "agirlik": 0.24,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K27",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K28",
+      "agirlik": 0.51,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K29",
+      "agirlik": 0.34,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "Ç",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K30",
+      "agirlik": 0.52,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "N",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K31",
+      "agirlik": 0.39,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K32",
+      "agirlik": 0.26,
+      "tanilayici": true,
+      "H1": "Ç",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K33",
+      "agirlik": 0.26,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "N",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K34",
+      "agirlik": 0.51,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "Ç",
+      "H4": "T",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K35",
+      "agirlik": 0.39,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K36",
+      "agirlik": 0.34,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K37",
+      "agirlik": 0.51,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K38",
+      "agirlik": 0.16,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "Ç",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K39",
+      "agirlik": 0.68,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    },
+    {
+      "kanit_id": "K40",
+      "agirlik": 0.12,
+      "tanilayici": true,
+      "H1": "T",
+      "H2": "N",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K41",
+      "agirlik": 0.51,
+      "tanilayici": true,
+      "H1": "N",
+      "H2": "T",
+      "H3": "T",
+      "H4": "N",
+      "H5": "T"
+    },
+    {
+      "kanit_id": "K42",
+      "agirlik": 0.24,
+      "tanilayici": false,
+      "H1": "N",
+      "H2": "N",
+      "H3": "N",
+      "H4": "N",
+      "H5": "N"
+    }
+  ],
+  "puanlar": {
+    "agirlikli_tutarsizlik": {
+      "H1": 3.15,
+      "H2": 3.85,
+      "H3": 3.43,
+      "H4": 0.39,
+      "H5": 0
+    },
+    "agirlikli_tutarlilik": {
+      "H1": 5.05,
+      "H2": 5.55,
+      "H3": 7.23,
+      "H4": 2.18,
+      "H5": 10.37
+    },
+    "ham_celiski_sayisi": {
+      "H1": 5,
+      "H2": 10,
+      "H3": 8,
+      "H4": 1,
+      "H5": 0
+    },
+    "mekanik_siralama": [
+      "H5",
+      "H4",
+      "H1",
+      "H3",
+      "H2"
+    ]
+  },
+  "en_tanilayici_kanitlar": [
+    {
+      "kanit_id": "K01",
+      "neden": "Arapça cihat biatı ve 'Halep' sloganları H2/H3'ü destekliyor; H1 ancak 'kasıtlı yanıltma' ek varsayımıyla ayakta kalıyor."
+    },
+    {
+      "kanit_id": "K20",
+      "neden": "Ölümden yaklaşık 2,5 saat sonra Gmail yazışmalarının silinmesi saf yalnız aktör (H2) hipotezini ciddi biçimde zayıflatıyor, ama yardımcının kim olduğunu söylemiyor."
+    },
+    {
+      "kanit_id": "K22",
+      "neden": "Savcılık iddiasına göre hatsız telefon, gizli iletişim ve 9 Aralık'ta 256 metrelik baz yakınlığı var. H1'in kamuya açık en somut pozitif kanıtı, ancak içerik açıklanmadı."
+    },
+    {
+      "kanit_id": "K27",
+      "neden": "Mahkeme saldırganın Sosyal Doku/Nurettin Yıldız çevresindeki varlığını kabul ediyor ve 'sızma' diye yorumluyor. Olgu H3a/H5a lehine, yorum H1 lehine."
+    },
+    {
+      "kanit_id": "K34",
+      "neden": "Sahiplenme bildirisi sahte çıktı, JFŞ ve Ceyş el-Fetih inkâr etti. Bu, H3b'yi (ağ yönlendirmesi) zayıflatıyor, H3a'yı (esinlenme) etkilemiyor."
+    }
+  ],
+  "rafine_hipotezler_kritik_kartlarda": {
+    "not": "Sonradan eklenen H3a/H3b/H5a (hipotezler.json) için yalnızca tanılayıcı kartlarda yapılan niteliksel işaretleme.",
+    "K01": {
+      "H3a": "T",
+      "H3b": "T",
+      "H5a": "T"
+    },
+    "K20": {
+      "H3a": "Ç",
+      "H3b": "T",
+      "H5a": "T"
+    },
+    "K21": {
+      "H3a": "Ç",
+      "H3b": "Ç",
+      "H5a": "N"
+    },
+    "K22": {
+      "H3a": "Ç",
+      "H3b": "N",
+      "H5a": "T"
+    },
+    "K27": {
+      "H3a": "T",
+      "H3b": "N",
+      "H5a": "T"
+    },
+    "K30": {
+      "H3a": "T",
+      "H3b": "N",
+      "H5a": "T"
+    },
+    "K33": {
+      "H3a": "T",
+      "H3b": "N",
+      "H5a": "T"
+    },
+    "K34": {
+      "H3a": "N",
+      "H3b": "Ç",
+      "H5a": "N"
+    },
+    "K35": {
+      "H3a": "T",
+      "H3b": "Ç",
+      "H5a": "N"
+    }
+  },
+  "nihai_siralama": [
+    {
+      "sira": 1,
+      "hipotez": "H5 (özgül biçimi H5a)",
+      "olasilik_terimi": "muhtemel (~%55-65)",
+      "gerekce": "Geçmiş Gülen teması (K30), İslamcı-cihatçı çevrede dönüşüm (K27, K32, K33), Halep tetikleyicisi (K01, K14, K15, K41) ve ölüm sonrası yardımcı izi (K20) birlikte tek tek hipotezlerden daha iyi açıklanıyor. Yönlendiricinin kimliği belirsiz kalıyor."
+    },
+    {
+      "sira": 2,
+      "hipotez": "H1 (FETÖ organizasyonu)",
+      "olasilik_terimi": "olası, kanıtlanmamış (~%25-35, H5a içindeki FETÖ yönlendirmeli alt varyant dahil edilirse daha yüksek)",
+      "gerekce": "Kesinleşmiş mahkeme kararı ve somut temas iddiaları var (K22, K23, K28, K29). Ancak iletişim içerikleri kamuya kapalı (K30), atıf kanıttan önce geldi (K04, K05, K08), motivasyon/zaman çerçevesi tutarsız (K18, K24) ve iddianamede çürütülemezlik yapısı var (K26)."
+    },
+    {
+      "sira": 3,
+      "hipotez": "H3 (cihatçı ortam) – H3a esinlenme",
+      "olasilik_terimi": "olası (~%20-30, tek başına)",
+      "gerekce": "Sloganlar, Sosyal Doku/Yıldız teması ve İHH bağışları (D derecesi) ortamla teması gösteriyor. Ancak dizüstünde cihatçı içerik bulunmadığı bildirildi (K21) ve ölüm sonrası silme bir yardımcıya işaret ediyor (K20)."
+    },
+    {
+      "sira": 4,
+      "hipotez": "H3b (cihatçı ağ yönlendirmesi)",
+      "olasilik_terimi": "olası değil (~%5-10)",
+      "gerekce": "Gerçek sahiplenme yok; sahte bildiri ve resmi inkâr var (K34, K35). Güvenilir kanalda ağ izi yok."
+    },
+    {
+      "sira": 5,
+      "hipotez": "H2 (saf yalnız aktör)",
+      "olasilik_terimi": "olası değil (~%10)",
+      "gerekce": "Ölüm sonrası e-posta silme (K20) ve iddia edilen temaslar (K22) saf yalnızlıkla bağdaşmıyor. Ancak silmenin masum açıklamaları kamuya açık kanıtla dışlanmadı."
+    },
+    {
+      "sira": 6,
+      "hipotez": "H4 (üçüncü taraf istihbarat provokasyonu)",
+      "olasilik_terimi": "çok düşük (<%5)",
+      "gerekce": "Pozitif kanıt yok. Kremlin'in 'provokasyon' nitelemesi (K11) fail adlandırmıyor, iddianamedeki 'arkasındaki istihbarat örgütleri' (K24) isimsiz. Düşük ACH puanı kanıt yokluğundan kaynaklanıyor."
+    }
+  ],
+  "olasilik_notu": "Yüzde aralıkları, kanıt setinin kırılganlığını göstermek için verilen analist yargılarıdır; istatistiksel değildir. Hipotezler kısmen örtüştüğü için toplamları 100 değildir.",
+  "seytanin_avukati": {
+    "H5a_aleyhine": "Kombinasyon hipotezleri doğası gereği sınanması zor hipotezlerdir. 'Biraz Gülen, biraz cihatçı, biraz yardım' her veriyi emebilir. Mahkeme kararını reddetmek için kamuya açık güçlü bir karşı kanıt yok. Bağımsız bir teyit olmadan sözü edilen temasların (Sosyal Doku, İHH) çoğunun kaynağı Gülen'e yakın ve çıkarı olan yayınlar (K32, K33). H5a'nın 'esnekliği' gerçek bir açıklama gücü değil, belirsizliğin yansıması olabilir.",
+    "H1_lehine_en_guclu_dava": "Türk ve Rus soruşturmacılar birlikte çalıştı (K20, K21). Rusya'nın Türk mahkeme kararını kamuoyu önünde reddettiğine dair bir kayıt bu oturumda bulunmadı (aranmadı, doğrulanmadı). Rus analizinin dizüstünde 690 Hizmet atfı bulup cihatçı içerik bulmaması (K21), baz kaydı (K22), etkin pişmanlık ifadesi (K23) ve Yargıtay onaması (K29) birbirinden bağımsız görünen dört kanal. Sloganlar gerçekten de kolay taklit edilebilir bir yanıltma aracı.",
+    "H1_aleyhine_en_guclu_dava": "Atıf 19 Aralık gecesi, delil yokken eleme yoluyla yapıldı (K05) ve ilk 48 saatte Cumhurbaşkanlığı düzeyinde sabitlendi (K08). Bundan sonraki soruşturma, Türkiye'nin OHAL döneminde kesin bir siyasi çerçeve içinde yürüdü. Rusya'nın 'Rusya da biliyor' iddiasını ertesi gün reddetmesi (K10, K07) önemli. Kremlin sonradan da Gülen'i adıyla suçlamadı (bu oturumda doğrulanmadı). İletişim içerikleri hiçbir zaman açıklanmadı (K30). İddianame ve gerekçeli karar, Sosyal Doku/İHH hattını 'renklendirme' diyerek kapattı (K27, K33).",
+    "H3_lehine_en_guclu_dava": "Kaan'ın hipotezi yapısal olarak güçlü: 2016 sonbaharında Ankara Nusra'nın Halep'ten çıkarılmasına onay verdi (K16), Türkiye destekli grupları Rus hedef listesinden çıkarma çabası sona erdi (K17), 20 Aralık bildirisi Nusra'ya ortak savaşı resmileştirdi (K13). Tahliye haftasında hükümete yakın İslamcı STK'lar Rus temsilcilikleri önünde 'Katil Rusya' dedi (K15, K41). Saldırgan bu çevrenin sohbet halkalarındaydı (K27). JFŞ eylemi sahiplenmedi ama 'doğal tepki' diye meşrulaştırdı (K35).",
+    "H3_aleyhine_en_guclu_dava": "Esinlenme tek başına ölüm sonrası e-posta silmeyi açıklamıyor (K20). Rus analizinde cihatçı dijital iz yok (K21). Gerçek bir sahiplenme yok ve sahte bildiri çabuk çöktü (K34). Türk hükümete yakın çevrelerin Rusya'ya öfkesi meşru siyasi protestoydu; şiddete geçiş kanıtı yok.",
+    "H4_lehine": "Zamanlama Moskova üçlü toplantısının arifesi (K13), sahte sahiplenme bildirisinin Mısır, Irak ve Rus devlet medyası üzerinden yayılması (K34) ve ölüm sonrası profesyonel iz silme (K20, K21: VPN) bir istihbarat imzası olarak okunabilir.",
+    "H4_aleyhine": "Hiçbir taraf (Rusya dahil) somut bir üçüncü devlet adı vermedi. Provokasyon yapılmışsa amacına ulaşmadı: üçlü toplantı ertesi gün yapıldı, Astana süreci başladı."
+  },
+  "tez_soykutugu": [
+    {
+      "tarih": "2016-12-19 (gece)",
+      "aktor": "MFA No:327",
+      "tez": "Örgüt adı yok; 'tüm boyutlarıyla soruşturulacak'",
+      "kart": "K12"
+    },
+    {
+      "tarih": "2016-12-19 (gece)",
+      "aktor": "AKP MV Kani Torun",
+      "tez": "'Tek muhtemel fail FETÖ'; Suriye teması 'çok düşük ihtimal' (eleme yoluyla)",
+      "kart": "K05"
+    },
+    {
+      "tarih": "2016-12-19/20",
+      "aktor": "Ankara BB Bşk. Gökçek (Twitter)",
+      "tez": "Gülen bağlantısı imaları",
+      "kart": "K04"
+    },
+    {
+      "tarih": "2016-12-20",
+      "aktor": "Sabah / A. Selvi (HDN)",
+      "tez": "FETÖ 'uyuyan hücre'; Arapça = 'Nusra imajı yaratma'; farklı haber yapan gazeteler 'FETÖ'ye hizmet'",
+      "kart": "K06, K36"
+    },
+    {
+      "tarih": "2016-12-20",
+      "aktor": "Dışişleri Bakanı Çavuşoğlu → Kerry",
+      "tez": "'Türkiye de Rusya da FETÖ olduğunu biliyor'",
+      "kart": "K07"
+    },
+    {
+      "tarih": "2016-12-21",
+      "aktor": "Kremlin Sözcüsü Peskov",
+      "tez": "'Sonuç için erken' (Rusya katılmıyor)",
+      "kart": "K10"
+    },
+    {
+      "tarih": "2016-12-21",
+      "aktor": "Cumhurbaşkanı Erdoğan",
+      "tez": "'Tamamı ile FETÖ terör örgütüne mensup'",
+      "kart": "K08"
+    },
+    {
+      "tarih": "2016-12-27",
+      "aktor": "CHP MV Necati Yılmaz",
+      "tez": "Soru: FETÖ'yse neden açığa alınmadı, Nusra sloganıyla ne örtülüyor?",
+      "kart": "K37"
+    },
+    {
+      "tarih": "2017-01-29",
+      "aktor": "Savcılık kaynakları",
+      "tez": "Gmail silme = 'yalnız değildi'",
+      "kart": "K20"
+    },
+    {
+      "tarih": "2017-12-19",
+      "aktor": "Rus analizi (Arab News)",
+      "tez": "Dizüstünde 690 Hizmet atfı, cihatçı içerik yok",
+      "kart": "K21"
+    },
+    {
+      "tarih": "2018-11-24",
+      "aktor": "İddianame (Savcı A. Akıncı)",
+      "tez": "Ocak 2016 ABD planı; 'FETÖ ve arkasındaki istihbarat örgütleri'; Rusya-Türkiye savaşı amacı; renklendirme",
+      "kart": "K22-K26, K42"
+    },
+    {
+      "tarih": "2021-03-09 / 04-19",
+      "aktor": "Ankara 2. ACM",
+      "tez": "FETÖ zinciri sabit; amaç 'çözülmeyi engelleme ve darbeye zemin'; MİT tırları ve 15 Temmuz ile 'aynı amaç'",
+      "kart": "K27, K28, K31"
+    },
+    {
+      "tarih": "2023-06",
+      "aktor": "Yargıtay",
+      "tez": "Söğüt'ün cezası onandı",
+      "kart": "K29"
+    },
+    {
+      "tarih": "2026-05-01",
+      "aktor": "MİT suç duyurusu (Daily Sabah)",
+      "tez": "Abdullah Bozkurt yönetti; 'hücre evi'; 'teslim olma' talimatı",
+      "kart": "K38"
+    }
+  ],
+  "tez_soykutugu_degerlendirmesi": "Siyasi atıf (19-21 Aralık), kamuya açık delilden (Ocak 2017 ve sonrası) önce geldi ve sonraki adli süreç bu çerçevenin içinde ilerledi. Amaç tanımı zamanla değişti: 'ilişkileri bozma' (2016), 'savaş' (2018), 'darbeye zemin/anayasal düzen' (2021). Yeni aktörler de eklendi (Bozkurt, 2026). Bu tek başına H1'in yanlış olduğunu göstermez, ancak çıpalama (anchoring) ve doğrulama yanlılığı riskinin yüksek olduğunu gösterir."
+}

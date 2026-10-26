@@ -1,0 +1,1580 @@
+{
+  "vaka": "Andrey Karlov suikastı, 19 Aralık 2016, Ankara",
+  "olusturma": "2026-10-26",
+  "olcek": {
+    "kaynak_derecesi": "A tamamen güvenilir · B genellikle güvenilir · C oldukça güvenilir · D genellikle güvenilir değil/taraflı · E güvenilmez · F değerlendirilemez",
+    "bilgi_derecesi": "1 başka kaynaklarca teyitli · 2 muhtemelen doğru · 3 olası · 4 şüpheli · 5 olasılık dışı · 6 değerlendirilemez",
+    "iliski": "T=tutarlı/destekler · Ç=çelişir · N=nötr/ilgisiz"
+  },
+  "devlet_baglantili_kaynak_notu": "AA, TRT, TASS, RIA, RT, Sputnik ve resmi kurum siteleri devlet_baglantili=true olarak işaretlendi; Al Jazeera (Katar finansmanı) da işaretlendi.",
+  "kartlar": [
+    {
+      "kanit_id": "K01",
+      "tur": "olay anı / birincil tanık-video aktarımı",
+      "kaynak_url": "https://www.bbc.com/news/world-europe-38377419",
+      "kurum_yayin": "BBC News",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "Saldırgan ateş ettikten hemen sonra bozuk Arapçayla cihat biatı dizesini okudu, 'Allahu Akbar' dedi; Türkçe 'Suriye'yi, Halep'i unutmayın' diye bağırdı.",
+      "alinti": "We are the ones who pledged loyalty to [the Prophet] Muhammad to fight jihad as long as we live.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Olay video kaydına dayanıyor; çok sayıda bağımsız kuruluş (CNN, AP, NYT) aynı sloganları aktarmış. Sözlerin içeriği kesin; anlamı (samimi motivasyon mu, kasıtlı yanıltma mı) yoruma açık.",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "Ç",
+          "gerekce": "Resmi tez bunu 'kasıtlı hedef şaşırtma' sayıyor; bu ek varsayım olmadan Gülen ideolojisiyle bağdaşmıyor."
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Halep/Suriye vurgusu bireysel öfke motivasyonuyla uyumlu."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Arapça dize cihatçı çevrelerin, özellikle Nusra propagandasının diliyle örtüşüyor."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "Provokasyonu ne doğruluyor ne dışlıyor."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "Cihatçı dil + başka unsurların birleşimiyle uyumlu."
+        }
+      }
+    },
+    {
+      "kanit_id": "K02",
+      "tur": "saldırgan profili",
+      "kaynak_url": "https://www.bbc.com/news/world-europe-38377419",
+      "kurum_yayin": "BBC News",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "İçişleri Bakanı Soylu'ya göre saldırgan 22 yaşında, Söke doğumlu, 2,5 yıldır Ankara Çevik Kuvvet'te görevli bir polisti. Olay günü izinliydi, yakındaki bir otelde hazırlandı. Metal dedektörü öttü ama polis kimliğiyle içeri alındı.",
+      "alinti": "He set off a metal detector on entering the exhibition, but was waved through after showing his official police ID.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Kimlik bilgileri resmi kaynaktan (İçişleri), giriş ayrıntısı birden çok basın kaynağında var (MEE de Sabah'a atfen aynı şeyi aktarıyor).",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Erişim kolaylığı her senaryoda polis kimliğinden geliyor."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "Ayırt edici değil."
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "Ayırt edici değil."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "Ayırt edici değil."
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "Ayırt edici değil."
+        }
+      },
+      "not": "Düşük tanılayıcılık; güvenlik zafiyeti olarak 'Bilinmeyenler' bölümünde kullanılır."
+    },
+    {
+      "kanit_id": "K03",
+      "tur": "saldırgan profili / doğrulanmamış iddia",
+      "kaynak_url": "https://www.bbc.com/news/world-europe-38377419",
+      "kurum_yayin": "BBC News",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-07 / 2016-11",
+      "ozet": "Doğrulanmamış haberlere göre saldırgan, darbe girişimcileriyle bağlantı şüphesiyle Kasım ortasına kadar birkaç hafta açığa alınmıştı. Hükümet yanlısı medya ayrıca darbeden hemen sonra üç gün izin aldığını gösteren bir belge yayımladı.",
+      "alinti": "Unconfirmed reports said he had been suspended for several weeks until mid-November because of suspected links to the plotters behind Turkey's failed July coup.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "BBC iddiayı açıkça 'doğrulanmamış' diye niteliyor. K32'de Emniyet'in 21 Aralık'ta açığa alınma iddiasını yalanladığı aktarılıyor (Gülen'e yakın kaynak). K37'de CHP aynı soruyu Meclis'e taşıyor.",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Doğruysa erken bir Gülen şüphesi kaydı demek."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "Açığa alınma kendi başına motivasyon hakkında bir şey söylemiyor."
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "İlgisiz."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "İlgisiz."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "Geçmiş bağ + farklı radikalleşme kombinasyonuyla uyumlu."
+        }
+      }
+    },
+    {
+      "kanit_id": "K04",
+      "tur": "basın değerlendirmesi",
+      "kaynak_url": "https://www.bbc.com/news/world-europe-38377419",
+      "kurum_yayin": "BBC News",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-19/20",
+      "ozet": "Ankara Belediye Başkanı Gökçek Twitter'da olası Gülen bağlantısını ima etti. Gülenciler saldırıyı kınadı ve bağlantıyı reddetti. BBC'ye göre ortaya atılan bağlantıların hiçbiri kanıtlanmadı.",
+      "alinti": "And although reports of potential links have begun to emerge, none has been proven.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "20 Aralık itibarıyla kamuya açık kanıtın durumunu doğru yansıtıyor; o tarihte hiçbir soruşturma bulgusu açıklanmamıştı.",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "Ç",
+          "gerekce": "İlk 24 saatte H1 kanıtla değil iddiayla kurulmuştu."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "Doğrudan ilgisi yok."
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "Doğrudan ilgisi yok."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "Doğrudan ilgisi yok."
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "Doğrudan ilgisi yok."
+        }
+      }
+    },
+    {
+      "kanit_id": "K05",
+      "tur": "resmi/siyasi açıklama (AKP milletvekili)",
+      "kaynak_url": "https://www.aljazeera.com/news/2016/12/19/ankara-focuses-on-gulen-links-in-karlov-assassination",
+      "kurum_yayin": "Al Jazeera English (Katar devleti finansmanlı)",
+      "yayin_tarihi": "2016-12-19",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "Olay gecesi AKP milletvekili Kani Torun Al Jazeera'ya iki şey söyledi: Saldırganın Suriye'deki gruplarla temas kurmuş olmasının 'çok düşük ihtimal' olduğunu ve 'tek muhtemel failin' FETÖ olduğunu. Bu çıkarım eleme yoluyla yapıldı, kanıt sunulmadı.",
+      "alinti": "Accordingly, the only likely culprit for this attack is FETO. They have been very active in police forces,",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Açıklamanın yapıldığı kesin. İçeriği, olaydan birkaç saat sonra ve soruşturma bulgusu yokken dile getirilmiş bir 'AKP milletvekili iddiası'.",
+      "serit": "Arap/Körfez basını",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Bir iddianın varlığı, iddianın doğruluğu için kanıt değil; tez soykütüğü açısından önemli."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "Milletvekili iddiası Suriye bağlantısını dışlıyor; ancak bu da kanıtsız."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "Al Jazeera Katar devleti tarafından finanse ediliyor; işaretlendi. Kartın asıl değeri tez soykütüğünde."
+    },
+    {
+      "kanit_id": "K06",
+      "tur": "yorum (hükümete yakın köşe yazarı)",
+      "kaynak_url": "https://www.hurriyetdailynews.com/opinion/abdulkadir-selvi/assassination-cell-of-feto--107550",
+      "kurum_yayin": "Hürriyet Daily News – Abdulkadir Selvi",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-19/20",
+      "ozet": "Selvi suikasti 'FETÖ suikast hücresi' olarak çerçeveledi ve Arapça sözleri El Kaide/Nusra imajı yaratma çabası saydı. FETÖ bağlantısına ipucu olarak 15 Temmuz'daki doktor raporunu ve bir dershane bağlantısını gösterdi. Aynı yazıda saldırgan canlı yakalanmadığı için emri kimin verdiğinin öğrenilemeyebileceğini kabul etti.",
+      "alinti": "he also was keen in creating an image of al-Qaeda or al-Nusra by speaking in Arabic.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Kanıt değil yorum. İleri sürülen ipuçları (rapor, dershane) bu kaynakta belgelenmiyor. Tez soykütüğünün erken bir halkası.",
+      "serit": "TR hükümet yanlısı basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "İddia; bağımsız kanıt içermiyor."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "'Kasıtlı yanıltma' yorumu 20 Aralık'ta, iddianameden yaklaşık 2 yıl önce dolaşıma girmişti."
+    },
+    {
+      "kanit_id": "K07",
+      "tur": "resmi açıklama (diplomatik kaynak) + muhalefet",
+      "kaynak_url": "https://www.bbc.com/turkce/haberler-turkiye-38383633",
+      "kurum_yayin": "BBC News Türkçe (AA'ya atfen)",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-20",
+      "ozet": "AA'nın diplomatik kaynaklara dayandırdığı habere göre Dışişleri Bakanı Çavuşoğlu, Kerry'ye 'hem Türkiye'nin hem Rusya'nın' saldırının arkasında FETÖ olduğunu bildiğini söyledi. Reuters'a konuşan bir güvenlik yetkilisi 'çok güçlü sinyaller' olduğunu belirtti. Kılıçdaroğlu ise saldırganın neden canlı yakalanmadığını sordu.",
+      "alinti": "'hem Türkiye'nin hem de Rusya'nın saldırının arkasında Fetullahçı Terör Örgütü'nün (FETÖ) olduğunu bildiğini'",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "BBC açıklamayı doğru aktarıyor. 'Rusya da biliyor' kısmı Dışişleri Bakanlığı iddiası ve K10 ile çelişiyor: Kremlin ertesi gün 'sonuç çıkarmak için erken' dedi.",
+      "serit": "Batı basını",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Bakanlık iddiası; delil sunulmadı."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "Alıntının ilk kaynağı AA (devlet bağlantılı)."
+    },
+    {
+      "kanit_id": "K08",
+      "tur": "resmi açıklama (Cumhurbaşkanı)",
+      "kaynak_url": "https://www.milliyet.com.tr/siyaset/erdogan-resmen-acikladi-suikastci-feto-mensubu-2365707",
+      "kurum_yayin": "Milliyet / DHA",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-21",
+      "ozet": "Erdoğan, Arnavutluk Cumhurbaşkanı ile ortak basın toplantısında saldırganın FETÖ mensubu olduğunu söyledi. Açıklama saldırıdan yaklaşık iki gün sonra yapıldı; o tarihte kamuya açıklanmış bir soruşturma bulgusu yoktu.",
+      "alinti": "Bağlantıların öncelikli olanı tamamı ile FETÖ terör örgütüne mensup olduğudur. Bunu gizlememize gerek yok.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Açıklama kesin (Euronews TR ve Haber3 de aynı sözleri aktarıyor). İçerik 'Cumhurbaşkanlığı iddiası'; somut delil gösterilmedi ('yetiştiği yerden... iltisaklarına').",
+      "serit": "TR ana akım basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "İddia; tez soykütüğünün kilit halkası."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K09",
+      "tur": "resmi açıklama (ABD Dışişleri)",
+      "kaynak_url": "https://tass.com/politics/921077",
+      "kurum_yayin": "TASS (Rusya devlet ajansı)",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-20/21",
+      "ozet": "ABD Dışişleri Sözcüsü Kirby, saldırganın motivasyonunun henüz bilinmediğini söyledi ve ABD'nin işin içinde olduğu imasını 'absolutely ridiculous' diye niteledi.",
+      "alinti": "I don't know and I don't think you know what the motivations were",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "TASS devlet ajansı; ancak ABD Dışişleri brifingini aktarıyor ve doğrulanabilir bir kayıt. Alıntı önceki oturumda fetch edildi; bu oturumda sayfa yeniden açılamadı.",
+      "serit": "Rus devlet basını",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "Ç",
+          "gerekce": "ABD müdahalesini reddediyor (ilgili tarafın inkârı, zayıf)."
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K10",
+      "tur": "resmi açıklama (Kremlin sözcüsü)",
+      "kaynak_url": "https://www.euronews.com/2016/12/21/it-s-too-early-to-say-kremlin-distances-itself-from-turkey-s-claims-over",
+      "kurum_yayin": "Euronews",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-21",
+      "ozet": "Kremlin Sözcüsü Peskov, Gülen iddiası sorulduğunda sonuç çıkarmak için erken olduğunu söyledi. Aynı gün Rus devlet medyası, Nusra'nın (JFŞ) sahiplendiği iddia edilen bir bildiriyi yayımlıyordu.",
+      "alinti": "Kremlin spokesperson Dmitry Peskov said it was too early to draw any conclusions when questioned about the Gulen claim",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Açıklama birden çok kaynakta var. Rusya'nın Türk tezine o tarihte katılmadığını gösteriyor.",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "Ç",
+          "gerekce": "Ankara'nın 'Rusya da biliyor' iddiasını o tarih itibarıyla zayıflatıyor."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K11",
+      "tur": "resmi açıklama (Rusya Devlet Başkanı)",
+      "kaynak_url": "http://en.kremlin.ru/events/president/transcripts/53500",
+      "kurum_yayin": "Kremlin (resmi transkript)",
+      "yayin_tarihi": "2016-12-19",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "Putin, olay gecesi Lavrov, Narışkin ve Bortnikov'la yaptığı toplantıda suikastı ilişkilerin normalleşmesini ve Suriye barış sürecini raydan çıkarmaya yönelik bir provokasyon olarak niteledi. 'Katilin elini kimin yönlendirdiğini bulmalıyız' dedi.",
+      "alinti": "This crime is undeniably a provocation aimed at derailing the normalisation of Russian-Turkish relations and the peace process in Syria",
+      "kaynak_derecesi": "A",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Transkript resmi; açıklama kesin. 'Provokasyon' nitelemesi bir 'Kremlin iddiası/değerlendirmesi' ve faili adlandırmıyor.",
+      "serit": "resmi-RU",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "'Provokasyon' çerçevesi, ilişkileri bozma amacı güden örgütlü fail anlatısıyla uyumlu."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "Örgütlü bir yönlendirici varsayıyor."
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "Cihatçı ağ da 'yönlendiren el' olabilir."
+        },
+        "H4": {
+          "iliski": "T",
+          "gerekce": "Provokasyon çerçevesi en çok H4'e uyuyor; ancak adlandırma yok."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K12",
+      "tur": "resmi açıklama (Türkiye Dışişleri)",
+      "kaynak_url": "https://www.mfa.gov.tr/no_-327_-19-december-2016_-press-release-regarding--the-terrorist-attack-against-the-russian-ambassador-in-ankara.en.mfa",
+      "kurum_yayin": "T.C. Dışişleri Bakanlığı, Basın Açıklaması No:327",
+      "yayin_tarihi": "2016-12-19",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "Dışişleri saldırıyı kınadı ve olayın 'tüm boyutlarıyla' soruşturulacağını açıkladı. Saldırının Türk-Rus dostluğuna gölge düşürmesine izin verilmeyeceğini vurguladı. İlk resmi metinde fail ya da örgüt adı geçmiyor.",
+      "alinti": "We will not allow this attack to shed a shadow on Turkish-Russian friendship.",
+      "kaynak_derecesi": "A",
+      "bilgi_derecesi": 1,
+      "bilgi_derecesi_gerekcesi": "Resmi metin.",
+      "serit": "resmi-TR",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "İlk resmi metin örgüt adı vermiyor; atıf sonraki 24-48 saatte siyasi düzeyde ortaya çıkıyor."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K13",
+      "tur": "resmi belge (üçlü ortak bildiri)",
+      "kaynak_url": "https://www.mfa.gov.tr/joint-statement-by-the-foreign-ministers-of-the-islamic-republic-of-iran_-the-russian-federation-and-the-republic-of-turkey-on-agreed-steps-to-revitalize-the-political-process-to-end-the-syrian-conflict_-20-december-2016_-moscow.en.mfa",
+      "kurum_yayin": "T.C. Dışişleri Bakanlığı – İran/Rusya/Türkiye Moskova Ortak Bildirisi",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-20",
+      "ozet": "Suikastın ertesi günü Moskova'da yayımlanan bildiriyle üç ülke Doğu Halep'ten 'silahlı muhalefetin düzenli çıkışını' memnuniyetle karşıladı ve garantörlüğe hazır olduklarını açıkladı. Astana önerisini not ettiler (md. 7). DEAŞ ve Nusra'ya karşı birlikte savaşma ve silahlı muhalefeti onlardan ayırma kararlılığını teyit ettiler (md. 8).",
+      "alinti": "Iran, Russia and Turkey reiterate their determination to fight jointly against ISIL/DAESH and Al-Nusra and to separate from them armed opposition groups.",
+      "kaynak_derecesi": "A",
+      "bilgi_derecesi": 1,
+      "bilgi_derecesi_gerekcesi": "Resmi metin; doğrudan fetch edildi.",
+      "serit": "resmi-TR",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Ayırt edici değil."
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Bireysel öfkenin bağlamını (Halep tahliyesi, Rusya ile uzlaşı) belgeliyor."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Türkiye'nin Nusra'yı resmen hedef listesine eklediği an; Nusra çevrelerinde Ankara'ya ve Rusya'ya karşı öfke için yapısal motivasyon."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K14",
+      "tur": "uluslararası kuruluş açıklaması",
+      "kaynak_url": "https://www.icrc.org/en/document/sarc-and-icrc-finalise-evacuation-some-35000-people-devastated-aleppo-neighbourhoods",
+      "kurum_yayin": "ICRC (Uluslararası Kızılhaç Komitesi)",
+      "yayin_tarihi": "2016-12-22",
+      "olay_tarihi": "2016-12-15 → 2016-12-22",
+      "ozet": "Doğu Halep tahliyesi 15 Aralık'ta (Perşembe) başladı ve 22 Aralık akşamı tamamlandı. Yaklaşık 35.000 kişi tahliye edildi. Suikast tahliyenin tam ortasında gerçekleşti.",
+      "alinti": "Some 35,000 people were evacuated to neighbouring rural areas by the Syrian Arab Red Crescent (SARC) and the International Committee of the Red Cross (ICRC).",
+      "kaynak_derecesi": "A",
+      "bilgi_derecesi": 1,
+      "bilgi_derecesi_gerekcesi": "Tarafsız insani kuruluş; OCHA ve BM Güvenlik Konseyi kayıtlarıyla tutarlı.",
+      "serit": "uluslararası kuruluş",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Zamanlama Halep tahliyesinin en yoğun haftasına denk geliyor."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Zamanlama, 'köşeye sıkışan' grupların tahliye edildiği haftaya denk geliyor."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "Zamanlama Moskova toplantısına da denk; ayırt edici değil."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K15",
+      "tur": "olay bağlamı (protesto)",
+      "kaynak_url": "https://www.middleeasteye.net/news/russia-get-out-syria-thousands-join-protest-turkey-border",
+      "kurum_yayin": "Middle East Eye",
+      "yayin_tarihi": "2016-12-17",
+      "olay_tarihi": "2016-12-17",
+      "ozet": "İHH'nin organize ettiği yaklaşık 5.000 araçlık yardım konvoyu Türkiye-Suriye sınırında protestoyla sonuçlandı ve 'Rusya Suriye'den defol' sloganları atıldı. Saldırıdan iki gün önce gerçekleşti.",
+      "alinti": "Around 5,000 cars packed with supplies for Syrians fleeing Aleppo were driven to the Turkish border in solidarity protest",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "MEE, İHH'nin kendi açıklamalarına ve ajans haberlerine dayanıyor. The Guardian Nigeria/AFP ve The Atlantic de protestoyu aktarıyor.",
+      "serit": "Arap/Körfez basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Kamuoyunda Rusya karşıtı öfkenin yoğunluğunu gösteriyor."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Türkiye'de hükümete yakın İslamcı sivil toplumda Rusya'ya karşı seferberlik var; radikalleşme ortamı."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K16",
+      "tur": "resmi açıklama (Cumhurbaşkanı)",
+      "kaynak_url": "https://aa.com.tr/en/middle-east/erdogan-says-turkeys-duty-is-to-blow-out-aleppo-fire/668293",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2016-10-19",
+      "olay_tarihi": "2016-10-18/19",
+      "ozet": "Erdoğan muhtarlara Putin'le telefonda Fetih el-Şam (eski Nusra) cephesinin Halep'ten çıkarılması konusunda anlaştıklarını söyledi.",
+      "alinti": "The Turkish leader also said he and Putin had agreed on removing the terrorist Fatah al-Sham Front (formerly called al-Nusra Front) from Aleppo.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "AA devlet ajansı; ancak Cumhurbaşkanı'nın kendi beyanı. Reuters, Turkish Minute ve Fox da aynı sözleri aktarıyor.",
+      "serit": "TR devlet basını",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Ankara'nın Nusra'nın Halep'ten çıkarılmasında Moskova ile işbirliği yaptığını gösteriyor; Nusra çevrelerinin 'ihanet' algısı için zemin."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K17",
+      "tur": "düşünce kuruluşu analizi",
+      "kaynak_url": "https://mei.edu/publication/how-far-can-turkey-russia-rapprochement-syria-go/",
+      "kurum_yayin": "Middle East Institute – Gönül Tol",
+      "yayin_tarihi": "2016-10-26",
+      "olay_tarihi": "2016-08 → 2016-10",
+      "ozet": "MEI'ye göre Ankara 'yakın zamana kadar' Nusra ve Ahrar el-Şam gibi Türkiye destekli grupları Rusya'nın hedef listesinden çıkarmaya çalışıyordu. Erdoğan Doğu Halep operasyonu konusunda sessiz kaldı, Rusya da Türkiye'nin YPG'ye yönelik saldırılarına göz yumdu. Fırat Kalkanı'nın bir sonraki hedefi El Bab'dı.",
+      "alinti": "Until recently, Ankara was trying to convince Russia not to include Turkish-supported groups such as Jabhat al-Nusra and Ahrar al-Sham on its target list.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Bağımsız analiz kuruluşu. 'Türkiye destekli Nusra' ifadesi bir analist değerlendirmesi (Al-Monitor'a atıf); Ankara bu nitelemeyi kabul etmiyor.",
+      "serit": "düşünce kuruluşu",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Kaan'ın hipotezinin yapısal temeli: Türkiye'ye yakın sayılan radikal gruplar 2016 sonbaharında Ankara-Moskova pazarlığının bedelini ödüyordu."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K18",
+      "tur": "resmi belge (Kremlin)",
+      "kaynak_url": "http://en.kremlin.ru/events/president/news/52282",
+      "kurum_yayin": "Kremlin",
+      "yayin_tarihi": "2016-06-27",
+      "olay_tarihi": "2016-06-27",
+      "ozet": "Kremlin'in aktardığına göre Erdoğan, Kasım 2015'te düşürülen uçak için Putin'e mektup gönderdi ve pilotun ailesine 'Bizi affedin' dedi. Normalleşme bu tarihte başladı.",
+      "alinti": "We never had the desire or deliberate intention of shooting down the Russian Federation's plane,",
+      "kaynak_derecesi": "A",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Resmi kayıt; Türk tarafı mektubu inkâr etmedi (Washington Institute, BBC de 27 Haziran mektubunu aktarıyor).",
+      "serit": "resmi-RU",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "Ç",
+          "gerekce": "İddianameye göre plan Ocak 2016'da (K24), yani bozulacak bir normalleşme yokken yapıldı. Bu, 'normalleşmeyi bozma' motivasyonunu zayıflatıyor; iddianame amacı 'savaş' olarak tanımlayarak bunu kısmen telafi ediyor."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K19",
+      "tur": "düşünce kuruluşu analizi",
+      "kaynak_url": "https://www.brookings.edu/articles/the-assassination-of-andrey-karlov-what-his-death-means-for-turkish-russian-relations/",
+      "kurum_yayin": "Brookings Doha Center – Beverley Milton-Edwards (Katar ortaklı; 2021'de ayrıldı)",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-19/21",
+      "ozet": "Milton-Edwards'a göre Nusra ile doğrudan bağlantıya dair 'az kanıt' var. Ancak saldırının, Ankara'nın Moskova'ya yanaşmasından rahatsız Sünni kamuoyu duyarlılığını yansıttığını söylüyor; yalnız kurt eğilimini de not ediyor.",
+      "alinti": "Presently, there is little evidence of a direct link to the Nusra Front.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Uzman değerlendirmesi; olaydan iki gün sonra yazıldı.",
+      "serit": "düşünce kuruluşu",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Yalnız kurt + Sünni öfke çerçevesi."
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "Doğrudan örgüt bağı için az kanıt (ağ versiyonuna karşı); esinlenme versiyonuna nötr."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K20",
+      "tur": "soruşturma bulgusu (savcılık kaynaklı basın)",
+      "kaynak_url": "https://www.milliyet.com.tr/gundem/suikasttan-2-5-saat-sonra-maili-silindi-2386730",
+      "kurum_yayin": "Milliyet",
+      "yayin_tarihi": "2017-01-29",
+      "olay_tarihi": "2016-12-19 (~21:30)",
+      "ozet": "Savcılık, saldırganın Gmail yazışmalarının ölümünden yaklaşık 2,5 saat sonra silindiğini tespit etti ve Google'dan döküm istedi. Savcılık yetkilileri bunu 'yalnız olmadığının en güçlü kanıtı' saydı. Altıntaş'la aynı polis okulunda okumuş dört koruma polisi gözaltına alındı ve adli kontrolle serbest bırakıldı.",
+      "alinti": "mail'lerin silinmiş olmasını, suikastta yalnız olmadığının en güçlü kanıtı olarak değerlendirildiğini söyledi",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Bilgi isimsiz savcılık yetkililerinden geliyor; silme işleminin kendisi daha sonra iddianame bağlamında başka kaynaklarda da geçiyor. Silen kişi/kurum belirsiz. Wikipedia'ya göre Google verilerin kurtarılamadığını bildirdi (doğrulanmadı).",
+      "serit": "TR ana akım basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Ölümden sonra hesaba erişen biri var; örgütlü yardımcı varsayımıyla uyumlu."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "Saf yalnız aktör senaryosuyla çelişiyor (otomatik silme ya da aile/arkadaş erişimi gibi masum açıklamalar dışlanmadı)."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Ağ versiyonuyla uyumlu; hangi ağ olduğunu söylemiyor."
+        },
+        "H4": {
+          "iliski": "T",
+          "gerekce": "Profesyonel iz silme ile uyumlu."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      },
+      "not": "En tanılayıcı kanıtlardan biri: H2'yi zayıflatıyor ama H1/H3/H4 arasında ayrım yapmıyor."
+    },
+    {
+      "kanit_id": "K21",
+      "tur": "soruşturma bulgusu (Rus analizi, basın aktarımı)",
+      "kaynak_url": "https://www.arabnews.com/node/1211506/world",
+      "kurum_yayin": "Arab News (Suudi) – Menekşe Tokyay",
+      "yayin_tarihi": "2017-12-19",
+      "olay_tarihi": "2017",
+      "ozet": "Rus uzmanlar saldırganın dizüstü bilgisayarında silinmiş dosyaları kurtardı. Haberde Hizmet ve Nur Cemaati'ne 690 atıf bulunduğu, DEAŞ/Nusra/El Kaide'ye hiç atıf bulunmadığı aktarılıyor. Sosyal medya ve e-postaların VPN üzerinden silindiği; yetkililere göre ByLock bağlantısı olduğu ve saldırganın bir ay önce numara değiştirdiği de haberde yer alıyor.",
+      "alinti": "They found no references to Daesh, Al-Nusra or Al-Qaeda.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Birincil Rus raporu kamuya açık değil; kaynak belirtilmeden aktarılıyor. ByLock iddiası K22 (AA/iddianame) ile tutarsız: orada ByLock kullanıcısı Söğüt, Altıntaş ise Wi-Fi üzerinden sosyal medya/mail ile iletişim kuruyor. 'Hizmet' kelimesi Türkçede genel anlamda da yaygın; bağlam verilmemiş.",
+      "serit": "Arap/Körfez basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Gülen hareketine yoğun dijital atıf."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "Cihatçı içerik yokluğu ağ ve esinlenme versiyonlarını zayıflatıyor (Nordic Monitor'un 'cihatçı literatür' iddiasıyla çelişiyor)."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "Gülen geçmişi + sonradan radikalleşme ile uyumlu."
+        }
+      },
+      "not": "Türk-Rus ortak soruşturmasının sızıntısı; bağımsız doğrulama yok."
+    },
+    {
+      "kanit_id": "K22",
+      "tur": "iddianame (devlet ajansı aktarımı)",
+      "kaynak_url": "https://aa.com.tr/tr/turkiye/karlovun-suikast-emrini-mahrem-imam-iletmis/1319977",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "2016-11-15 → 2016-12-09",
+      "ozet": "Ankara Cumhuriyet Başsavcılığı iddiasına göre Altıntaş'ın 'mahrem imamı' Şahin Söğüt ByLock kullanıcısıydı. Altıntaş 15 Kasım 2016'dan sonra hatsız telefon kullandı ve Söğüt'le Wi-Fi üzerinden sosyal medya ve mail hesabıyla iletişim kurdu. Söğüt'ün telefonu 9 Aralık'ta Altıntaş'ın evine 256 metre mesafede sinyal verdi. Bu tarihten sonra Altıntaş 'hedef şaşırtmak' amaçlı aramalar yaptı. Söğüt susma hakkını kullandı; yazışma içeriği aktarılmıyor.",
+      "alinti": "Söğüt'ün 9 Aralık 2016'da Altıntaş'ın Ankara'nın Keçiören ilçesindeki evine 256 metre mesafede telefonunun sinyal verdiği belirtilen",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Savcılık iddiası. Baz verisi gerçek bir veri türü, ancak 256 metre yakınlık buluşmayı kanıtlamaz. İletişim içeriği kamuya açık değil ve 'hedef şaşırtma' nitelemesi savcılığın yorumu.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Somut bir temas iddiası (yakınlık + hatsız telefon + gizli iletişim)."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "Doğruysa saldırı öncesi yönlendirici temas var."
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "Temasın içeriği bilinmiyor; teorik olarak her ağla uyumlu, ama iddia edilen kişinin FETÖ hiyerarşisi olduğu söyleniyor."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K23",
+      "tur": "iddianame – etkin pişmanlık ifadesi",
+      "kaynak_url": "https://aa.com.tr/tr/turkiye/karlovun-suikast-emrini-mahrem-imam-iletmis/1319977",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "—",
+      "ozet": "Ankara Cumhuriyet Başsavcılığı iddiasına göre etkin pişmanlıktan yararlanan Salih Yılmaz, Altıntaş'ın kendisine bağlı hücrede olduğunu ve Altıntaş'tan sorumlu 'Ahmet' kod adlı öğretmenin Şahin Söğüt olduğunu beyan etti.",
+      "alinti": "etkin pişmanlık hükümlerinden faydalanan Salih Yılmaz'ın Altıntaş'ın kendisine bağlı hücrede olduğunu",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Etkin pişmanlık ifadeleri ceza indirimi teşvikine bağlı ve olağanüstü hal dönemi FETÖ yargılamalarında tartışmalı. Yine de mahkeme bu ifadeyi esas aldı ve Yılmaz da ağırlaştırılmış müebbet aldı.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Doğrudan hücre üyeliği beyanı."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "Doğruysa yönlendirme cihatçı değil."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K24",
+      "tur": "iddianame (basın aktarımı)",
+      "kaynak_url": "https://www.hurriyet.com.tr/gundem/karlovu-ak-partinin-iftarinda-vuracaklardi-41029337",
+      "kurum_yayin": "Hürriyet",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "2016-01 → 2016-06-27",
+      "ozet": "Savcı Adem Akıncı'nın 609 sayfalık iddianamesine göre plan Ocak 2016'da ABD'deki örgütsel toplantılarda yapıldı ve hazırlıklar Şubat 2016'da başladı. İddianame 27 Haziran 2016 AKP iftarında suikast planlandığını, Karlov yurt dışında olduğu için iptal edildiğini ileri sürüyor. Amaç 'FETÖ ve arkasındaki istihbarat örgütlerinin' Rusya ile Türkiye'yi olası savaşa sürüklemesi olarak tanımlanıyor; senaryo bir dizi bölümüne dayandırılıyor.",
+      "alinti": "Suikast planın ABD'deki örgütsel toplantılarda Ocak 2016 tarihinde yapıldığı belirtildi.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Savcılık iddiası. ABD toplantısı ve dizi bağlantısı için kaynakta delil türü belirtilmiyor. 'Arkasındaki istihbarat örgütleri' adlandırılmıyor.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Uzun vadeli örgütsel planlama iddiası."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "10 aylık planlama iddiası anlık radikalleşmeyle çelişiyor."
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "T",
+          "gerekce": "'Arkasındaki istihbarat örgütleri' ifadesi H1+H4 kombinasyonu öneriyor, ancak isim yok."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      },
+      "not": "Tarih tutarlılığı sorunu: Ocak 2016'da normalleşme yoktu (bkz. K18). Mahkeme ise sonradan amacı 'darbeye zemin + ilişkileri bozma' olarak genişletti (K27)."
+    },
+    {
+      "kanit_id": "K25",
+      "tur": "iddianame – sanık ifadesi",
+      "kaynak_url": "https://www.hurriyet.com.tr/gundem/karlovu-ak-partinin-iftarinda-vuracaklardi-41029337",
+      "kurum_yayin": "Hürriyet",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "2015-11 sonrası",
+      "ozet": "İddianameye göre eski MİT mensubu Vehbi Kürşad Akalın, uçak düşürüldükten sonra 'cemaat abisi' Hüseyin Kötüce'nin kendisine Rus elçiliğinin güvenliğini sorduğunu ve büyükelçinin koruma kullanmadığını ilettiğini ifade etti.",
+      "alinti": "büyükelçinin Türkiye'de kendisini güvende hissetmesi nedeniyle koruma kullanmadığını",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Sanık ifadesi, iddianamede aktarılıyor. Koşulları (gözaltı, OHAL) bilinmiyor; Kötüce başka davada ByLock'u kabul etmiş (AA 2020 arama özeti, fetch edilmedi).",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Hedef hakkında istihbarat toplama iddiası."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "T",
+          "gerekce": "İstihbarat-içi hücre iddiası."
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K26",
+      "tur": "iddianame – çürütülemezlik işareti",
+      "kaynak_url": "https://www.hurriyet.com.tr/gundem/karlovu-ak-partinin-iftarinda-vuracaklardi-41029337",
+      "kurum_yayin": "Hürriyet",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "—",
+      "ozet": "İddianame, örgütün saldırının FETÖ eylemi olmadığı imajını yaratmak için Altıntaş'ın ilişkilerini önceden ayarladığını savunuyor. Saldırganın ikinci telefonu soruşturmayı uzatmak için bıraktığı da ileri sürülüyor.",
+      "alinti": "İddianamede eylemin bir FETÖ saldırısı olmadığı imajı yaratmak için örgütün çalışma yaptığı ve önceden saldırgan Altıntaş'ın ilişkilerini ayarladığı görüşü savunuldu.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Savcılık yorumu. Bu yapı, cihatçı yöndeki her kanıtı H1 lehine yeniden yorumluyor; analitik olarak çürütülemezlik (unfalsifiability) riski taşıyor.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Kanıt değil, yorumlama kuralı."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "ACH'de ağırlık verilmez; şeytanın avukatı bölümünde kullanılır."
+    },
+    {
+      "kanit_id": "K27",
+      "tur": "mahkeme gerekçeli kararı (devlet ajansı aktarımı)",
+      "kaynak_url": "https://www.aa.com.tr/tr/turkiye/teror-elebasi-gulenin-diger-dini-gruplara-sizin-talimati-karlov-suikasti-davasinin-gerekceli-kararinda-/2213698",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2021-04-19",
+      "olay_tarihi": "—",
+      "ozet": "Ankara 2. Ağır Ceza Mahkemesi'nin gerekçeli kararına göre talimat, MİT içindeki Akalın'dan başlayıp Kötüce üzerinden Gülen'e, oradan emniyet yapılanması (Kılıçarslan → Yılmaz → Söğüt) üzerinden Altıntaş'a iletildi. Mahkeme 'renklendirme' taktiğiyle Altıntaş'ın Sosyal Doku Vakfı içinde 'saklandığını' kabul etti. Amaç 'örgütteki çözülmeyi engelleme ve darbe girişimine zemin hazırlama' olarak tanımlandı.",
+      "alinti": "Altıntaş'ın, bu amaçla \"Sosyal Doku Vakfı\" içerisinde saklandığı",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Mahkeme kararı, devlet ajansı özetinden. Önemli nokta: mahkeme saldırganın Sosyal Doku (Nurettin Yıldız) çevresindeki varlığını inkâr etmiyor, yalnızca sızma olarak yorumluyor.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Mahkeme H1'i hüküm altına aldı."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Sosyal Doku çevresindeki varlık mahkemece de sabit; yorum farklı."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "Gülen geçmişi + İslamcı-cihatçı çevre teması gerçeği iki hipotezin birleşimini destekliyor."
+        }
+      }
+    },
+    {
+      "kanit_id": "K28",
+      "tur": "mahkeme kararı (hüküm)",
+      "kaynak_url": "https://www.aa.com.tr/tr/turkiye/teror-elebasi-gulenin-diger-dini-gruplara-sizin-talimati-karlov-suikasti-davasinin-gerekceli-kararinda-/2213698",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2021-04-19",
+      "olay_tarihi": "2021-03-09",
+      "ozet": "9 Mart 2021 kararında 3 sanığa ikişer, 2 sanığa birer kez ağırlaştırılmış müebbet verildi. 7 sanık FETÖ üyeliğinden, 1 sanık yardımdan ceza aldı, 6 sanık beraat etti. Gülen dahil 9 sanığın dosyası ayrıldı.",
+      "alinti": "6 sanığın beraatına hükmetmişti.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Hüküm sayıları birden çok kaynakta tutarlı (Cumhuriyet, Independent).",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Yargısal sonuç H1 yönünde."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K29",
+      "tur": "yargı süreci (Yargıtay)",
+      "kaynak_url": "https://www.dailysabah.com/politics/feto-suspect-in-russian-envoys-murder-captured-in-istanbul/news",
+      "kurum_yayin": "Daily Sabah (hükümet yanlısı)",
+      "yayin_tarihi": "2023-08-15",
+      "olay_tarihi": "2023-06",
+      "ozet": "Yargıtay Haziran 2023'te Söğüt'ün iki ağırlaştırılmış müebbet cezasını onadı. Daily Sabah'a göre mahkeme amaçlar arasında 'ülkeler arasında savaş' çıkarmayı da saydı.",
+      "alinti": "A top court in June upheld two instances of lifetime imprisonment for Söğüt for his role in the terrorist group.",
+      "kaynak_derecesi": "D",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Hükümet yanlısı kaynak. Ancak onama bilgisi olgusal ve başka haberlerle (Yeniçağ) tutarlı.",
+      "serit": "TR hükümet yanlısı basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "Kesinleşmiş yargı kararı."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K30",
+      "tur": "yargılama – sanık ifadeleri",
+      "kaynak_url": "https://www.indyturk.com/node/6421/haber/karlov-suikast%C4%B1-davas%C4%B1-ba%C5%9Flad%C4%B1-san%C4%B1klar-neler-s%C3%B6yledi",
+      "kurum_yayin": "Independent Türkçe (AA'ya atfen)",
+      "yayin_tarihi": "2019-01-08",
+      "olay_tarihi": "2013 öncesi → 2019-01-08",
+      "ozet": "Polis okulundan sanıklardan biri Altıntaş'ı 2013 öncesinde FETÖ evlerinde gördüğünü söyledi. Bir diğeri Altıntaş'ın 'birden değiştiğini, namaz kılmaya başladığını' anlattı. Mahkeme başkanı bazı sanıklar için ByLock kullanımının bildirildiğini, ancak içeriklerin belirtilmediğini açıkladı.",
+      "alinti": "bazı sanıkların ByLock kullandığı bildirildi, ancak içerikler belirtilmedi.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Duruşma tutanağına yakın aktarım. Sanık ifadeleri birbiriyle çelişiyor: biri FETÖ toplantısı diyor, diğeri suçlamaları reddedip savcının 'ilişki bulamayınca' üyelikten dava açtığını söylüyor.",
+      "serit": "TR ana akım basın",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "2013 öncesi Gülen evlerine katılım tanıklığı (geçmiş bağ)."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "Kişisel dönüşüm anlatısı."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "'Birden değişti, namaz kılmaya başladı' ifadesi sonraki dini radikalleşmeyle uyumlu."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "Geçmiş Gülen teması + sonraki dönüşüm, kombinasyonu en iyi açıklayan veri."
+        }
+      },
+      "not": "Kritik: ByLock içeriklerinin kamuya ve hatta duruşmada açık olmaması, H1'in iletişim delilinin kamuoyunca denetlenemediği anlamına geliyor."
+    },
+    {
+      "kanit_id": "K31",
+      "tur": "yargılama – mahkeme kararı",
+      "kaynak_url": "https://www.aa.com.tr/tr/turkiye/teror-elebasi-gulenin-diger-dini-gruplara-sizin-talimati-karlov-suikasti-davasinin-gerekceli-kararinda-/2213698",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2021-04-19",
+      "olay_tarihi": "—",
+      "ozet": "Mahkeme, FETÖ'nün suikasttaki amacının 19 Ocak 2014 MİT tırlarının durdurulması ve 15 Temmuz'daki amaçla 'aynı' olduğunu, yani anayasal düzeni ortadan kaldırmak olduğunu belirtti.",
+      "alinti": "Her üç eylemin de amacı aynıdır.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Mahkeme yorumu. Motivasyon çerçevesinin 2016'daki 'ilişkileri bozma' tezinden 'anayasal düzen' tezine genişlediğini gösteriyor.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Yorumsal; tez soykütüğü için önemli."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K32",
+      "tur": "sürgün/Gülen'e yakın basın analizi",
+      "kaynak_url": "https://turkishminute.com/2018/11/26/analysis-who-killed-russian-ambassador-karlov/",
+      "kurum_yayin": "Turkish Minute (Gülen hareketine yakın, sürgün yayın)",
+      "yayin_tarihi": "2018-11-26",
+      "olay_tarihi": "2016-12-21 / 2018",
+      "ozet": "Turkish Minute'e göre Emniyet 21 Aralık 2016'da açığa alınma iddiasını yalanladı ve Altıntaş OHAL kararnameleriyle ihraç edilen 10.000'den fazla polis arasında değildi. Aile, Altıntaş'ın Nurettin Yıldız'ın sohbetlerine gittiğini söyledi. Yayına göre iddianame Yıldız bağlantısını inkâr etmiyor, sızma olarak yorumluyor.",
+      "alinti": "The connection to the Gülen movement remains vague.",
+      "kaynak_derecesi": "D",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Taraf kaynak (hareket sanık konumunda). Ancak Yıldız/Sosyal Doku teması mahkeme kararında da yer alıyor (K27) ve bu kısım teyitli. Emniyet yalanlaması ve ihraç listesi iddiası bu oturumda bağımsız doğrulanmadı.",
+      "serit": "Gülen yanlısı/sürgün",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "Ç",
+          "gerekce": "Açığa alınmamış/ihraç edilmemiş olması (doğruysa) erken bir FETÖ şüphesini zayıflatır."
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Halep'e öfkelenen genç polis anlatısı."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Nurettin Yıldız çevresi; cihatçı gruplarla temaslı vaiz iddiası."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K33",
+      "tur": "sürgün/Gülen'e yakın araştırma (iddianame belgelerine atıfla)",
+      "kaynak_url": "https://nordicmonitor.com/2019/03/turkish-charity-ihh-named-by-russia-as-arms-runner-to-jihadists-linked-to-killer-of-russian-envoy/",
+      "kurum_yayin": "Nordic Monitor – Abdullah Bozkurt (Gülen'e yakın; Bozkurt 2026'da MİT şikâyetinin hedefi)",
+      "yayin_tarihi": "2019-03 (güncelleme 2021-04-02)",
+      "olay_tarihi": "2015-01 → 2016-07; 2017-01-06",
+      "ozet": "Nordic Monitor'un iddianameye eklendiğini söylediği MASAK raporlarına göre Altıntaş Ocak 2015-Temmuz 2016 arasında İHH'ye 11 işlemde 1.584,13 TL gönderdi. İHH çalışanı tanık Mikail Bora, Altıntaş'ı Nurettin Yıldız'ın sohbetlerinde gördüğünü ifade etti. Altıntaş 2014'ten itibaren Sosyal Doku Ankara Gönüllüleri ile temastaydı. Yayına göre savcı İHH hattını soruşturmadı.",
+      "alinti": "the killer sent TL 1,584.13 to IHH accounts in 11 separate transactions between January 2015 and July 2016.",
+      "kaynak_derecesi": "D",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Ciddi çıkar çatışması var: Yazar Bozkurt, 2026'da MİT tarafından suikastın arkasındaki kişi olarak suçlandı (K38). Belge görüntüleri yayınlanmış, ancak bağımsız doğrulanamadı. Sosyal Doku teması mahkemece de kabul edildi (K27). Bağış tutarı küçük ve İHH bağışı Türkiye'de yaygın bir davranış.",
+      "serit": "Gülen yanlısı/sürgün",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Mahkeme bunları 'renklendirme' olarak yorumladı."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "İslamcı-cihatçı çevreye (Yıldız, İHH) somut temas iddiası."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      },
+      "not": "Küçük bağışlar ideolojik yakınlık göstergesi olabilir ama örgütsel yönlendirme kanıtı değildir."
+    },
+    {
+      "kanit_id": "K34",
+      "tur": "cihatçı grubun inkârı (SITE aktarımı)",
+      "kaynak_url": "https://lenta.ru/news/2016/12/21/fateh/",
+      "kurum_yayin": "Lenta.ru (Rus özel medya; devlet çizgisine yakın sahiplik)",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-21",
+      "ozet": "SITE Intelligence Group'a göre JFŞ (eski Nusra) ve Ceyş el-Fetih, kendileri adına dolaşan sahiplenme bildirisinin sahte olduğunu açıkladı. Suriyeli gazeteci Karam al-Hamad yazı tipi farkına dikkat çekti. Sahte bildiriyi ilk olarak Mısır (Youm7) ve Irak (Alsumaria) medyası duyurmuş, TASS da yaymıştı.",
+      "alinti": "экстремисты назвали сфабрикованными заявления СМИ о том, что боевики данной организации взяли на себя ответственность за это преступление",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "İnkâr birden çok bağımsız kaynakta var (SITE, Haber7, Protothema, Daily Sabah). Sahte bildirinin yayılma yolu (Mısır/Irak/Rus devlet medyası) belgelendi.",
+      "serit": "Rus basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "İnkâr H1'i desteklemez; yalnızca sahte sahiplenmeyi eler."
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Örgüt sahiplenmesinin olmaması yalnız aktörle uyumlu."
+        },
+        "H3": {
+          "iliski": "Ç",
+          "gerekce": "Ağ (yönlendirme) versiyonu için beklenen sahiplenme yok; esinlenme versiyonu etkilenmez."
+        },
+        "H4": {
+          "iliski": "T",
+          "gerekce": "Sahte bildirinin dolaşıma sokulması bir dezenformasyon katmanı olduğunu gösteriyor (kim sokturduğu bilinmiyor)."
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K35",
+      "tur": "cihatçı grubun açıklaması (basın aktarımı)",
+      "kaynak_url": "https://www.protothema.gr/world/article/639100/diapseudei-i-al-nousra-oti-anelave-tin-euthuni-gia-ti-dolofonia-tou-rosou-presvi/",
+      "kurum_yayin": "Protothema (Yunanistan)",
+      "yayin_tarihi": "2016-12-21",
+      "olay_tarihi": "2016-12-21",
+      "ozet": "JFŞ sözcüsü sahiplenmeyi reddetti. Ancak aynı açıklamada suikastı, Halep'teki Rus 'katliamına' karşı bölge insanlarının 'doğal tepkisi' olarak niteledi.",
+      "alinti": "«φυσική απάντηση» σε όσα συμβαίνουν στη Συρία",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 3,
+      "bilgi_derecesi_gerekcesi": "Açıklamanın görüntüsü yayımlanmış. 'Doğal tepki' ifadesi grubun kendi propaganda çerçevesi.",
+      "serit": "Avrupa basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Grubun kendisi eylemi tabandan gelen bir tepki olarak sunuyor."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Esinlenme versiyonuyla uyumlu: grup eylemi sahiplenmeden meşrulaştırıyor."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K36",
+      "tur": "hükümet yanlısı medya çerçevelemesi",
+      "kaynak_url": "https://www.sabah.com.tr/gundem/2016/12/20/feto-diyemediler",
+      "kurum_yayin": "Sabah (hükümet yanlısı)",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-20",
+      "ozet": "Sabah, ertesi sabah FETÖ bağlantısından söz etmeyen Hürriyet, Cumhuriyet ve BirGün'ü hedef aldı. Hürriyet'in 'El Nusra sloganı attı' başlığını 'FETÖ'nün algı operasyonuna hizmet' olarak niteledi.",
+      "alinti": "Hürriyet'in ise \"El Nusra sloganı attı\" şeklinde attığı başlıklarla FETÖ'nün bu algı operasyonuna hizmet ettiği belirtildi.",
+      "kaynak_derecesi": "D",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Sabah'ın ne yazdığı kesin; içeriği taraflı yorum. Medya ortamında Nusra çerçevesini haberleştirmenin ilk günden itibaren bedel taşıdığını gösteriyor.",
+      "serit": "TR hükümet yanlısı basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Tez soykütüğü; kanıt değil."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "Bilgi ortamı göstergesi: alternatif hipotezlerin yerli basında incelenmesi baskı altındaydı."
+    },
+    {
+      "kanit_id": "K37",
+      "tur": "muhalefet – Meclis soru önergesi",
+      "kaynak_url": "https://www.istanbulgercegi.com/chpli-yilmaz-mevlut-mert-altintas-feto-mensubu-ise-neden-aciga-alinmadi_116658.html",
+      "kurum_yayin": "İstanbul Gerçeği / Vişne Haber Ajansı",
+      "yayin_tarihi": "2016-12-27",
+      "olay_tarihi": "2016-12-27",
+      "ozet": "CHP Milletvekili Necati Yılmaz şunları sordu: Altıntaş FETÖ mensubuysa 15 Temmuz'dan sonra neden açığa alınmadı? Nusra sloganıyla hangi gerçeğin üstü örtülmek isteniyor? Rus temsilcilikleri önündeki eylemleri kim organize etti? Hükümete yakın medyanın Halep söyleminin etkisi oldu mu?",
+      "alinti": "İddia edildiği gibi FETÖ mensubu ise 15 Temmuz'dan sonraki süreçte açığa alınmış mıdır?",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Önergenin varlığı ve içeriği kesin. Kaynak küçük bir haber sitesi; içerik soru niteliğinde, iddia değil. Önergeye verilen yanıt bulunamadı.",
+      "serit": "TR muhalefet",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Soru; kanıt değil."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "Cevapsız bir resmi soru olarak 'Bilinmeyenler'e taşındı."
+    },
+    {
+      "kanit_id": "K38",
+      "tur": "resmi şikâyet (MİT) – basın aktarımı",
+      "kaynak_url": "https://www.dailysabah.com/politics/war-on-terror/turkish-intel-moves-against-key-feto-figure-in-russian-envoys-murder",
+      "kurum_yayin": "Daily Sabah (hükümet yanlısı)",
+      "yayin_tarihi": "2026-05-01",
+      "olay_tarihi": "2026-04/05",
+      "ozet": "MİT, İsveç'te yaşayan Abdullah Bozkurt hakkında suç duyurusunda bulundu. Güvenlik kaynaklarına göre Bozkurt suikastın yönlendirilmesinde merkezi rol oynadı ve saldırgan Ankara'daki bir 'hücre evinde' radikalleştirilip teslim olmaması talimatı aldı. T24 ve diğer kaynaklar şikâyetin konusunun 'iftira' ve 'devlet kurumlarını aşağılama' olduğunu aktarıyor (fetch edilmedi). İsveç Yüksek Mahkemesi Ekim 2025'te iadeyi reddetmişti (arama özeti).",
+      "alinti": "Investigators say the gunman was radicalized in an organizational “cell house” in Ankara and was instructed not to surrender after carrying out the assassination.",
+      "kaynak_derecesi": "D",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Hükümet yanlısı kaynak, isimsiz güvenlik kaynakları. 2018 iddianamesi ve 2021 gerekçeli kararında Bozkurt adı geçmiyordu (AA/Hürriyet özetlerinde yok). Tez yaklaşık 10 yıl sonra yeni bir aktörle genişliyor.",
+      "serit": "TR hükümet yanlısı basın",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "H1 anlatısını genişleten yeni iddia."
+        },
+        "H2": {
+          "iliski": "Ç",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      },
+      "not": "Tez soykütüğü: 2016 'FETÖ' → 2018 'FETÖ + arkasındaki istihbarat örgütleri' → 2021 'darbeye zemin' → 2026 'Bozkurt yönetti'."
+    },
+    {
+      "kanit_id": "K39",
+      "tur": "muhalefet sorusu / resmi gerekçe",
+      "kaynak_url": "https://www.bbc.com/turkce/haberler-turkiye-38383633",
+      "kurum_yayin": "BBC News Türkçe",
+      "yayin_tarihi": "2016-12-20",
+      "olay_tarihi": "2016-12-19/20",
+      "ozet": "Kılıçdaroğlu saldırganın canlı yakalanmayıp öldürülmesinin ayrıca üzerinde durulması gerektiğini söyledi. Erdoğan ise ertesi gün 'bomba mı çıkaracak endişesiyle' vurulduğunu açıkladı (Milliyet/DHA, önceki oturumda fetch edildi). Altıntaş yaklaşık 15 dakika çatıştıktan sonra öldürüldü (BBC, önceki oturum).",
+      "alinti": "O kişinin canlı yakalanmayıp da öldürülmesi de ayrıca üzerinde durmamız gereken bir noktadır.",
+      "kaynak_derecesi": "B",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Açıklamalar kesin. Saldırganın ölümü, motivasyonun doğrudan sorgulanabileceği tek kaynağı ortadan kaldırdı.",
+      "serit": "Batı basını",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "Susturma iddiası (H4/örtbas) için kullanılabilir, ancak çatışma koşulları bunu açıklamaya yetiyor."
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K40",
+      "tur": "uzman iddiası (Türk düşünce kuruluşu)",
+      "kaynak_url": "https://www.arabnews.com/node/1211506/world",
+      "kurum_yayin": "Arab News – Eray Güçlüer (ASAM) ve Timur Akhmetov (RIAC)",
+      "yayin_tarihi": "2017-12-19",
+      "olay_tarihi": "—",
+      "ozet": "ASAM'dan Güçlüer'e göre saldırgan 'önceden tasarlanmış bir senaryo gereği' suikasttan birkaç ay önce El Kaide bağlantılı gruplarla temasa sokuldu, oysa sosyal medyada bu grupları sert biçimde eleştirmişti. Güçlüer ayrıca Rusya'nın 2006'da Gülen okullarını kapatmasını olası bir intikam motivasyonu olarak gösteriyor.",
+      "alinti": "the hit man was put into contact with groups linked to Al-Qaeda just a couple of months before the assassination.",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 5,
+      "bilgi_derecesi_gerekcesi": "Uzman beyanı; kaynağı ve delili belirtilmemiş. Önemli bir dolaylı kabul var: hükümet tezine yakın bir uzman bile El Kaide bağlantılı gruplarla temasın gerçek olduğunu söylüyor.",
+      "serit": "düşünce kuruluşu",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "T",
+          "gerekce": "'Kasıtlı yanıltma' senaryosu."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Cihatçı çevreyle temasın varlığını dolaylı olarak kabul ediyor."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      }
+    },
+    {
+      "kanit_id": "K41",
+      "tur": "olay bağlamı – hükümete yakın STK protestosu",
+      "kaynak_url": "https://www.aa.com.tr/en/middle-east/turkish-ngos-protest-aleppo-violence/705778",
+      "kurum_yayin": "Anadolu Ajansı (devlet)",
+      "yayin_tarihi": "2016-12-14",
+      "olay_tarihi": "2016-12-13",
+      "ozet": "Aralarında BBP Gençlik Kolları ve TÜGVA'nın da bulunduğu STK'lar 13 Aralık gecesi Ankara'da Rus Büyükelçiliği önünde protesto yaptı. İstanbul'da 'Katil Rusya/İran Suriye'den defol' sloganı atıldı. Aynı gün AA, ateşkesin Türkiye'nin aracılığıyla sağlandığını aktarıyordu.",
+      "alinti": "Demonstrators outside the the Russian consulate general chanted, \"Murderer Russia/Iran get out of Syria\".",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 2,
+      "bilgi_derecesi_gerekcesi": "Devlet ajansının kendi haberi. Protestonun varlığı MEE ve Turkish Minute'te de var.",
+      "serit": "TR devlet basını",
+      "devlet_baglantili": true,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H2": {
+          "iliski": "T",
+          "gerekce": "Saldırıdan 6 gün önce Ankara'daki Rus elçiliği önünde yoğun öfke ortamı."
+        },
+        "H3": {
+          "iliski": "T",
+          "gerekce": "Hükümete yakın İslamcı sivil toplum ile cihatçı söylem arasında ortak bir Rusya karşıtı duygu alanı."
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "T",
+          "gerekce": "—"
+        }
+      },
+      "not": "Paradoks: Ankara aynı hafta Moskova'yla tahliyeyi müzakere ederken kendi tabanı Rusya'yı protesto ediyordu. Bu, 'Neden şimdi?' sorusunun merkezinde."
+    },
+    {
+      "kanit_id": "K42",
+      "tur": "iddianame – genişletici çıkarım",
+      "kaynak_url": "https://www.hurriyet.com.tr/gundem/karlovu-ak-partinin-iftarinda-vuracaklardi-41029337",
+      "kurum_yayin": "Hürriyet",
+      "yayin_tarihi": "2018-11-24",
+      "olay_tarihi": "2016-12-19",
+      "ozet": "İddianame, saldırı görüntülerinin TRT'de yayımlanmasının da saldırıyla 'bağlantılı' olduğunu ve 'habercilik kavramlarıyla açıklanamayacağını' savunuyor.",
+      "alinti": "yaşanan gelişmelerin gerçekleşen saldırı ile bağlantılı olduğu, bu hususun habercilik ve haber yapma kavramları ile açıklanamayacağı anlaşılmıştır",
+      "kaynak_derecesi": "C",
+      "bilgi_derecesi": 4,
+      "bilgi_derecesi_gerekcesi": "Savcılık yorumu; delil türü belirtilmiyor. İddianamenin çıkarım eşiğinin düşük olduğuna işaret ediyor.",
+      "serit": "mahkeme/iddianame",
+      "devlet_baglantili": false,
+      "hipotez_iliskisi": {
+        "H1": {
+          "iliski": "N",
+          "gerekce": "Kanıt niteliği zayıf; genel güvenilirliği etkiler."
+        },
+        "H2": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H3": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H4": {
+          "iliski": "N",
+          "gerekce": "—"
+        },
+        "H5": {
+          "iliski": "N",
+          "gerekce": "—"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "vaka": "Rusya'nın Ankara Büyükelçisi Andrey Karlov suikastı, 19 Aralık 2016, Ankara (Çağdaş Sanat Merkezi sergi açılışı)",
+  "on_kayit_zaman_damgasi": "2026-10-26T09:47:00+01:00",
+  "not": "Hipotezler kanıt toplamaya başlamadan önce kaydedildi. Sonradan eklenenler 'sonradan_eklendi': true ile işaretlenecek.",
+  "hipotezler": [
+    {
+      "id": "H1",
+      "ad": "Resmi tez: FETÖ organizasyonu",
+      "tanim": "Saldırı, Türk yetkililerinin iddia ettiği gibi Fethullah Gülen yapılanması (FETÖ) tarafından planlanmış/yönlendirilmiş; tetikçi Mevlüt Mert Altıntaş örgütün talimatıyla hareket etti; amaç Türkiye-Rusya ilişkilerini bozmak.",
+      "beklenen_kanitlar": "Tetikçinin örgütle somut iletişim/talimat izi (ByLock, abi/imam irtibatı), örgüt hücresi, mahkemede iletişim delilleri, saldırı öncesi örgüt yönlendirmesine dair belgeler."
+    },
+    {
+      "id": "H2",
+      "ad": "Halep'le radikalleşmiş yalnız aktör",
+      "tanim": "Altıntaş, Halep kuşatması ve Rusya'nın Suriye'deki bombardımanına öfkeyle bireysel olarak radikalleşti ve örgütsel talimat olmadan tek başına hareket etti.",
+      "beklenen_kanitlar": "Olay yeri sözleri (Halep/Suriye), bireysel internet/okuma geçmişi, örgütsel iletişim yokluğu, kısa planlama izi, yardımcı/hücre bulunamaması."
+    },
+    {
+      "id": "H3",
+      "ad": "Cihatçı ağ/ortam bağlantısı (Nusra/JFŞ/HTŞ çevreleri)",
+      "tanim": "Saldırı, Rusya'nın Suriye'deki kampanyası ve muhalif/radikal grupların (bir kısmı Türkiye'ye yakın) Halep'te köşeye sıkıştırılmasına tepki olarak cihatçı bir ağ veya ideolojik ortamla bağlantılı ya da ondan esinlenmiş şekilde gerçekleşti.",
+      "beklenen_kanitlar": "Cihatçı slogan/biat ifadeleri, cihatçı içerik tüketimi, cihatçı kişilerle temas, örgüt sahiplenmesi (güvenilir kanaldan), mahkemede bu yönde bulgular."
+    },
+    {
+      "id": "H4",
+      "ad": "Üçüncü taraf/istihbarat provokasyonu",
+      "tanim": "Saldırı, Türkiye-Rusya yakınlaşmasını (ve 20 Aralık Moskova üçlü toplantısını) raydan çıkarmayı amaçlayan bir üçüncü devlet veya istihbarat servisinin provokasyonuydu.",
+      "beklenen_kanitlar": "Yabancı servisle iletişim/finansman izi, profesyonel planlama, zamanlamanın dışarıdan belirlendiğine dair belge, Rus/Türk yetkililerinin somut delil sunması."
+    },
+    {
+      "id": "H5",
+      "ad": "Kombinasyon",
+      "tanim": "Birden fazla unsurun birleşimi: örn. kişisel radikalleşme (H2) + cihatçı ortam etkisi (H3) + Gülen yapısıyla geçmiş bağlar veya iddia edilen örgütsel manipülasyon (H1) ya da dış aktör istismarı (H4).",
+      "beklenen_kanitlar": "Farklı hipotezlerin her birini kısmen destekleyen, birbirini dışlamayan kanıtlar."
+    }
+  ],
+  "sonradan_eklenen_rafinasyonlar": [
+    {
+      "id": "H3a",
+      "ust": "H3",
+      "sonradan_eklendi": true,
+      "zaman_damgasi": "Mon 2026-10-26 9:58 AM CET",
+      "ad": "Cihatçı ortamdan esinlenme (örgütsel emir yok)",
+      "tanim": "Saldırgan Türkiye'deki İslamcı-cihatçı sosyal çevrede (sohbet halkaları, STK protestoları, Nusra söylemi) radikalleşti; Suriye'deki bir grup tarafından yönlendirilmedi.",
+      "neden": "Kanıtlar H3'ün 'ağ yönlendirmesi' ve 'esinlenme' versiyonlarını farklı yönlerde etkiliyor (sahte sahiplenme ve inkâr ağı zayıflatıyor, esinlenmeyi etkilemiyor)."
+    },
+    {
+      "id": "H3b",
+      "ust": "H3",
+      "sonradan_eklendi": true,
+      "zaman_damgasi": "Mon 2026-10-26 9:58 AM CET",
+      "ad": "Cihatçı ağ yönlendirmesi",
+      "tanim": "Nusra/JFŞ/Ceyş el-Fetih veya Türkiye'deki bir uzantısı eylemi planladı ya da emretti.",
+      "neden": "Aynı gerekçe."
+    },
+    {
+      "id": "H5a",
+      "ust": "H5",
+      "sonradan_eklendi": true,
+      "zaman_damgasi": "Mon 2026-10-26 9:58 AM CET",
+      "ad": "Özgül kombinasyon",
+      "tanim": "2013 öncesi Gülen çevresiyle teması olan, 2014 sonrası Sosyal Doku/İslamcı çevrede dönüşüm geçiren, Halep tahliyesiyle tetiklenen ve en az bir yardımcısı (ölüm sonrası e-posta silme) olan saldırgan; yardımcının/yönlendiricinin kimliği kamuya açık kanıtla belirlenemiyor.",
+      "neden": "H5'in sıfır tutarsızlık puanı belirsizliğinden kaynaklanıyor; sınanabilir hale getirmek için özgülleştirildi."
+    }
+  ]
+}

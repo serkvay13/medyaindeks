@@ -15,6 +15,7 @@
     python -m medya onayla <vaka> --surum N --onaylayan "…" --tarih YYYY-AA-GG
     python -m medya aktor dogrula [--dizin aktorler] | tepki --csv olaylar.csv --a TUR --b RUS --y 4 --x 3 [--gun 7]
     python -m medya ornek kur                                  # sentetik örnek vaka (deneme için)
+    python -m medya vaka-ice-aktar <klasör> <vaka_id>          # K/KR/R/RD kart dosyalarını vakaya aktar
 
 Sağlayıcı: MEDYA_LLM_SAGLAYICI (offline varsayılan) · Depo: MEDYA_KANIT_DB · Çalışma alanı: MEDYA_CALISMA
 """
@@ -83,7 +84,7 @@ def cmd_kanit(a):
             print(f"[OK] {d.disa_aktar(a.vaka, a.dosya)} kart yazıldı: {a.dosya}")
         elif a.alt == "liste":
             for k in d.vaka_kartlari(a.vaka):
-                print(f"{k.kanit_id}  {k.derece}  {k.tur:<18} {k.baslik()[:50]:<50} {k.ozet[:70]}")
+                print(f"{k.gorunen_id:<14}  {k.derece}  {k.tur:<18} {k.baslik()[:50]:<50} {k.ozet[:70]}")
 
 
 def cmd_hipotez(a):
@@ -226,6 +227,20 @@ def cmd_ornek(a):
     print(f"[OK] sentetik örnek vaka kuruldu: {v.id} ({v.dizin}). Sonra: python -m medya rapor uret {v.id}")
 
 
+def cmd_vaka_ice_aktar(a):
+    from medya.vaka_paketi import vakaya_aktar
+    with KanitDeposu() as d:
+        r = vakaya_aktar(a.klasor, a.vaka_id, d)
+    print(f"[OK] {r['vaka']}: {r['kart']} kart ({r['yeni_kart']} yeni) · "
+          + ", ".join(f"{ad} ({s})" for ad, s in r["dosyalar"].items()))
+    if r["on_kayit"]:
+        print(f"[OK] hipotezler ön kaydedildi · SHA-256 {r['on_kayit']['ozet']}")
+    for u in r["uyarilar"]:
+        print(f"[UYARI] {u}")
+    for h in r["hatalar"]:
+        print(f"[RED] {h}")
+
+
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="python -m medya", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -331,11 +346,16 @@ def parser() -> argparse.ArgumentParser:
 
     o = s.add_parser("ornek").add_subparsers(dest="alt", required=True)
     o.add_parser("kur")
+
+    x = s.add_parser("vaka-ice-aktar", help="kart klasörünü (K/KR/R/RD şemaları) vakaya aktar")
+    x.add_argument("klasor")
+    x.add_argument("vaka_id")
     return p
 
 
 KOMUTLAR = {"vaka": cmd_vaka, "kanit": cmd_kanit, "hipotez": cmd_hipotez, "ach": cmd_ach, "baglam": cmd_baglam,
-            "rapor": cmd_rapor, "soru": cmd_soru, "onayla": cmd_onayla, "aktor": cmd_aktor, "ornek": cmd_ornek}
+            "rapor": cmd_rapor, "soru": cmd_soru, "onayla": cmd_onayla, "aktor": cmd_aktor, "ornek": cmd_ornek,
+            "vaka-ice-aktar": cmd_vaka_ice_aktar}
 
 
 def main(argv=None):

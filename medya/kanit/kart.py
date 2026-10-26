@@ -39,9 +39,17 @@ class KanitHatasi(ValueError):
     """Kanıt kartı geçersiz."""
 
 
-def kanit_id_uret(url: str, alinti: str) -> str:
-    """URL + alıntıdan kararlı kimlik: aynı kaynak ve aynı alıntı her zaman aynı kimliği verir."""
+ERISIM_DURUMLARI = ("açıldı", "arama özeti", "bulunamadı", "devralındı")
+_STABIL_ID = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşü]{1,6}-?\d{1,5}[a-z]?")
+
+
+def kanit_id_uret(url: str, alinti: str, stabil_id: str = "") -> str:
+    """URL + alıntıdan kararlı kimlik: aynı kaynak ve aynı alıntı her zaman aynı kimliği verir.
+    Kararlı (insan) kimliği olan kartlarda (KR-001, RD12 …) bu kimlik de tabana girer: aynı URL ve alıntıyı
+    paylaşan iki ayrı kayıt (aynı haberden iki olgu) tek karta çökmesin."""
     taban = (url or "").strip() + "\n" + re.sub(r"\s+", " ", (alinti or "")).strip()
+    if stabil_id:
+        taban += "\n" + stabil_id.strip()
     return "k-" + hashlib.sha256(taban.encode("utf-8")).hexdigest()[:12]
 
 
@@ -78,12 +86,26 @@ class KanitKarti:
     arsiv_url: str = ""
     etiketler: list = field(default_factory=list)   # ör. "bolum:6", "hipotez:H2"
     kanit_id: str = ""
+    # --- içe aktarılan kart dosyaları için (medya.kanit.ice_aktar) ---
+    stabil_id: str = ""             # kaynağın kendi kimliği (K01, KR-001, R12, RD05); raporda bu görünür
+    erisim_durumu: str = ""         # açıldı | arama özeti | bulunamadı | devralındı
+    celiski: str = ""               # kaynaklar arası çelişki notu (varsa)
+    kaynak_sinifi: str = ""         # yayın/kaynak sınıfı (sahiplik dönemine göre düzeltilmiş olabilir)
+    sinif_duzeltildi: bool = False  # sınıf yayın tarihine göre düzeltildiyse (raporda † işareti)
+    derecesiz: bool = False         # Admiralty derecesi verilmemiş kayıt (ör. kronoloji satırı): F6 sayılır
+    saat: str = ""                  # olay/yayın saati metni (kronoloji)
+    donem: str = ""                 # kronoloji alt dönemi
+    ek: dict = field(default_factory=dict)          # şemaya özgü ek alanlar (ham sınıf, aktör, tema …)
 
     def __post_init__(self):
         self.tur = (self.tur or "").strip()
         if self.tur not in TURLER:
             raise KanitHatasi(f"Geçersiz kanıt türü: {self.tur!r} (geçerli: {', '.join(TURLER)})")
-        if not (self.kaynak_url or "").strip():
+        self.erisim_durumu = (self.erisim_durumu or "").strip()
+        if self.erisim_durumu and self.erisim_durumu not in ERISIM_DURUMLARI:
+            raise KanitHatasi(f"Geçersiz erişim durumu: {self.erisim_durumu!r} ({', '.join(ERISIM_DURUMLARI)})")
+        if not (self.kaynak_url or "").strip() and self.erisim_durumu != "bulunamadı":
+            # Tek istisna: kaynağı aranıp bulunamadığı açıkça kayıtlı satır (bu durum raporda görünür)
             raise KanitHatasi("kaynak_url zorunlu: kaynaksız kanıt kartı olmaz")
         if not (self.kurum or "").strip():
             raise KanitHatasi("kurum/yayın zorunlu")
@@ -109,7 +131,13 @@ class KanitKarti:
             raise KanitHatasi("Yayın grubu tarihsiz ve dayanaksız yazılamaz: yayin_grubu_tarihi ve "
                               "yayin_grubu_dayanak gerekli (yayın sicili ilkesi)")
         self.etiketler = list(self.etiketler or [])
-        beklenen = kanit_id_uret(self.kaynak_url, self.alinti or self.ozet)
+        self.ek = dict(self.ek or {})
+        self.stabil_id = (self.stabil_id or "").strip()
+        if self.stabil_id and not _STABIL_ID.fullmatch(self.stabil_id):
+            raise KanitHatasi(f"Kararlı kimlik biçimi geçersiz: {self.stabil_id!r} (ör. K01, KR-001, RD12)")
+        if self.derecesiz:
+            self.kaynak_derecesi, self.bilgi_derecesi = "F", "6"
+        beklenen = kanit_id_uret(self.kaynak_url, self.alinti or self.ozet, self.stabil_id)
         if self.kanit_id and self.kanit_id != beklenen:
             raise KanitHatasi(f"kanit_id içerikle uyuşmuyor ({self.kanit_id} ≠ {beklenen})")
         self.kanit_id = beklenen
@@ -117,7 +145,15 @@ class KanitKarti:
     # ------------------------------------------------------------------
     @property
     def derece(self) -> str:
+        """Admiralty derecesi; derecesiz kayıtta erişim durumu (ör. "açıldı")."""
+        if self.derecesiz:
+            return self.erisim_durumu or "derecesiz"
         return f"{self.kaynak_derecesi}{self.bilgi_derecesi}"
+
+    @property
+    def gorunen_id(self) -> str:
+        """Raporda görünen kimlik: kararlı kimlik varsa o, yoksa içerik özeti kimliği."""
+        return self.stabil_id or self.kanit_id
 
     @property
     def iddia_mi(self) -> bool:
@@ -152,14 +188,15 @@ class KanitKarti:
         return cls(**{k: v for k, v in d.items() if k in adlar})
 
     def markdown(self) -> str:
-        satir = f"- `{self.kanit_id}` **{self.baslik()}** — {self.derece} " \
-                f"({KAYNAK_DERECELERI[self.kaynak_derecesi]} / {BILGI_DERECELERI[self.bilgi_derecesi]})"
+        olcek = (f"erişim: {self.derece}" if self.derecesiz else
+                 f"{KAYNAK_DERECELERI[self.kaynak_derecesi]} / {BILGI_DERECELERI[self.bilgi_derecesi]}")
+        satir = f"- `{self.gorunen_id}` **{self.baslik()}** — {self.derece} ({olcek})"
         tarih = ", ".join(x for x in (f"yayın {tarih_tr(self.yayin_tarihi)}" if self.yayin_tarihi else "",
                                       f"olay {tarih_tr(self.olay_tarihi)}" if self.olay_tarihi else "") if x)
         satir += f"  \n  {self.ozet}"
         if self.alinti:
             satir += f"  \n  > “{self.alinti}”"
-        satir += f"  \n  [{self.kaynak_url}]({self.kaynak_url})"
+        satir += f"  \n  [{self.kaynak_url}]({self.kaynak_url})" if self.kaynak_url else "  \n  kaynak bulunamadı"
         if self.arsiv_url:
             satir += f" · [arşiv]({self.arsiv_url})"
         if tarih:

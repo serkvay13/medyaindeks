@@ -1,0 +1,25 @@
+# Karlov suikastı vaka paketi. Girdiler notes/karlov (K, hipotezler, ACH) ve notes/karlov/v2 (KR, R, RD)
+# dosyalarından kopyalandı. Kütüphane kaydı: vakalar/ankara-2016-buyukelci.toml
+id: karlov
+kutuphane_id: ankara-2016-buyukelci
+ad: "Andrey Karlov suikastı (Ankara, 19 Aralık 2016)"
+soru: "Rusya'nın Ankara Büyükelçisi Andrey Karlov'a 19 Aralık 2016'da düzenlenen suikast nasıl gerçekleşti, kim tarafından ve hangi süreçle; medya olayı nasıl çerçeveledi?"
+olay_tarihi: "2016-12-19"
+kart_klasoru: kartlar
+
+# İçe aktarıcı şema ayarları (medya.kanit.ice_aktar). sahiplik: sınıf alanına sahiplik dönemi düzeltmesi
+# uygulanır mı; yeniden_adlandir: sınıf metninde alt dize değişimi.
+sema_ayarlari:
+  K: {sahiplik: false}
+  KR: {sahiplik: true}
+  R:
+    sahiplik: true
+    yeniden_adlandir: {"hükümete yakın yayın": "Rusya'da hükümete yakın yayın"}
+  RD:
+    sahiplik: true
+    yeniden_adlandir:
+      "yurt içi ana akım (Hürriyet/CNN Türk, Doğan grubu dönemi; 2018 sonrası Demirören → hükümete yakın)": "ana akım (Hürriyet, Doğan dönemi)"
+
+# Hipotez türleri (ACH simetri kuralı için); metinler kartlar/hipotezler.json'dan
+hipotez_turleri: {H1: resmi_tez, H2: alternatif, H3: yapisal, H4: dis_konjonktur, H5: diger,
+                  H3a: yapisal, H3b: yapisal, H5a: diger}
