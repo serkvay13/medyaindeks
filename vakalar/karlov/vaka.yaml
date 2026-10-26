@@ -119,7 +119,7 @@ rapor:
           - [".*", "diğer"]
   kart_dizini:
     # Referans raporla aynı etiket; "temel kartlardan" olarak değiştirilebilir
-    erisim_etiketleri: {devralındı: " (v1 kartından)"}
+    erisim_etiketleri: {devralındı: " (temel kartlardan)"}
     semalar:
       - {sema: K, baslik: "A.1 Kanıt kartları ({aralik}, `{dosya}`)"}
       - sema: KR

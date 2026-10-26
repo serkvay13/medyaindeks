@@ -1269,13 +1269,13 @@ KR satırlarının içeriği Bölüm 2 tablolarında tam olarak verilmiştir; bu
 | RD46 | Gazete Duvar | 2016-12-22 | yurt içi muhalif/bağımsız | B2 (arama özeti) | Telefon hattı incelemesinde ByLock kullanmadığı belirlendi. |
 | RD47 | Hürriyet – Nedim Şener köşe yazısı | 2023-07-10 | hükümete yakın yayın (Demirören dönemi köşe yazısı) | D4 | Garson SD kart: 2014 kodlama listesinde 'EA' koduyla 'en sadık' olarak… |
 | RD48 | A Haber | 2026-06-15 | hükümete yakın yayın | C4 (arama özeti) | Garson kod sözlüğü: 'EA (Ehil Dünya)' = örgüt içinde ama tam teslimiyet… |
-| RD49 | Turkish Minute | 2018-11-26 | rejim kontrolünde olmayan kaynaklar | C2 (v1 kartından) | Emniyet 21 Aralık 2016'da açığa alınma iddiasını yalanladı; Altıntaş OHAL… |
+| RD49 | Turkish Minute | 2018-11-26 | rejim kontrolünde olmayan kaynaklar | C2 (temel kartlardan) | Emniyet 21 Aralık 2016'da açığa alınma iddiasını yalanladı; Altıntaş OHAL… |
 | RD50 | Anadolu Ajansı | 2016-12-22 | devlet medyası (TR) | C3 (arama özeti) | AA: hat HTS incelemesinde sıklıkla görüştüğü 8 kişi ByLock kullanıcısı… |
 | RD51 | Yeni Şafak | 2016-12-24 | hükümete yakın yayın | C3 (arama özeti) | Yeni Şafak: 16-17 Temmuz 2016'da senelik izin kullandı; izni FETÖ'den… |
 | RD52 | Memurlar.net | 2018-12-04 | hükümete yakın yayın | C4 (arama özeti) | İddianame (KOM Daire Başkanlığı 'Emniyet Mahrem Yapılanması' raporuna… |
 | RD53 | Odatv (Sabah'a atfen) | 2026-05-01 | yurt içi muhalif/bağımsız (MİT suç duyurusunun aktarımı) | D5 (arama özeti) | MİT suç duyurusu (Sabah'a atfen): Abdullah Bozkurt'un Altıntaş'ı… |
 | RD54 | Nordic Monitor (Bozkurt) | 2026-05-07 | rejim kontrolünde olmayan kaynaklar (yazar iddianın hedefi: doğrudan çıkar çatışması) | C3 | Soruşturma iki ev belirledi: biri AKP'ye yakın bir avukata ait, diğeri… |
-| RD55 | BBC News | 2016-12-20 | yabancı bağımsız medya | A1 (v1 kartından) | Saldırı anında Arapça cihat biatı dizesi ve 'Halep'i unutmayın' sözleri. |
+| RD55 | BBC News | 2016-12-20 | yabancı bağımsız medya | A1 (temel kartlardan) | Saldırı anında Arapça cihat biatı dizesi ve 'Halep'i unutmayın' sözleri. |
 | RD56 | Turkish Minute | 2016-12-24 | rejim kontrolünde olmayan kaynaklar | C3 (arama özeti) | Turkish Minute: İçişleri Bakanı Soylu, radikal İslamcı izlerin Gülen… |
 
 </div>
