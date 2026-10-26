@@ -50,8 +50,13 @@ medya/
   hipotez/         ACH (Heuer): ön kayıt + SHA-256 kilidi, T/Ç/N matrisi, tanısallık, ağırlık, kırmızı takım
   baglam/          on adımlık bağlam protokolü
   aktor/           aktör profilleri (aktorler/*.toml) + tepki fonksiyonları (Wilson %95 GA)
-  uzman/           sağlayıcıdan bağımsız LLM katmanı; istemler/*.md (Türkçe sistem istemleri)
-  rapor/           14 bölümlük rapor motoru, Markdown çıktı, durum geçişleri
+  uzman/           sağlayıcıdan bağımsız LLM katmanı; istemler/*.md (Türkçe sistem istemleri);
+                   yazim.py: bölüm bazlı rapor yazımı + kural denetimi + doğrulama
+  rapor/           14 bölümlük rapor motoru, Markdown çıktı, durum geçişleri;
+                   vaka_raporu.py + yapi.py + tablolar.py + pdf.py: vaka paketinden MD/HTML/PDF (referans yapı)
+  gdelt/           GDELT GKG 2.1 ham veri: indirici, vaka sorgusu, istatistik, göstergeler, grafikler
+  arastirma/       araştırma protokolü (beş hat), görev listesi, arama sağlayıcıları, kapsam denetçisi
+  vaka_paketi.py   vakalar/<vaka>/ paketleri (vaka.yaml, kartlar/, anlati/, gdelt/ …)
   derinlestir/     ek sorular → araştırma planı → yeni kanıt → yeni sürüm + değişiklik günlüğü
   vaka.py          vaka çalışma alanı (MEDYA_CALISMA, varsayılan data/vakalar_calisma/) + vaka kütüphanesi
   cli.py           python -m medya …
@@ -184,19 +189,125 @@ venv/bin/streamlit run app.py
 ```
 
 Ortam değişkenleri: `MEDYA_KANIT_DB`, `MEDYA_CALISMA`, `MEDYA_LLM_SAGLAYICI`, `MEDYA_LLM_MODEL`,
-`MEDYA_FIYATSIZ_IZIN`, `LLM_AYLIK_TAVAN`, `LLM_CALISMA_TAVANI`, `PANEL_PAROLA_OZETI`.
+`MEDYA_FIYATSIZ_IZIN`, `LLM_AYLIK_TAVAN`, `LLM_CALISMA_TAVANI`, `LLM_FIYAT_DOSYASI`, `OPENAI_API_KEY`,
+`GEMINI_API_KEY`/`GOOGLE_API_KEY`, `ANTHROPIC_API_KEY`, `MEDYA_GDELT_HAM`, `MEDYA_ARAMA_URL`,
+`MEDYA_ARAMA_ANAHTAR`, `PANEL_PAROLA_OZETI`.
 
-## 6. Bilinen sınırlar
+## 6. Vaka paketi → rapor (Karlov örneği)
+
+Bir vaka paketi `vakalar/<vaka>/` altında durur:
+
+```
+vakalar/karlov/
+  vaka.yaml          olay tarihi, anonimleştirme kuralları, şema ayarları, araştırma değişkenleri,
+                     rapor künyesi (kapak, başlıklar, kaynak tabanı sınıf kuralları, kart dizini etiketleri)
+  kartlar/           kanitlar.json (K) · kronoloji.json (KR) · rusya_dunya.json (R) ·
+                     radikallesme_kartlar.json (RD) · hipotezler.json (ön kayıt)
+  gdelt.yaml         GDELT sorgusu: tarih aralığı, ad/URL kalıpları, çerçeve sözlüğü, gösterge eşikleri
+  gdelt/             hesaplanmış istatistik.json + gunluk.png + saatlik.png (ham veri depoda değil)
+  ach_matris.yaml    tanısal kanıt satırları (E01…), hipotez sırası, kaynak × bilgi ağırlıkları
+  celiskiler.yaml    kaynaklar arası çelişki kayıtları (kartlara bağlı)
+  anlati/            çevrimdışı anlatı: <sıra>_<bölüm>.md (yer tutucularla)
+  kaynaklar/         kavram notu (literatür künyeli)
+  referans/          elle derlenmiş rapor ve GDELT çıktıları (yalnızca eşleşme testleri)
+```
+
+```bash
+# Kart klasörünü çalışma alanındaki bir vakaya aktar (K/KR/R/RD şemaları; KR-001, K24 … kimlikleri korunur)
+python -m medya vaka-ice-aktar vakalar/karlov/kartlar karlov
+
+# GDELT: indir (yalnızca ilk kez; devam ettirilebilir), tara (önbellekli), istatistik + grafik
+python -m medya gdelt indir karlov --paralel 8          # ham veri: MEDYA_GDELT_HAM ya da gdelt.yaml > ham_veri
+python -m medya gdelt tara karlov --en-fazla 600        # büyük veride parça parça
+python -m medya gdelt istatistik karlov                 # vakalar/karlov/gdelt/istatistik.json + PNG
+
+# Araştırma protokolü
+python -m medya arastirma baslat yeni-vaka --hipotezler hipotezler.json --dizin is/   # ön kayıt + görevler
+python -m medya arastirma al yeni-vaka is/                                           # doldurulan kartlar
+python -m medya arastirma kapsam karlov                                              # beş hat denetimi
+
+# Rapor
+python -m medya vaka-rapor karlov --cevrimdisi                  # anlatı anlati/'dan; MD + HTML + PDF
+python -m medya vaka-rapor karlov --saglayici openai --tavan-usd 2   # anlatı LLM'den, cümle cümle doğrulanır
+# Çıktı: data/raporlar/<vaka>/<dosya_adi>.{md,html,pdf} + rapor_ozeti.json (kapsam, uyarılar, düşürülen cümleler)
+```
+
+### GDELT modülü (`medya/gdelt`)
+
+- **İndirici:** masterfile listesi (ya da zaman damgası üretimi) → 15 dakikalık `translation`/`english` GKG
+  dosyaları; satırlar `srclc:tur` ve/veya `.tr` alan adıyla süzülür, GCAM alanı boşaltılır. Durum
+  `_durum.json`'da tutulur; ikinci çalıştırma yalnızca eksik/hatalı dosyaları ister; boş dosya da kaydedilir.
+- **Vaka sorgusu:** geniş küme = ad alanlarında (kişi, kurum, başlık) ad kalıbı; çekirdek küme = geniş ∩ URL
+  kalıbı, URL'ye göre tekil. URL kalıbının tek başına yakaladığı site-geneli gürültü ayrıca sayılır ve uyarılır.
+- **İstatistik:** günlük hacim ve Türkçe arşivdeki pay, saatlik eğri (UTC ve yerel saat), izlenen yayınların ilk
+  haber zamanı, yayın grupları (`KEY_OUTLETS` kopyası; "rejim kontrolünde olmayan kaynaklar"), ton, kopya-slug
+  kümeleri, çerçeve sayımları.
+- **Çerçeve sözlüğü** vaka ayarındadır (`gdelt.yaml > cerceveler`). URL yüzde kodlaması çözülür, Türkçe katlanır,
+  harf/rakam dışı her şey `-` olur; kalıplar `-` ile başlamak zorundadır (sözcük başı sınırı). Böylece
+  "dışişleri" içindeki "isis" ya da "saldırısıdır" içindeki "isid" çerçeve sayılmaz (test:
+  `test_cerceve_sozcuk_siniri_alt_dize_hatasini_engeller`). Joker (`.{1,8}`) kullanılamaz.
+- **Göstergeler** (aday, hüküm değil; her biri masum açıklamasıyla): sessizlik (çerçevenin bir grupta
+  beklenenden az görünmesi), eşzamanlı söylem (aynı slug ya da aynı çerçeve aynı 15 dk dosyasında ≥3 sitede),
+  atıf aklama adayı (çerçevenin ilk dosyasında yabancı kaynağa atıf kalıbı, ör. `-rus-ajansi-`).
+- Karlov eşleşmesi: FETÖ/Gülen 217, çekirdek 4.185 haber, 211 site, hükümete yakın 322 haberde FETÖ 44 /
+  cihatçı 3, muhalif/bağımsız 276 haberde 14 / 14; günlük, saatlik, ilk haber, ton, kopya-slug ve grafikler
+  referansla birebir (ham veri yoksa ham veriden yeniden hesap testi atlanır, kayıtlı istatistik testi çalışır).
+
+### LLM yazım katmanı (`medya/uzman/yazim.py`)
+
+- Sabit sistem istemi: `medya/uzman/istemler/rapor_yazim.md`. Kurallar: yalnızca verilen kartlar; cümle türü
+  `[O]`/`[D]`/`[S]`; her olgu kart kimliğine bağlı; resmî açıklama kurum iddiası; hipotezler nötr H1…Hn ve
+  kişiye atfedilmez; "rejim kontrolünde olmayan kaynaklar" (Gülen cemaati iddiası yasak); özel kişiler rolüyle;
+  rapor sürümü anlatılmaz; "Bu rapor ne değildir" bölümü yazılmaz.
+- Bölüm başına yalnızca o bölüme seçilen kartlar (ve GDELT / kavram notu / ACH satırları için sözde kartlar)
+  modele gider. Dönen her cümle kural denetiminden ve doğrulayıcıdan geçer; geçmeyen düşürülür ve
+  `rapor_ozeti.json`'da nedeniyle listelenir.
+- Sağlayıcılar: `anthropic`, `openai`, `gemini` (anahtar yalnızca ortamdan: `ANTHROPIC_API_KEY`,
+  `OPENAI_API_KEY`, `GEMINI_API_KEY`/`GOOGLE_API_KEY`; yoksa çağrıdan önce net hata).
+- Bütçe: Claude fiyatları `llm/butce.py`'de; diğer modellerin fiyatları koda yazılmaz, `llm/fiyatlar.toml`'dan
+  (`LLM_FIYAT_DOSYASI`) okunur. Dosya boş gelir: fiyatsız modelde uyarı verilir ve çağrı yalnızca
+  `MEDYA_FIYATSIZ_IZIN=1` ile yapılır. `TokenSayaci` rapor başına token/USD tavanı uygular
+  (`--tavan-usd`, `--tavan-token`).
+
+### Araştırma protokolü (`medya/arastirma`)
+
+Her vakada zorunlu beş hat (`protokol.yaml`): (a) dakika dakika kronoloji — TR/EN/RU + ilgili diller, çelişki
+işaretiyle; (b) diğer aktörlerin tepkileri, kendi soruşturmaları ve mağdur yakınları; (c) her yeni kavram için
+akademik açıklama + vakaya özgü süreç; (d) GDELT; (e) kanıt + ACH. Görev listesi şablonlardan ve vaka
+değişkenlerinden (`vaka.yaml > arastirma`) üretilir, **hipotez ön kaydı olmadan üretilmez** (SHA-256 kilidi,
+`on_kayit.json`). Arama: web adaptörü (`MEDYA_ARAMA_URL`, sonuçlar aday) ya da manuel/harici ajan modu
+(görev JSON'u + kart şeması → doldurulan kart dosyaları içe aktarıcıdan). Kapsam denetçisi rapordan önce
+çalışır: hat başına asgari kart, olay günü kronoloji eşiği, zorunlu tema (mağdur yakınları), kavram notu,
+GDELT çekirdek kümesi, ön kayıt ve ACH satırı.
+
+### Rapor motoru (`medya/rapor/vaka_raporu.py`)
+
+Yapı: kapak + kaynak tabanı/okuma kılavuzu, yönetici özeti, kronoloji (4 alt dönem + çelişki tablosu), GDELT,
+diğer aktörler, kavram, fail süreci, bağlam, hipotezler + ACH, kim kazandı, açık sorular, kaynak eleştirisi,
+Ek A (kart dizini), Ek B (yöntem). Deterministik parçalar koddan üretilir (kapak, kaynak tabanı, KR tabloları,
+çelişki tablosu, GDELT tabloları ve grafikleri, ACH matrisi ve ağırlıklı toplamlar, kart dizini); anlatı LLM'den
+ya da `anlati/` dosyalarından gelir. Kapakta her zaman "Taslak — insan onayı bekliyor" ve GDELT atfı yazılır.
+Gövdedeki her `[kimlik]` atfı kart olarak var olmalıdır. PDF: pandoc (`markdown-smart+raw_html`, numaralı,
+içindekiler kapaktan sonra) + WeasyPrint, stil `medya/rapor/stil/style.css`.
+
+Karlov çevrimdışı çıktısı referans raporla birebir test edilir (`tests/test_vaka_raporu.py`). Tek bilinen fark:
+R50 (Hürriyet, 2017-06-03) — girdi dosyasında "yurt içi muhalif/bağımsız"; platform Hürriyet için 2018 öncesine
+sahiplik düzeltmesini ("yurt içi ana akım (Doğan dönemi)†") tutarlı uygular, referans bu satırda uygulamamıştı.
+
+## 7. Bilinen sınırlar
 
 - Ad denetimi büyük harf ve kök eşleşmesine dayanır (çekim eki için sözcük sonundan en çok 4 harf kırpılır);
   küçük harfle yazılmış uydurma bir ad ya da yazıyla yazılmış büyük sayılar ("bin iki yüz") yakalanmayabilir.
   Doğrulayıcı uydurmayı zorlaştırır, insan onayının yerini tutmaz.
-- 5. ve 9. bölümlerin modülleri (ilişki grafiği; sessizlik, eşzamanlı söylem, değişiklik/silme, gündem kaydırma)
-  bu sürümde yok.
+- Sessizlik, eşzamanlı söylem ve atıf aklama göstergeleri GDELT modülünde var (aday üretir); ilişki grafiği,
+  değişiklik/silme ve gündem kaydırma modülleri yok.
+- GDELT çerçeve sayımı URL'ye dayanır (2019 öncesinde başlık yok): başlığa/URL'ye taşınmayan çerçeveyi kaçırır.
+- Çevrimdışı anlatı dosyaları elle derlenmiş metindir; motor yalnızca atıfları denetler, cümleleri yeniden
+  doğrulamaz. LLM modunda her cümle doğrulanır.
 - Doğrulayıcının kalıpları Python `re` ile çalışır; BigQuery/DuckDB'ye giden arama kalıpları gibi RE2 kısıtına
   tabi değildir (joker kullanılmaz, kelime başı sınırı korunur).
-- `pages/` klasörü Streamlit'in çok sayfalı düzenini açar; Cloud Run imajı (`Dockerfile`) bu klasörü ve `medya/`
-  paketini henüz kopyalamaz.
+- `pages/` klasörü Streamlit'in çok sayfalı düzenini açar; Cloud Run imajı (`Dockerfile`) artık `medya/`,
+  `pages/`, `vakalar/` ve `aktorler/`'i kopyalar, pandoc ve WeasyPrint'i kurar.
 
 ---
 Veri kaynağı: [The GDELT Project](https://www.gdeltproject.org/). GDELT verisi açık ve ücretsizdir; bu platform

@@ -61,9 +61,9 @@ hesaba düşer. **Servis hesabı anahtarı asla repoya girmez** — yalnızca `.
 | `cases/` | Vaka çalışması araçları: korpus, analiz, metin, kaynak kaydı, PDF rapor |
 | `llm/` | LLM destekli başlık etiketleme: kod kitapları, örneklem, insan kodlama ekranı, bütçe defteri, doğruluk ölçümü |
 | `ajan/` | MCP araçları (salt okunur, protokolden bağımsız) + stdio sunucusu |
-| `medya/` | Kanıta bağlı analiz paketi (platform v1): kanıt deposu, doğrulayıcı, ACH, bağlam protokolü, aktörler, uzman LLM katmanı, 14 bölümlük rapor, derinleştirme — bkz. `docs/platform.md` |
+| `medya/` | Kanıta bağlı analiz paketi (platform v1): kanıt deposu, doğrulayıcı, ACH, bağlam protokolü, aktörler, uzman LLM katmanı ve yazım katmanı, GDELT ham veri modülü, araştırma protokolü, vaka raporu motoru (MD/HTML/PDF), derinleştirme — bkz. `docs/platform.md` |
 | `pages/vaka_raporu.py` | Vaka raporu sayfası (Streamlit çok sayfa; `app.py`'den bağımsız) |
-| `aktorler/`, `vakalar/` | Aktör profilleri (kaynaklı) ve vaka kütüphanesi |
+| `aktorler/`, `vakalar/` | Aktör profilleri (kaynaklı); vaka kütüphanesi ve vaka paketleri (ör. `karlov/`: kartlar, GDELT istatistiği, ACH matrisi, çelişki kayıtları, anlatı) |
 | `vitrin/` | Statik tanıtım sayfası üreticisi |
 | `yasal/` | Kullanım koşulları, gizlilik politikası, KVKK metni (**hukukçu kontrolünden geçmemiş taslak**) |
 | `Dockerfile`, `dagit.sh` | Cloud Run dağıtımı |
@@ -182,6 +182,26 @@ Doğruluk ölçümü `llm/olcum.py` ile yapılır; yerel bir Ollama modeli veya 
 çalıştırılabilir. **Altın set insan eliyle kodlanır** — LLM altın seti kodlamaz, yoksa doğruluk
 ölçülmüş olmaz.
 
+## Platform kullanımı (vaka raporu)
+
+Kanıta bağlı analiz platformu (`medya/`) vaka paketlerinden (`vakalar/<vaka>/`) taslak rapor üretir. Ayrıntı:
+`docs/platform.md` §6.
+
+```bash
+venv/bin/pip install -r requirements-platform.txt            # + sistemde pandoc (PDF için)
+venv/bin/python -m medya arastirma kapsam karlov              # beş araştırma hattının kapsamı
+venv/bin/python -m medya gdelt istatistik karlov              # ham veri varsa GDELT istatistiği + grafikler
+venv/bin/python -m medya vaka-rapor karlov --cevrimdisi       # MD + HTML + PDF → data/raporlar/karlov/
+venv/bin/python -m medya vaka-rapor karlov --saglayici openai --tavan-usd 2   # anlatı LLM'den (OPENAI_API_KEY)
+```
+
+- Tablolar ve sayılar koddan üretilir; anlatı ya `anlati/` dosyalarından (çevrimdışı) ya da LLM yazım
+  katmanından gelir ve her cümle doğrulanır; doğrulanamayan cümle düşürülür.
+- Çıktı **taslaktır** ("Taslak — insan onayı bekliyor") ve GDELT atfını taşır; yayımlanmadan önce insan
+  editör onayı gerekir.
+- Claude dışı model fiyatları `llm/fiyatlar.toml`'a kaynağı ve tarihiyle girilir; dosya boşken çağrı yalnızca
+  `MEDYA_FIYATSIZ_IZIN=1` ile yapılır.
+
 ## Test
 
 `medya/` paketi için ağsız bir test paketi vardır: `venv/bin/pip install -r requirements-platform.txt` ve
@@ -206,8 +226,9 @@ assert not at.exception
 bash dagit.sh
 ```
 
-Cloud Run'a dağıtır. İmaja yalnızca panelin ihtiyacı olanlar girer (`app.py`,
-`.streamlit/config.toml`, `assets/`, `yasal/`, iki pipeline modülü); `llm/` ve `ajan/` girmez.
+Cloud Run'a dağıtır. İmaja panelin ihtiyacı olanlar (`app.py`, `.streamlit/config.toml`, `assets/`, `yasal/`, iki
+pipeline modülü) ve analiz platformu (`medya/`, `pages/`, `vakalar/`, `aktorler/`, `llm/butce.py` +
+`llm/fiyatlar.toml`; pandoc ve WeasyPrint) girer; `ajan/`, GDELT ham verisi ve gizli ayarlar girmez.
 
 - **`--session-affinity` şarttır:** Streamlit oturumu sunucuda tutar; aynı kullanıcı farklı
   örneğe düşerse oturum kopar.
