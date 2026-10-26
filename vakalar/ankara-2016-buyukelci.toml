@@ -1,0 +1,37 @@
+# Tasarım belgesinde önerilen ilk uçtan uca sınama vakası. Kamusal rol: Rusya'nın Ankara Büyükelçisi.
+# Sanık adları bilerek yazılmamıştır. İlk atıflar henüz kaynaklarıyla girilmedi (TODO).
+id = "ankara-2016-buyukelci"
+ad = "Rusya'nın Ankara Büyükelçisine suikast (Aralık 2016)"
+durum = "taslak"
+olay_tarihi = "2016-12-19"
+yer = "Ankara"
+etiketler = ["suikast", "diplomat", "ankara", "rusya", "suriye", "halep", "resmi-tez-orgut", "yargi-sureci"]
+
+# TODO: olaydan sonraki ilk 72 saatte yapılan atıflar (resmi, iktidara yakın, muhalif, yabancı basın),
+# her biri url ve tarihiyle. Uyum alanı nihai sonuç kesinleşince doldurulur.
+ilk_atiflar = []
+
+[nihai_sonuc]
+durum = "kismen_kesinlesti"
+ozet = "Ankara 2. Ağır Ceza Mahkemesi 28 sanıklı davada 9 Mart 2021'de 5 sanığa ağırlaştırılmış müebbet hapis verdi, 6 sanık beraat etti; firari sanıkların dosyası ayrıldı. Karar istinaftan geçti (23 Şubat 2022); Yargıtay 3. Ceza Dairesi 23 Haziran 2023'te 13 sanıktan 12'sinin cezasını onadı, bir sanığın cezasını bozdu."
+tarih = "2023-06-23"
+
+[[kaynaklar]]
+url = "https://tr.euronews.com/2021/03/09/28-san-kl-rus-buyukelci-andrey-karlov-suikast-davas-nda-5-kisiye-muebbet-cezas-verildi"
+tarih = "2021-03-09"
+not = "Euronews: 28 sanıklı davada 5 ağırlaştırılmış müebbet, 6 beraat"
+
+[[kaynaklar]]
+url = "https://www.aa.com.tr/tr/turkiye/rusyanin-ankara-buyukelcisi-karlov-suikastina-iliskin-28-sanikli-davada-karar-aciklandi/2169953"
+tarih = "2021-03-09"
+not = "AA: ilk derece kararı (Ankara 2. Ağır Ceza Mahkemesi)"
+
+[[kaynaklar]]
+url = "https://haberintelifi.aa.com.tr/tr/gundem/fetonun-buyukelci-karlov-suikasti-davasi-istinaftan-gecti/2510894"
+tarih = "2022-02-23"
+not = "AA: karar istinaftan geçti"
+
+[[kaynaklar]]
+url = "https://www.aa.com.tr/tr/gundem/fetonun-rus-buyukelci-karlov-suikasti-davasinda-12-sanigin-cezalari-onandi/2929352"
+tarih = "2023-06-23"
+not = "AA: Yargıtay 3. Ceza Dairesi 13 sanıktan 12'sinin cezasını onadı"
