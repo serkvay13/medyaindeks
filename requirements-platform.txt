@@ -1,0 +1,8 @@
+# Kanıta bağlı analiz paketi (medya/) ve testleri. Panelin requirements.txt'ine EKLENMEZ.
+#   venv/bin/pip install -r requirements-platform.txt
+# Sürümler requirements.txt ile uyumlu alt sınırlardır (pandas 3, DuckDB 1.5+).
+pandas>=3.0
+duckdb>=1.5
+pytest>=8
+# İsteğe bağlı: Streamlit sayfası (pages/vaka_raporu.py) ve sayfa testleri için requirements.txt'teki streamlit.
+# İsteğe bağlı LLM sağlayıcıları (yalnızca kullanılacaksa): anthropic (requirements-llm.txt), openai, google-genai.
