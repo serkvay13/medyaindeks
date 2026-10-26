@@ -61,6 +61,9 @@ hesaba düşer. **Servis hesabı anahtarı asla repoya girmez** — yalnızca `.
 | `cases/` | Vaka çalışması araçları: korpus, analiz, metin, kaynak kaydı, PDF rapor |
 | `llm/` | LLM destekli başlık etiketleme: kod kitapları, örneklem, insan kodlama ekranı, bütçe defteri, doğruluk ölçümü |
 | `ajan/` | MCP araçları (salt okunur, protokolden bağımsız) + stdio sunucusu |
+| `medya/` | Kanıta bağlı analiz paketi (platform v1): kanıt deposu, doğrulayıcı, ACH, bağlam protokolü, aktörler, uzman LLM katmanı, 14 bölümlük rapor, derinleştirme — bkz. `docs/platform.md` |
+| `pages/vaka_raporu.py` | Vaka raporu sayfası (Streamlit çok sayfa; `app.py`'den bağımsız) |
+| `aktorler/`, `vakalar/` | Aktör profilleri (kaynaklı) ve vaka kütüphanesi |
 | `vitrin/` | Statik tanıtım sayfası üreticisi |
 | `yasal/` | Kullanım koşulları, gizlilik politikası, KVKK metni (**hukukçu kontrolünden geçmemiş taslak**) |
 | `Dockerfile`, `dagit.sh` | Cloud Run dağıtımı |
@@ -181,7 +184,9 @@ Doğruluk ölçümü `llm/olcum.py` ile yapılır; yerel bir Ollama modeli veya 
 
 ## Test
 
-Otomatik test paketi yoktur. Değişiklikten sonra uygulamayı çalıştırın:
+`medya/` paketi için ağsız bir test paketi vardır: `venv/bin/pip install -r requirements-platform.txt` ve
+`venv/bin/python -m pytest -q` (GitHub Actions: `.github/workflows/test.yml`). Panelin (`app.py`) kendisi için
+otomatik test yoktur. Değişiklikten sonra uygulamayı çalıştırın:
 
 ```python
 from streamlit.testing.v1 import AppTest
