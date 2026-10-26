@@ -10,6 +10,10 @@
 #     ve Google istemcisi ADC'ye düşer — Cloud Run'da bu, servise bağlı hesabın kimliğidir.
 #
 # Yerel arşiv imajda yoktur; panel otomatik olarak bulut arşivine (BigQuery, Storage Read) düşer.
+#
+# Kanıta bağlı analiz platformu (medya/) da imajdadır: vaka raporu sayfası (pages/), vaka paketleri (vakalar/),
+# aktör tanımları (aktorler/) ve PDF üretimi (pandoc + WeasyPrint, DejaVu yazı tipleri). GDELT ham verisi
+# imaja girmez; vaka paketlerindeki hesaplanmış istatistik (vakalar/<vaka>/gdelt/istatistik.json) yeterlidir.
 FROM python:3.12-slim
 
 ENV PYTHONUNBUFFERED=1 \
@@ -18,9 +22,16 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
+# PDF raporu için sistem araçları: pandoc (Markdown → HTML), WeasyPrint'in Pango/HarfBuzz kütüphaneleri,
+# Türkçe karakterli DejaVu yazı tipleri
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends pandoc libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 \
+       fonts-dejavu-core \
+    && rm -rf /var/lib/apt/lists/*
+
 # Bağımlılıklar önce: kod değişince katman yeniden kurulmaz
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements-platform.txt ./
+RUN pip install --no-cache-dir -r requirements.txt -r requirements-platform.txt
 
 # Yalnızca panelin ihtiyacı olanlar
 COPY app.py ./
@@ -29,6 +40,14 @@ COPY assets/ ./assets/
 COPY yasal/ ./yasal/
 # app.py bunları sys.path üzerinden içe alır (sapma: gündem sapmaları, adlar: Türkçe ad eşleştirmesi)
 COPY pipeline/sapma.py pipeline/adlar.py ./pipeline/
+
+# Analiz platformu: paket, Streamlit sayfası, vaka paketleri, aktör tanımları; LLM bütçe modülü (fiyat
+# yapılandırması dahil; anahtarlar imaja girmez, ortam değişkeninden gelir)
+COPY medya/ ./medya/
+COPY pages/ ./pages/
+COPY vakalar/ ./vakalar/
+COPY aktorler/ ./aktorler/
+COPY llm/__init__.py llm/butce.py llm/fiyatlar.toml ./llm/
 
 # Cloud Run sağlık denetimi $PORT'a bağlanmayı bekler
 EXPOSE 8080

@@ -14,9 +14,17 @@ __pycache__/
 .claude/
 # Panelde kullanılmayanlar
 cases/
-llm/
+llm/*
+!llm/__init__.py
+!llm/butce.py
+!llm/fiyatlar.toml
 ajan/
 vitrin/
 tests/
 *.md
 !yasal/*.md
+# Platform: istem dosyaları ve vaka anlatıları Markdown'dır ve imaja girmelidir
+!medya/**/*.md
+!vakalar/**/*.md
+# Vaka paketlerindeki referans karşılaştırma dosyaları yalnızca testler içindir
+vakalar/*/referans/
